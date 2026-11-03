@@ -8,6 +8,8 @@ A proposed theory, and the plan for a tool: a multi-angle cross-check that watch
 
 The shadow is Carl Jung's word for what a person hides or won't see. This theory is about the shadow of the world: what official records hide or never measured. Jung supplied the word, not the evidence ([origins](docs/origins.md)).
 
+**A shadow is an indicator:** something you can measure that moves with something you can't, like night-time light for a country's real economy, or lichens for sulphur in the air. Finding the right one is finding variable X.
+
 ## The idea
 
 We've collected more ingredients than any generation before us: satellites, sensors, records. The recipes are scattered, one per paper, in fields that don't read each other. Sometimes the signal is there before the event, in a photograph nobody was looking at. One person can't watch it all. This is designed to.
