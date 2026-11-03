@@ -15,6 +15,7 @@ Cheap dust sensors read fog as pollution. When a sensor spikes, check it against
 - **Done when:** on past spikes in one city, the cross-check raises fewer false alarms than the baseline and misses no real event, with official stations as the reference.
 - **If it reads otherwise:** extra angles add nothing at city scale; rethink before going bigger.
 - **Also measured:** flags per week put in front of a person (R8).
+- **Also recorded:** for every spike, whether each angle called it real or false, and whether the reference stations agreed. That's each angle's track record for city air, which its weight will later come from. No weights are set before these results exist.
 
 ## Not decided yet
 
