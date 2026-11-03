@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1, 3 November 2026
+
+- README now says what a shadow is: an indicator, the variable X, with two examples.
+- First release made after Zenodo was switched on, so it can be archived with a DOI.
+
 ## 0.1.0, 2 November 2026
 
 - First statement of the theory: 3 laws (L1–L3) and 9 working rules (R1–R9).
