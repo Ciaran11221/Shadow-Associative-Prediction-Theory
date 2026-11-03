@@ -15,9 +15,12 @@ Changes reach `main` only through a pull request, and only once the corpus check
 
 ## Next steps
 
+Tests come first. How much each source counts is measured from their results, so weighting waits until they've run.
+
 1. **T1 stage 1: rebuild the night-lights result, in six steps** ([tests/T1](tests/T1-night-lights.md)). Start at step 1.1. Done when step 1.6 lands in the published range (about 35%). If it reads otherwise, compare against the paper's replication files, if published, before concluding anything.
-2. **Weight each source by its track record, like a vote** (the issue of that name). Done when THEORY.md shows how L2 weighs its sources, with a worked example. If weighted votes don't beat a plain head count when backtested, the weights aren't earning their place.
-3. **T1 stage 2: China's coal, 2010–2014.** Done when, using only data public before November 2015, the gap between reported coal use and its shadows flags under-reporting. Known answer: up to 17%. If it reads otherwise, record which shadows missed and why.
+2. **T1 stage 2: China's coal, 2010–2014.** Done when, using only data public before November 2015, the gap between reported coal use and its shadows flags under-reporting. Known answer: up to 17%. If it reads otherwise, record which shadows missed and why.
+3. **T2: the city-air false-alarm filter** ([tests/T2](tests/T2-city-air.md)). Done when, on past spikes in one city, the cross-check raises fewer false alarms than the baseline and misses no real event. If it reads otherwise, extra angles add nothing at city scale; rethink before going bigger. It also records each angle's calls, which step 4 needs.
+4. **Weight each source by its track record, like a vote** (the issue of that name). Waits on test results. A weight is how often a source has been right, so it can't be set in advance, and each field needs its own: a source that's good for city air can be poor for coal figures. Done when one field's weights are measured from its results and THEORY.md shows how L2 uses them, with a worked example. If the weights don't beat giving every source the same weight, on results they weren't measured from, they aren't earning their place.
 
 ## Not verified
 
