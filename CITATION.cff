@@ -6,8 +6,8 @@ authors:
   - family-names: "Brennan"
     given-names: "Ciaran"
 repository-code: "https://github.com/Ciaran11221/Shadow-Associative-Prediction-Theory"
-version: "0.1.0"
-date-released: "2026-11-02"
+version: "0.1.1"
+date-released: "2026-11-03"
 license: CC-BY-4.0
 keywords:
   - "proxy variables"
