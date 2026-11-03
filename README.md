@@ -1,5 +1,7 @@
 # Shadow Associative Prediction Theory
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23903518.svg)](https://doi.org/10.5281/zenodo.23903518)
+
 **Everything casts a shadow.**
 
 A proposed theory, and the plan for a tool: a multi-angle cross-check that watches public data nobody has time to watch, works out what to trust, and flags what doesn't add up.
@@ -45,6 +47,8 @@ The full statement, definitions, nine working rules and the strongest objections
 ## Cite
 
 GitHub's "Cite this repository" button uses [CITATION.cff](CITATION.cff).
+
+DOI for all versions: [10.5281/zenodo.23903518](https://doi.org/10.5281/zenodo.23903518). It always points to the newest version; each release also has its own DOI on Zenodo.
 
 ## Licence
 
