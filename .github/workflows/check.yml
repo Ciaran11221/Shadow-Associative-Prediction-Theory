@@ -1,0 +1,13 @@
+name: Check corpus
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Every law has a case and a test, and the index is up to date
+        run: python3 scripts/check_corpus.py --check

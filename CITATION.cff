@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use or build on this theory, please cite it as below."
+title: "Shadow Associative Prediction Theory"
+abstract: "Everything casts a shadow. A proposed theory for reading hidden numbers in public data: find the shadows they cast, check them from independent angles, and flag what doesn't add up."
+authors:
+  - family-names: "Brennan"
+    given-names: "Ciaran"
+repository-code: "https://github.com/Ciaran11221/Shadow-Associative-Prediction-Theory"
+version: "0.1.0"
+date-released: "2026-11-02"
+license: CC-BY-4.0
+keywords:
+  - "proxy variables"
+  - "shadow variables"
+  - "data fusion"
+  - "open data"
+  - "remote sensing"
+  - "falsifiability"
