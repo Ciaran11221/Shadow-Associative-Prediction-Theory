@@ -29,8 +29,8 @@ Rebuild the night-lights comparison on free data. Each step fits one sitting and
 
 Found in step 1.1, 3 November 2026.
 
-- **The author's own:** "Replication Dictators GDP.zip", about 102 MB on Google Drive. It's the [replication files](https://drive.google.com/file/d/1A8ihVMB3rud84p73w9IkoO5Xk_LJ54OX/view?usp=sharing) link beside the paper on [his website](https://sites.google.com/site/lrmartineza). Not downloaded yet, so what's inside and its terms of use are unchecked.
-- **A third-party reproduction package:** [Constenla-Villoslada (2023), Harvard Dataverse](https://doi.org/10.7910/DVN/9M0S0M), doi:10.7910/DVN/9M0S0M. CC0; 141 files, about 206 MB: Stata code plus the night-light, World Bank and Freedom House data it uses. Its record calls it a "revised reproduction package for the main claim", so its code is a revised copy, not the author's as posted.
+- **The author's own:** "Replication Dictators GDP.zip", about 102 MB on Google Drive. It's the [replication files](https://drive.google.com/file/d/1A8ihVMB3rud84p73w9IkoO5Xk_LJ54OX/view?usp=sharing) link beside the paper on [the author's website](https://sites.google.com/site/lrmartineza). Not downloaded yet, so what's inside and its terms of use are unchecked.
+- **A third-party reproduction package:** [Constenla-Villoslada (2023), Harvard Dataverse](https://doi.org/10.7910/DVN/9M0S0M), doi:10.7910/DVN/9M0S0M. CC0; 141 files, about 206 MB: Stata code plus the night-light, World Bank and Freedom House data it uses. It holds `setup.do` and `estimations.do` alongside `_revised` copies, which its file notes put down to minor file-path corrections, and a new `master.do` that runs the main results. Whether it matches the author's zip is unchecked.
 - **The journal's own page** blocks automated reads, so whether it carries a data and code supplement is unchecked.
 
 ## Stage 2: point it at a new target
