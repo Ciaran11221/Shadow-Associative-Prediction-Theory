@@ -6,7 +6,7 @@ Data: NOAA GML HATS global CFC-11, doi:10.15138/BVQ6-2S69
 Usage:
   python scripts/c02_cfc11.py <path to NOAA's file> [--out cases/C02]
 
-Writes trace.json, check.csv and chart.png to the out folder.
+Writes trace.json, check.csv, all_series.csv and chart.png to the out folder.
 Standard library plus matplotlib. Straight lines are ordinary least squares in plain Python.
 The rule is fixed: see the Q1 and Q2 sections below.
 """
@@ -116,6 +116,152 @@ def ingest(path):
     return info, rows, last
 
 
+def roll(reading, i):
+    """The rule for month i. reading(j) gives a number, or None for no reading.
+    A line through the previous 120 calendar months; skip the month if it or any of its 120 has no reading."""
+    rec = {"month": label(i), "window_first": label(i - WINDOW), "window_last": label(i - 1),
+           "n": None, "slope": None, "x_mean": None, "y_mean": None, "usual_miss": None,
+           "line_value": None, "gap": None, "threshold": None, "flag": False,
+           "skipped": False, "skip_reason": None}
+    missing = [label(j) for j in range(i - WINDOW, i + 1) if reading(j) is None]
+    if missing:
+        rec["skipped"] = True
+        rec["skip_reason"] = "no reading for " + ", ".join(missing)
+    else:
+        pts = [(xval(j), reading(j)) for j in range(i - WINDOW, i)]
+        f = fit(pts)
+        miss = math.sqrt(math.fsum((y - line_at(f, x)) ** 2 for x, y in pts) / len(pts))
+        lv = line_at(f, xval(i))
+        gap = reading(i) - lv
+        rec.update({"n": f["n"], "slope": f["slope"], "x_mean": f["x_mean"], "y_mean": f["y_mean"],
+                    "usual_miss": miss, "line_value": lv, "gap": gap,
+                    "threshold": MULTIPLE * miss, "flag": gap > MULTIPLE * miss})
+    return rec
+
+
+STATION_LINE = re.compile(r"^#\s*(\w+)\s*=\s*(.+?)\s*$")
+LAT = re.compile(r"\(\s*(\d+(?:\.\d+)?)\s*([NS])\b")
+COLUMN = re.compile(r"^HATS_(.+)_F11$")
+PAPER = idx(2018, 5)
+
+
+def parse_stations(comment_lines):
+    """code -> (name, latitude). Name is the text up to the first ' ('; South is negative."""
+    out = {}
+    for text in comment_lines:
+        m = STATION_LINE.match(text)
+        if not m:
+            continue
+        rest = m.group(2)
+        lat = LAT.search(rest)
+        if not lat:
+            continue
+        name = rest.split(" (")[0].strip()
+        value = float(lat.group(1)) * (-1 if lat.group(2) == "S" else 1)
+        out.setdefault(m.group(1).lower(), (name, value))
+    return out
+
+
+def read_file(path):
+    """Whole file: (comment lines, {HATS_*_F11 column: {month index: value or None}}). Later duplicate months are ignored."""
+    lines = Path(path).read_bytes().decode("utf-8").replace("\r\n", "\n").split("\n")
+    comments, names, cols = [], None, {}
+    for text in lines:
+        if text.startswith("#"):
+            comments.append(text)
+            continue
+        if not text.strip():
+            continue
+        parts = text.split()
+        if names is None:
+            names = parts
+            cols = {n: {} for n in names if COLUMN.match(n)}
+            continue
+        i = idx(int(parts[names.index(YEAR_COL)]), int(parts[names.index(MONTH_COL)]))
+        for n, d in cols.items():
+            if i not in d:
+                cell = parts[names.index(n)]
+                d[i] = None if cell.lower() == "nan" else float(cell)
+    return comments, cols
+
+
+def north_minus_south(north, south):
+    """Month by month; no reading if either side has none."""
+    out = {}
+    for i in north.keys() | south.keys():
+        a, b = north.get(i), south.get(i)
+        out[i] = None if a is None or b is None else a - b
+    return out
+
+
+def multiple_of(rec):
+    return rec["gap"] / rec["usual_miss"] if rec["usual_miss"] else None
+
+
+def run_series(sid, name, lat, reading, last):
+    recs = [roll(reading, i) for i in range(idx(2005, 1), last + 1)]
+    tested = [r for r in recs if not r["skipped"]]
+    flags = [r for r in tested if r["flag"]]
+    before = [r for r in flags if r["month"] < "2013-01"]
+    early = [multiple_of(r) for r in tested if r["month"] < "2013-01" and multiple_of(r) is not None]
+    first = next((r for r in flags if r["month"] >= "2013-01"), None)
+    rec = {"series": sid, "name": name, "lat": lat, "tested": len(tested), "skipped": len(recs) - len(tested),
+           "false_alarms_before_2013": len(before),
+           "first_flag_from_2013": first["month"] if first else None,
+           "months_before_paper": PAPER - idx(int(first["month"][:4]), int(first["month"][5:])) if first else None,
+           "total_flags": len(flags), "largest_multiple_before_2013": max(early) if early else None}
+    for k in ("reading", "line_value", "gap", "usual_miss", "threshold", "multiple"):
+        rec[k] = None
+    if first:
+        i = idx(int(first["month"][:4]), int(first["month"][5:]))
+        rec.update({"reading": reading(i), "line_value": first["line_value"], "gap": first["gap"],
+                    "usual_miss": first["usual_miss"], "threshold": first["threshold"], "multiple": multiple_of(first)})
+    return rec
+
+
+def pick_worth(all_series):
+    """Earliest first flag from 2013 among series with no false alarm before 2013, with every series sharing that month."""
+    clean = [r for r in all_series if r["false_alarms_before_2013"] == 0 and r["first_flag_from_2013"]]
+    if not clean:
+        return None
+    month = min(r["first_flag_from_2013"] for r in clean)
+    keep = ("series", "name", "lat", "reading", "line_value", "gap", "usual_miss", "threshold", "multiple")
+    return {"month": month,
+            "months_before_paper": next(r["months_before_paper"] for r in clean if r["first_flag_from_2013"] == month),
+            "series": [{k: r[k] for k in keep} for r in clean if r["first_flag_from_2013"] == month]}
+
+
+def every_series(path, global_reading, last):
+    comments, cols = read_file(path)
+    stations = parse_stations(comments)
+    todo = [("global", "Global", None, global_reading)]
+    north, south = cols.get("HATS_NH_F11"), cols.get("HATS_SH_F11")
+    if north is not None:
+        todo.append(("north", "North", None, north.get))
+    if south is not None:
+        todo.append(("south", "South", None, south.get))
+    diff = None
+    if north is not None and south is not None:
+        diff = north_minus_south(north, south)
+        todo.append(("north_minus_south", "North minus south", None, diff.get))
+    for n, d in cols.items():
+        code = COLUMN.match(n).group(1)
+        if code in ("NH", "SH", "Global"):
+            continue
+        name, lat = stations.get(code.lower(), (code, None))
+        todo.append((code, name, lat, d.get))
+    rows = [run_series(sid, name, lat, rd, last) for sid, name, lat, rd in todo]
+    rows.sort(key=lambda r: (r["first_flag_from_2013"] is None, r["first_flag_from_2013"] or ""))
+    yearly = []
+    if diff is not None:
+        last_year = ym(last)[0] if ym(last)[1] == 12 else ym(last)[0] - 1
+        for y in range(2000, last_year + 1):
+            vals = [diff.get(idx(y, m)) for m in range(1, 13)]
+            vals = [v for v in vals if v is not None]
+            yearly.append({"year": y, "mean": math.fsum(vals) / len(vals) if vals else None, "months": len(vals)})
+    return rows, pick_worth(rows), yearly
+
+
 def run(path, out):
     info, rows, last = ingest(path)
     start = idx(*SERIES_START)
@@ -144,26 +290,7 @@ def run(path, out):
     q1["in_band"] = q1["percent"] is not None and 40 <= q1["percent"] <= 60
 
     # Question 2: for each month, a line through the previous 120 calendar months.
-    q2 = []
-    for i in range(idx(2005, 1), last + 1):
-        rec = {"month": label(i), "window_first": label(i - WINDOW), "window_last": label(i - 1),
-               "n": None, "slope": None, "x_mean": None, "y_mean": None, "usual_miss": None,
-               "line_value": None, "gap": None, "threshold": None, "flag": False,
-               "skipped": False, "skip_reason": None}
-        missing = [label(j) for j in range(i - WINDOW, i + 1) if reading(j) is None]
-        if missing:
-            rec["skipped"] = True
-            rec["skip_reason"] = "no reading for " + ", ".join(missing)
-        else:
-            pts = [(xval(j), reading(j)) for j in range(i - WINDOW, i)]
-            f = fit(pts)
-            miss = math.sqrt(math.fsum((y - line_at(f, x)) ** 2 for x, y in pts) / len(pts))
-            lv = line_at(f, xval(i))
-            gap = reading(i) - lv
-            rec.update({"n": f["n"], "slope": f["slope"], "x_mean": f["x_mean"], "y_mean": f["y_mean"],
-                        "usual_miss": miss, "line_value": lv, "gap": gap,
-                        "threshold": MULTIPLE * miss, "flag": gap > MULTIPLE * miss})
-        q2.append(rec)
+    q2 = [roll(reading, i) for i in range(idx(2005, 1), last + 1)]
 
     flags = [r["month"] for r in q2 if r["flag"]]
     before_2013 = [m for m in flags if m < "2013-01"]
@@ -180,7 +307,9 @@ def run(path, out):
 
     out = Path(out)
     out.mkdir(parents=True, exist_ok=True)
-    trace = {"ingest": info, "series": series, "q1": q1, "q2": q2, "summary": summary}
+    all_series, worth, yearly = every_series(path, reading, last)
+    trace = {"ingest": info, "series": series, "q1": q1, "q2": q2, "summary": summary,
+             "all_series": all_series, "worth_a_look": worth, "north_south_yearly": yearly}
     (out / "trace.json").write_text(json.dumps(trace, indent=1, allow_nan=False) + "\n",
                                     encoding="utf-8", newline="\n")
     with open(out / "check.csv", "w", encoding="utf-8", newline="") as fh:
@@ -191,6 +320,12 @@ def run(path, out):
             cells = [rd, r["line_value"], r["usual_miss"], r["gap"]]
             w.writerow([r["month"]] + ["" if c is None else repr(c) for c in cells]
                        + ["skipped" if r["skipped"] else str(r["flag"]).lower()])
+    with open(out / "all_series.csv", "w", encoding="utf-8", newline="") as fh:
+        w = csv.writer(fh, lineterminator="\n")
+        keys = list(all_series[0].keys())
+        w.writerow(keys)
+        for r in all_series:
+            w.writerow(["" if r[k] is None else repr(r[k]) if isinstance(r[k], float) else r[k] for k in keys])
     chart(out / "chart.png", rows, q1["periods"][0], last, q2)
 
     p1, p2 = q1["periods"]
@@ -202,6 +337,11 @@ def run(path, out):
     print(f"first flag from January 2013: {summary['first_flag_from_2013']}")
     print(f"total flags: {summary['total_flags']}  skips: {summary['skips']}")
     print(f"outcome: {outcome}")
+    if worth:
+        print(f"worth a look: {worth['month']}, {worth['months_before_paper']} months before the paper: "
+              + ", ".join(r["series"] for r in worth["series"]))
+    else:
+        print("worth a look: none")
     return trace
 
 
