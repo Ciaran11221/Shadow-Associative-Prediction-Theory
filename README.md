@@ -41,6 +41,8 @@ The full statement, definitions, nine working rules and the strongest objections
 | [STATUS.md](STATUS.md) | Where the theory stands, what's next, and what isn't verified |
 | [CHANGELOG.md](CHANGELOG.md) | What changed in each version |
 | [scripts/check_corpus.py](scripts/check_corpus.py) | Rebuilds the index; fails if a law has no case or test, or a rule has no case |
+| [scripts/c02_cfc11.py](scripts/c02_cfc11.py) | The CFC-11 check for case C02; its tests are in scripts/test_c02_cfc11.py |
+| [cases/C02/](cases/C02/) | That check's output: each month's sums, every series, and the chart |
 | [.github/workflows/check.yml](.github/workflows/check.yml) | Runs that check on every push |
 | [LICENSE](LICENSE) | The CC BY 4.0 legal text |
 

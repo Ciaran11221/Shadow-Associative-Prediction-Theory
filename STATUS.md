@@ -5,9 +5,9 @@
 | | |
 |---|---|
 | Stated | 3 laws, 9 working rules, 16 cases, 13 shadows (2 of them failures kept on record), 3 planned tests |
-| Run | No tests yet |
+| Run | One proven case checked against data: CFC-11, worth a look November 2013. T1, T2 and T3 not run yet |
 | Archived | v0.1.1 on Zenodo; every release gets its own DOI |
-| Next | Proven case 1: CFC-11, the banned gas |
+| Next | CFC-11 cross-check against AGAGE, an independent network |
 
 Work happens in bursts, so every step says what done looks like, and any burst can start from the next step here.
 
@@ -19,7 +19,7 @@ Proven cases come first: real events where the truth is now known. For each one,
 
 Tests follow. How much each source counts is measured from their results, so weighting waits until they've run.
 
-1. **CFC-11, the banned gas ([C02](cases/C02-cfc11-eastern-china.md)).** Done when NOAA's own readings show whether the fall slowed after 2012 (the published answer: by about half), and a check set in advance, with no hindsight, shows how early that could have been seen. The paper came out in May 2018. If our reading disagrees with the paper, find out why before going on. If the check catches nothing before May 2018, the case counts against L3.
+1. **CFC-11, the banned gas ([C02](cases/C02-cfc11-eastern-china.md)).** NOAA's table shows the fall slowed, and a check set in advance puts worth a look at November 2013, 54 months before the May 2018 paper. Next is the independent cross-check: the same rule on AGAGE, a separate network with its own labs. Done when AGAGE's stations have been run and the case file says whether they flag in the same window. If they don't, the sign may belong to one lab and worth a look stays provisional.
 2. **Volkswagen ([C04](cases/C04-volkswagen-test-cheat.md)).** Done when the road-test figures from the 2014 report sit next to the US limit in the case file, with the date they became public. If the report doesn't show that gap, the case file is wrong and gets corrected.
 3. **Chernobyl ([C01](cases/C01-chernobyl-1986.md)).** Done when the case file has a dated timeline from primary sources: what Sweden's Forsmark plant measured, how it ruled out its own reactors, and when Moscow spoke. If the sources don't support that order of events, the case file gets corrected.
 4. **T1 stage 1: rebuild the night-lights result, in six steps** ([tests/T1](tests/T1-night-lights.md)). Parked at step 1.2. Step 1.1 is done: the paper's replication files are linked there. Done when step 1.6 lands in the published range (about 35%). If it reads otherwise, compare against the paper's replication files before concluding anything.
@@ -39,3 +39,4 @@ These came from secondary sources or general reference works and should be check
 - **S05:** the 32% coverage figure comes from a preprint.
 - **S08:** 1.5 billion birds is the authors' scaled estimate, not a count.
 - **Zenodo:** one release (v0.1.1) has been archived so far; later releases should work the same way but haven't been tried.
+- **C02:** worth a look was picked after seeing the data, all 16 series come from one lab, and NOAA's table is smoothed. Only abstracts of the papers were read.
