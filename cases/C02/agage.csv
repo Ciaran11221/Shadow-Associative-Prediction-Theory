@@ -1,0 +1,7 @@
+code,name,testable,tested,tested_before_2013,tested_from_2013,skipped,false_alarms_before_2013,first_flag,first_flag_from_2013,months_before_paper,total_flags,largest_multiple_before_2013,reading,excess,line_value,gap,usual_miss,threshold,multiple
+mhd,Mace Head,True,246,96,150,0,0,2014-11,2014-11,42,1,2.0372024525393124,233.9170379638672,,232.0826907737581,1.8343471901090993,0.5783480219401003,1.7350440658203008,3.171701329513812
+thd,Trinidad Head,True,238,88,150,8,0,2013-11,2013-11,54,3,2.0693223437343122,234.87901306152344,,233.49931217268386,1.3797008888395794,0.4463400414563492,1.3390201243690476,3.091142986718816
+rpb,Ragged Point,False,60,60,0,186,0,,,,0,2.341017522294761,,,,,,,
+smo,Cape Matatula,False,64,64,0,115,0,,,,0,1.2876983675102163,,,,,,,
+cgo,Cape Grim,True,121,84,37,121,0,,,,0,1.37519148559261,,,,,,,
+gsn,Gosan,,10,,,76,,,,,0,,,,,,,,
