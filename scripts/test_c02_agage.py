@@ -2,6 +2,8 @@
 import contextlib
 import datetime
 import io
+import json
+import math
 import random
 import sys
 import tempfile
@@ -215,6 +217,130 @@ class Tests(unittest.TestCase):
         self.assertEqual(len(outs[0].splitlines()), 7)
         self.assertEqual(len((self.dir / "a" / "agage.csv").read_text().splitlines()), 7)  # header and six stations
         self.assertEqual([r["code"] for r in res["stations"]], ["mhd", "thd", "rpb", "smo", "cgo", "gsn"])
+
+
+    # ---- the gap rule: min_share 0.9, set on issue 18 ----
+
+    def test_8_one_gap_in_window_first_rule_skips_gap_rule_tests_with_n_119(self):
+        path = self.dir / "m.nc"
+        write_nc(path, monthly_rows(steady(31), fill={c.idx(2000, 6) - FROM}))
+        data = a.read_monthly(path)
+        first, first_recs = a.long_record("cgo", "Cape Grim", data)
+        gaps, gap_recs = a.long_record("cgo", "Cape Grim", data, a.GAP_SHARE)
+        self.assertTrue(first_recs[0]["skipped"])  # 2005-01 has 2000-06 in its window
+        self.assertFalse(gap_recs[0]["skipped"])
+        self.assertEqual(gap_recs[0]["month"], "2005-01")
+        self.assertEqual(gap_recs[0]["n"], 119)  # the missing month is not counted and not filled
+        self.assertEqual((first["skipped"], gaps["skipped"]), (66, 0))
+        self.assertEqual(gaps["tested"], len(gap_recs))
+        self.assertIsNone(data.get(c.idx(2000, 6)))  # still no reading afterwards
+        # months whose window is full give exactly the same record under both rules
+        full = [(x, y) for x, y in zip(first_recs, gap_recs) if not x["skipped"]]
+        self.assertTrue(full)
+        for x, y in full:
+            self.assertEqual(x, y)
+
+    def test_9_thirteen_gaps_in_a_window_skip_twelve_test(self):
+        path = self.dir / "m.nc"
+        write_nc(path, monthly_rows(steady(32), skip=set(range(0, 13))))  # 1995-01 to 1996-01 have no row
+        _, recs = a.long_record("mhd", "Mace Head", a.read_monthly(path), a.GAP_SHARE)
+        self.assertEqual(recs[0]["month"], "2005-01")  # window 1995-01 to 2004-12: 13 gaps, 107 of 120
+        self.assertTrue(recs[0]["skipped"])
+        self.assertIn("107 of 120", recs[0]["skip_reason"])
+        self.assertEqual(recs[1]["month"], "2005-02")  # window 1995-02 to 2005-01: 12 gaps, 108 of 120
+        self.assertFalse(recs[1]["skipped"])
+        self.assertEqual(recs[1]["n"], 108)
+        self.assertEqual(recs[2]["n"], 109)
+
+    def test_10_gap_in_the_month_itself_is_skipped_under_both_rules(self):
+        path = self.dir / "m.nc"
+        write_nc(path, monthly_rows(steady(33), fill={c.idx(2015, 3) - FROM}))
+        data = a.read_monthly(path)
+        for share in (1.0, a.GAP_SHARE):
+            _, recs = a.long_record("cgo", "Cape Grim", data, share)
+            rec = next(r for r in recs if r["month"] == "2015-03")
+            self.assertTrue(rec["skipped"])
+            self.assertEqual(rec["skip_reason"], "no reading for 2015-03")
+        # under the gap rule only that month goes; the next one has a full window but one gap
+        _, recs = a.long_record("cgo", "Cape Grim", data, a.GAP_SHARE)
+        self.assertEqual([r["month"] for r in recs if r["skipped"]], ["2015-03"])
+        self.assertEqual(next(r for r in recs if r["month"] == "2015-04")["n"], 119)
+
+    def test_11_gosan_window_needs_54_of_60(self):
+        def gosan(gaps, share):
+            means = {FROM + t: 2.0 + 0.01 * t for t in range(61) if t not in gaps}
+            return a.gosan_record(means, {FROM + t: 0.0 for t in range(61)}, share)
+        _, recs = gosan(set(range(1, 7)), a.GAP_SHARE)  # 6 gaps in the window of 2000-01
+        self.assertEqual(recs[0]["month"], "2000-01")
+        self.assertFalse(recs[0]["skipped"])
+        self.assertEqual(recs[0]["n"], 54)
+        _, recs = gosan(set(range(1, 8)), a.GAP_SHARE)  # 7 gaps: 53 of 60
+        self.assertTrue(recs[0]["skipped"])
+        self.assertIn("53 of 60", recs[0]["skip_reason"])
+        # the first rule skips even one gap
+        _, recs = gosan({3}, 1.0)
+        self.assertTrue(recs[0]["skipped"])
+        _, recs = gosan({3}, a.GAP_SHARE)
+        self.assertEqual(recs[0]["n"], 59)
+
+    def test_12_line_through_existing_months_matches_hand_worked_case(self):
+        # window 4, min_share 0.75 -> 3 of 4 needed. Months t=0,1,3 exist (t=2 missing), readings 10, 13, 15; month t=4 reads 20.
+        # mean t = 4/3, mean y = 38/3, Sxx = 14/3, Sxy = 22/3, slope = 11/7 per month.
+        # line: t=0 -> 74/7, t=1 -> 85/7, t=3 -> 107/7, t=4 -> 118/7. Misses -4/7, 6/7, -2/7: usual miss = sqrt((16+36+4)/49/3) = sqrt(8/21).
+        base = c.idx(2010, 1)
+        vals = {base: 10.0, base + 1: 13.0, base + 3: 15.0, base + 4: 20.0}
+        rec = c.roll(vals.get, base + 4, 4, 0.75)
+        self.assertFalse(rec["skipped"])
+        self.assertEqual(rec["n"], 3)
+        self.assertAlmostEqual(rec["slope"], 12 * 11 / 7, places=9)  # x is in years, so float rounding in the dates shows from the 12th place
+        self.assertAlmostEqual(rec["line_value"], 118 / 7, places=9)
+        self.assertAlmostEqual(rec["gap"], 20 - 118 / 7, places=9)
+        self.assertAlmostEqual(rec["usual_miss"], math.sqrt(8 / 21), places=9)
+        self.assertAlmostEqual(rec["threshold"], 3 * math.sqrt(8 / 21), places=9)
+        self.assertTrue(rec["flag"])  # 22/7 = 3.14 against 3 x 0.617 = 1.85
+        # the default and an explicit 1.0 skip it, and nothing is filled
+        for rec in (c.roll(vals.get, base + 4, 4), c.roll(vals.get, base + 4, 4, 1.0)):
+            self.assertTrue(rec["skipped"])
+            self.assertEqual(rec["skip_reason"], "no reading for " + c.label(base + 2))
+        self.assertIsNone(vals.get(base + 2))
+        # only 2 of 4 is not enough
+        del vals[base]
+        self.assertTrue(c.roll(vals.get, base + 4, 4, 0.75)["skipped"])
+
+    def test_13_whole_run_with_gap_rule_writes_its_own_files(self):
+        data = self.dir / "data"
+        data.mkdir()
+        fns = {"mhd": halves_at(2013, 6, 21), "thd": halves_at(2014, 6, 22), "rpb": halves_at(2015, 6, 23),
+               "smo": steady(24), "cgo": steady(25)}
+        for code, fn in fns.items():
+            write_nc(data / f"agage_{code}_cfc-11_monthly-baseline-20260716.nc",
+                     monthly_rows(fn, fill={c.idx(2001, 3) - FROM}))
+        base = steady(26)
+        b = {t: base(t) for t in range(c.idx(2018, 12) - FROM + 1)}
+        write_nc(data / "agage_gsn_cfc-11_monthly-baseline-20260716.nc", monthly_rows(lambda t: b[t]))
+        write_nc(data / "agage_gsn_cfc-11_20260716.nc", hf_rows(lambda t: b[t], lambda t: 1.0))
+        outs = []
+        for name in ("a", "b"):
+            buf = io.StringIO()
+            with contextlib.redirect_stdout(buf):
+                a.run(data, self.dir / name)
+                res = a.run(data, self.dir / name, a.GAP_SHARE, "agage_gaps")
+            outs.append(buf.getvalue())
+        self.assertEqual(outs[0], outs[1])
+        for f in ("agage.csv", "agage.json", "agage_gaps.csv", "agage_gaps.json"):
+            self.assertEqual((self.dir / "a" / f).read_bytes(), (self.dir / "b" / f).read_bytes())
+        first_rows = (self.dir / "a" / "agage.csv").read_text().splitlines()
+        gap_rows = (self.dir / "a" / "agage_gaps.csv").read_text().splitlines()
+        self.assertEqual(first_rows[0], gap_rows[0])  # same shape
+        self.assertEqual(len(gap_rows), 7)
+        self.assertEqual(res["confirmation"], (True, 3))
+        self.assertEqual(len(outs[0].splitlines()), 14)
+        self.assertIn("confirmation", outs[0].splitlines()[6])
+        self.assertIn("confirmation", outs[0].splitlines()[-1])
+        # 2001-03 is missing: the first rule skips 2005-01 to 2011-03 (75 months) at each long station, the gap rule skips none
+        by_code = lambda f: {r["code"]: r for r in json.loads((self.dir / "a" / f).read_text())["stations"]}
+        self.assertEqual(by_code("agage.json")["mhd"]["skipped"], 75)
+        self.assertEqual(by_code("agage_gaps.json")["mhd"]["skipped"], 0)
 
 
 if __name__ == "__main__":

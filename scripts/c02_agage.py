@@ -6,8 +6,10 @@ Data: AGAGE CFC-11 NetCDF files (monthly baseline for six stations, high frequen
 Usage:
   python scripts/c02_agage.py <folder holding the files> [--out cases/C02]
 
-Writes agage.csv and agage.json to the out folder.
-Standard library, matplotlib and scipy.io.netcdf_file only. The rule is c02_cfc11.roll(), unchanged.
+Runs two versions of the rule on every run and writes both to the out folder:
+  first rule (no gap allowed in the window): agage.csv and agage.json
+  gap rule (a month is tested if it has a reading and at least 90 percent of its window does): agage_gaps.csv and agage_gaps.json
+Standard library, matplotlib and scipy.io.netcdf_file only. The rule is c02_cfc11.roll(); min_share 1.0 is the first rule.
 A month with no reading stays no reading: nothing is filled, interpolated or averaged across a gap.
 """
 import argparse
@@ -29,6 +31,7 @@ EPOCH = datetime.datetime(1970, 1, 1)
 LONG = [("mhd", "Mace Head"), ("thd", "Trinidad Head"), ("rpb", "Ragged Point"),
         ("smo", "Cape Matatula"), ("cgo", "Cape Grim")]
 GOSAN_WINDOW = 60
+GAP_SHARE = 0.9  # gap rule: share of the window that must have readings (108 of 120, 54 of 60)
 MIN_TESTED = 12  # fewer tested months than this before 2013, or from 2013, means "not testable"
 FIELDS = ["code", "name", "testable", "tested", "tested_before_2013", "tested_from_2013", "skipped",
           "false_alarms_before_2013", "first_flag", "first_flag_from_2013", "months_before_paper",
@@ -86,10 +89,10 @@ def find(folder, pattern):
     return hits[-1]
 
 
-def long_record(code, name, data):
+def long_record(code, name, data, min_share=1.0):
     reading = data.get
     last = max(data)
-    recs = [c.roll(reading, i) for i in range(c.idx(2005, 1), last + 1)]
+    recs = [c.roll(reading, i, min_share=min_share) for i in range(c.idx(2005, 1), last + 1)]
     row = c.summarise(code, name, None, reading, recs)
     tested = [r for r in recs if not r["skipped"]]
     before = sum(r["month"] < "2013-01" for r in tested)
@@ -103,13 +106,13 @@ def long_record(code, name, data):
     return out, recs
 
 
-def gosan_record(means, baseline):
+def gosan_record(means, baseline, min_share=1.0):
     ex = excess_of(means, baseline)
     have = [i for i, v in ex.items() if v is not None]
     if not have:
         sys.exit("Gosan has no month with both a monthly mean and a baseline")
     start, last = min(have) + GOSAN_WINDOW, max(ex)
-    recs = [c.roll(ex.get, i, GOSAN_WINDOW) for i in range(start, last + 1)]
+    recs = [c.roll(ex.get, i, GOSAN_WINDOW, min_share) for i in range(start, last + 1)]
     row = c.summarise("gsn", "Gosan", None, ex.get, recs)
     flags = [r for r in recs if r["flag"]]
     out = {"code": "gsn", "name": "Gosan", "tested": row["tested"], "skipped": row["skipped"],
@@ -131,25 +134,25 @@ def confirmation(rows):
     return n >= 3, n
 
 
-def run(folder, out):
+def run(folder, out, min_share=1.0, stem="agage"):
     stations = []
     for code, name in LONG:
         path = find(folder, f"agage_{code}_cfc-11_monthly-baseline-*.nc")
-        stations.append(long_record(code, name, read_monthly(path)))
+        stations.append(long_record(code, name, read_monthly(path), min_share))
     baseline = read_monthly(find(folder, "agage_gsn_cfc-11_monthly-baseline-*.nc"))
     means = read_monthly_means(find(folder, "agage_gsn_cfc-11_[0-9]*.nc"))
-    gosan = gosan_record(means, baseline)
+    gosan = gosan_record(means, baseline, min_share)
     rows = [r for r, _ in stations]
     ok, n = confirmation(rows)
 
     out = Path(out)
     out.mkdir(parents=True, exist_ok=True)
     everyone = stations + [gosan]
-    (out / "agage.json").write_text(
+    (out / f"{stem}.json").write_text(
         json.dumps({"stations": [dict(r, months=m) for r, m in everyone],
                     "confirmation": {"met": ok, "count": n, "of": len(rows)}},
                    indent=1, allow_nan=False) + "\n", encoding="utf-8", newline="\n")
-    with open(out / "agage.csv", "w", encoding="utf-8", newline="") as fh:
+    with open(out / f"{stem}.csv", "w", encoding="utf-8", newline="") as fh:
         w = csv.writer(fh, lineterminator="\n")
         w.writerow(FIELDS)
         for r, _ in everyone:
@@ -174,7 +177,10 @@ def main():
     ap.add_argument("folder", help="folder holding the AGAGE .nc files")
     ap.add_argument("--out", default=str(ROOT / "cases" / "C02"))
     args = ap.parse_args()
+    print("FIRST RULE (no gap allowed in the window) -> agage.csv, agage.json")
     run(args.folder, args.out)
+    print("GAP RULE (at least 90 percent of the window has readings, line through the months that exist) -> agage_gaps.csv, agage_gaps.json")
+    run(args.folder, args.out, GAP_SHARE, "agage_gaps")
 
 
 if __name__ == "__main__":
