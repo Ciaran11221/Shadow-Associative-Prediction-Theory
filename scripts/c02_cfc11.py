@@ -116,19 +116,29 @@ def ingest(path):
     return info, rows, last
 
 
-def roll(reading, i):
+def roll(reading, i, window=WINDOW, min_share=1.0):
     """The rule for month i. reading(j) gives a number, or None for no reading.
-    A line through the previous 120 calendar months; skip the month if it or any of its 120 has no reading."""
-    rec = {"month": label(i), "window_first": label(i - WINDOW), "window_last": label(i - 1),
+    A line through the previous 120 calendar months (or `window` months); skip the month if it or any of its window has no reading.
+    min_share (default 1.0, the rule above): the share of the window that must have readings. Below 1.0 the month
+    itself must still have a reading, and the line is fitted through the window months that exist. Nothing is filled in."""
+    rec = {"month": label(i), "window_first": label(i - window), "window_last": label(i - 1),
            "n": None, "slope": None, "x_mean": None, "y_mean": None, "usual_miss": None,
            "line_value": None, "gap": None, "threshold": None, "flag": False,
            "skipped": False, "skip_reason": None}
-    missing = [label(j) for j in range(i - WINDOW, i + 1) if reading(j) is None]
-    if missing:
+    missing = [label(j) for j in range(i - window, i + 1) if reading(j) is None]
+    need = math.ceil(round(min_share * window, 9))
+    window_missing = sum(reading(j) is None for j in range(i - window, i))
+    if min_share >= 1.0 and missing:
         rec["skipped"] = True
         rec["skip_reason"] = "no reading for " + ", ".join(missing)
+    elif reading(i) is None:
+        rec["skipped"] = True
+        rec["skip_reason"] = "no reading for " + label(i)
+    elif window - window_missing < need:
+        rec["skipped"] = True
+        rec["skip_reason"] = f"only {window - window_missing} of {window} window months have a reading, need {need}"
     else:
-        pts = [(xval(j), reading(j)) for j in range(i - WINDOW, i)]
+        pts = [(xval(j), reading(j)) for j in range(i - window, i) if reading(j) is not None]
         f = fit(pts)
         miss = math.sqrt(math.fsum((y - line_at(f, x)) ** 2 for x, y in pts) / len(pts))
         lv = line_at(f, xval(i))
@@ -200,6 +210,10 @@ def multiple_of(rec):
 
 def run_series(sid, name, lat, reading, last):
     recs = [roll(reading, i) for i in range(idx(2005, 1), last + 1)]
+    return summarise(sid, name, lat, reading, recs)
+
+
+def summarise(sid, name, lat, reading, recs):
     tested = [r for r in recs if not r["skipped"]]
     flags = [r for r in tested if r["flag"]]
     before = [r for r in flags if r["month"] < "2013-01"]

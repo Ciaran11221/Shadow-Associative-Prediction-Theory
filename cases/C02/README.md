@@ -9,6 +9,8 @@ Everything in [the case file](../C02-cfc11-eastern-china.md) can be rebuilt from
 | [check.csv](check.csv) | Every month tested from January 2005: reading, line, usual miss, gap and whether it flagged |
 | [all_series.csv](all_series.csv) | The same rule on all 16 series, in first-flag order |
 | [chart.png](chart.png) | The global reading against the 2002 to 2012 trend |
+| [agage.csv](agage.csv) | The AGAGE check under the first rule: no, 2 of 5 |
+| [agage_gaps.csv](agage_gaps.csv) | The AGAGE check under the gap rule: yes, 5 of 5 |
 
 ## Steps
 
@@ -70,6 +72,40 @@ Compare-Object (Get-Content "$env:TEMP\c02-check\out\all_series.csv") (Get-Conte
 ```powershell
 Compare-Object (Get-Content "$env:TEMP\c02-check\out\check.csv") (Get-Content "cases\C02\check.csv")
 ```
+
+## AGAGE steps
+
+You also need scipy for these.
+
+**7. Download AGAGE's eight files.** About 390 KB, as a zip.
+
+```powershell
+Invoke-WebRequest -Uri "https://www-air.larc.nasa.gov/missions/agage/api/data/download/10151,10155,10152,10153,10146,10149,10059,10071" -OutFile "$env:TEMP\c02-check\agage.zip" -UseBasicParsing
+```
+
+```powershell
+Expand-Archive -Force "$env:TEMP\c02-check\agage.zip" "$env:TEMP\c02-check\agage"
+```
+
+**8. Run the check.**
+
+```powershell
+python scripts/c02_agage.py "$env:TEMP\c02-check\agage" --out "$env:TEMP\c02-check\agage-out"
+```
+
+You should see the first rule end in `no, 2 of 5`, and the gap rule end in `yes, 5 of 5`.
+
+**9. Compare with the files in this folder.** Each of these prints nothing if the files match.
+
+```powershell
+Compare-Object (Get-Content "$env:TEMP\c02-check\agage-out\agage.csv") (Get-Content "cases\C02\agage.csv")
+```
+
+```powershell
+Compare-Object (Get-Content "$env:TEMP\c02-check\agage-out\agage_gaps.csv") (Get-Content "cases\C02\agage_gaps.csv")
+```
+
+AGAGE updates its files, so these ids will point to version 20260716 only for as long as AGAGE keeps it.
 
 ## What these steps don't prove
 

@@ -7,7 +7,7 @@
 | Stated | 3 laws, 9 working rules, 16 cases, 13 shadows (2 of them failures kept on record), 3 planned tests |
 | Run | One proven case checked against data: CFC-11, worth a look November 2013. T1, T2 and T3 not run yet |
 | Archived | v0.1.1 on Zenodo; every release gets its own DOI |
-| Next | CFC-11 cross-check against AGAGE, an independent network |
+| Next | False flags: the flag count on gases with no scandal |
 
 Work happens in bursts, so every step says what done looks like, and any burst can start from the next step here.
 
@@ -19,7 +19,7 @@ Proven cases come first: real events where the truth is now known. For each one,
 
 Tests follow. How much each source counts is measured from their results, so weighting waits until they've run.
 
-1. **CFC-11, the banned gas ([C02](cases/C02-cfc11-eastern-china.md)).** NOAA's table shows the fall slowed, and a check set in advance puts worth a look at November 2013, 54 months before the May 2018 paper. Next is the independent cross-check: the same rule on AGAGE, a separate network with its own labs. Done when AGAGE's stations have been run and the case file says whether they flag in the same window. If they don't, the sign may belong to one lab and worth a look stays provisional.
+1. **CFC-11, the banned gas ([C02](cases/C02-cfc11-eastern-china.md)).** NOAA's table shows the fall slowed, and a check set in advance puts worth a look at November 2013, 54 months before the May 2018 paper. AGAGE, a separate network, agrees under the gap rule. Next is false flags: the same check on gases with no scandal. Done when the false-flag rate is written down. If more than 1 in 10 clean gases reaches level 3 of the flag count, the check needs a new dated version. After that, the same case gets the replacement-gas test, then a blind test with names and dates hidden.
 2. **Volkswagen ([C04](cases/C04-volkswagen-test-cheat.md)).** Done when the road-test figures from the 2014 report sit next to the US limit in the case file, with the date they became public. If the report doesn't show that gap, the case file is wrong and gets corrected.
 3. **Chernobyl ([C01](cases/C01-chernobyl-1986.md)).** Done when the case file has a dated timeline from primary sources: what Sweden's Forsmark plant measured, how it ruled out its own reactors, and when Moscow spoke. If the sources don't support that order of events, the case file gets corrected.
 4. **T1 stage 1: rebuild the night-lights result, in six steps** ([tests/T1](tests/T1-night-lights.md)). Parked at step 1.2. Step 1.1 is done: the paper's replication files are linked there. Done when step 1.6 lands in the published range (about 35%). If it reads otherwise, compare against the paper's replication files before concluding anything.
