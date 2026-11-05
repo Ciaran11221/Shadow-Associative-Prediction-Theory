@@ -213,7 +213,7 @@ def run_gas(name, noaa_folder, agage_folder, filename, kind, gas):
             hf = [p for p in Path(agage_folder).iterdir()
                   if re.match(rf"^agage_gsn_{re.escape(gas)}_[0-9]+\.nc$", p.name, re.I)]
             if not hf:
-                continue  # Gosan has no high frequency file for this gas, so there is no 5 year measure
+                fail(f"no Gosan high frequency file for {gas} in {agage_folder}")
             means = a.read_monthly_means(hf[0])
             excess = a.excess_of(means, data)
             _, recs = a.gosan_record(means, data, a.GAP_SHARE)

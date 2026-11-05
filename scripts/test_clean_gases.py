@@ -86,11 +86,6 @@ def write_table(path, series, end=END):
     return names
 
 
-def quiet(fn, *args, **kwargs):
-    with contextlib.redirect_stdout(io.StringIO()):
-        return fn(*args, **kwargs)
-
-
 GCMS_NOTE = '07--Apr-26\t"NOAA/ESRL/GMD flask data, supplied for collaborative use"'
 GCMS_HEAD = "site\tdec_date\tyyyymmdd hhmmss\twind_dir\twind_spd\tHAL1211\tHAL1211_sd"
 H1301_HEAD = " site      decdate    yyyymmdd    HH:MM   wind_dir   wind_spd         H-1301_C      H-1301_sd     flag   instr."
@@ -200,8 +195,8 @@ class EndToEnd(Base):
         self.noaa.mkdir()
         self.agage.mkdir()
 
-    def go(self, noaa=None, agage=None, extra=None):
-        """noaa: {code: fn}; agage: {code: fn or rows}. Defaults are straight falls everywhere."""
+    def go(self, noaa=None, agage=None, extra=None, printed=None):
+        """noaa: {code: fn}; agage: {code: fn or rows}. Defaults are straight falls everywhere. printed: a buffer for the output."""
         noaa = noaa or {code: straight(k) for k, code in enumerate(NOAA_CODES)}
         agage = agage or {code: straight(k + 3) for k, code in enumerate(AGAGE_CODES)}
         write_table(self.noaa / "HATS_global_MC.txt", noaa)
@@ -210,12 +205,78 @@ class EndToEnd(Base):
             write_nc(self.agage / f"agage_{code}_ch3ccl3_monthly-baseline-20260716.nc", rows)
         for name, rows in (extra or {}).items():
             write_nc(self.agage / name, rows)
-        result = quiet(g.run, self.noaa, self.agage, self.out, [MC])
+        with contextlib.redirect_stdout(printed or io.StringIO()):
+            result = g.run(self.noaa, self.agage, self.out, [MC])
         return result["gases"][0]
 
     @staticmethod
     def by_label(gas):
         return {c.label(m["month"]): m for m in gas["months"]}
+
+    def summary(self):
+        with open(self.out / "summary.csv", newline="") as fh:
+            return next(csv.DictReader(fh))
+
+    @staticmethod
+    def jumped(codes, month, shift=0, names=None):
+        """Straight falls for `names`, with a one-month jump at `codes` in `month`."""
+        j = month - FROM
+        names = NOAA_CODES if names is None else names
+        return {code: straight(k + shift, jump_at=j if code in codes else None) for k, code in enumerate(names)}
+
+    def test_level_3_inside_the_18_counts_on_both_pass_lines(self):
+        month, buf = c.idx(2010, 6), io.StringIO()
+        self.go(noaa=self.jumped(("alt", "brw"), month),
+                agage=self.jumped(("mhd",), month, 3, AGAGE_CODES), printed=buf)
+        self.assertEqual(buf.getvalue().strip().splitlines()[-3:],
+                         ["gases reaching level 3: 1 of 1",
+                          "gases reaching level 3 on the CFC-11 set: 1 of 1",
+                          "gosan flagged on: none"])
+
+    def test_level_3_outside_the_18_counts_only_on_the_first_pass_line(self):
+        month, buf = c.idx(2010, 6), io.StringIO()
+        agage = self.jumped((), month, 3, AGAGE_CODES)
+        agage["jfj"] = straight(1, jump_at=month - FROM)
+        agage["cmn"] = straight(2, jump_at=month - FROM)
+        self.go(noaa=self.jumped(("hfm",), month), agage=agage, printed=buf)
+        self.assertEqual(buf.getvalue().strip().splitlines()[-3:-1],
+                         ["gases reaching level 3: 1 of 1",
+                          "gases reaching level 3 on the CFC-11 set: 0 of 1"])
+
+    def test_a_gosan_flag_is_named_on_the_last_line(self):
+        first, end, month = c.idx(2008, 1), c.idx(2014, 12), c.idx(2013, 6)
+        base = straight()
+        excess = lambda t: 1.0 + 0.01 * PATTERN[t % 7] + (5.0 if t == month - FROM else 0.0)  # noqa: E731
+        extra = {"agage_gsn_ch3ccl3_monthly-baseline-20260716.nc": monthly_rows(base, first, end),
+                 "agage_gsn_ch3ccl3_20260716.nc": hf_rows(base, excess, first, end)}
+        buf = io.StringIO()
+        gas = self.go(extra=extra, printed=buf)
+        self.assertEqual(buf.getvalue().strip().splitlines()[-1], "gosan flagged on: methyl chloroform")
+        self.assertEqual(min(gas["gosan"].flags), month)
+        self.assertEqual(self.summary()["gosan_first_flag"], "2013-06")
+
+    def test_gosan_without_its_high_frequency_file_stops_with_an_error(self):
+        extra = {"agage_gsn_ch3ccl3_monthly-baseline-20260716.nc": monthly_rows(straight(), c.idx(2008, 1), c.idx(2014, 12))}
+        with self.assertRaises(SystemExit):
+            self.go(extra=extra)
+
+    def test_level_3_runs_leave_out_a_level_2_run(self):
+        first, second = c.idx(2010, 6), c.idx(2014, 6)
+        noaa = {code: straight(k) for k, code in enumerate(NOAA_CODES)}
+        for code in ("alt", "brw"):
+            noaa[code] = straight(NOAA_CODES.index(code), jump_at=first - FROM)
+        for code in ("kum", "nwr"):
+            noaa[code] = straight(NOAA_CODES.index(code), jump_at=second - FROM)
+        self.go(noaa=noaa, agage=self.jumped(("mhd",), first, 3, AGAGE_CODES))
+        row = self.summary()
+        self.assertEqual((row["level_3_runs"], row["months_level_3plus"], row["months_level_2"]), ("1", "12", "12"))
+
+    def test_gas_years_count_only_months_where_level_3_was_possible(self):
+        late = {code: monthly_rows(straight(k + 3), first=c.idx(2003, 1)) for k, code in enumerate(AGAGE_CODES)}
+        self.go(agage=late)  # AGAGE reaches 108 of 120 window months in January 2012
+        row = self.summary()
+        self.assertEqual((row["months_run"], row["months_possible"]), ("168", "84"))
+        self.assertEqual(float(row["gas_years"]), 7.0)
 
     def test_straight_falls_everywhere_stay_at_level_0(self):
         gas = self.go()

@@ -58,6 +58,11 @@ class Ladder(unittest.TestCase):
         self.assertEqual(len(s), 10)
         self.assertEqual(at(s, M0)["level"], 3)
 
+    def test_ten_sources_two_labs_south_only_is_level_3(self):
+        s = many("NOAA", ["cgo"] * 5, M0) + many("AGAGE", ["cgo"] * 5, M0)
+        self.assertEqual(len(s), 10)
+        self.assertEqual(at(s, M0)["level"], 3)
+
     def test_ten_sources_one_lab_both_hemispheres_is_level_2(self):
         s = many("NOAA", NORTH_N + ["spo", "psa", "cgo", "smo"], M0)
         self.assertEqual(len(s), 10)
@@ -110,6 +115,7 @@ class Ladder(unittest.TestCase):
             fl.make_source("NOAA", "alt", [M0], [M0 + 1])
 
     def test_south_and_set_membership(self):
+        self.assertEqual(fl.SOUTH, {"NOAA": {"spo", "psa", "cgo", "smo"}, "AGAGE": {"cgo", "smo"}})
         self.assertTrue(src("AGAGE", "cgo").south)
         self.assertFalse(src("AGAGE", "rpb").south)
         self.assertTrue(src("NOAA", "psa").south)
