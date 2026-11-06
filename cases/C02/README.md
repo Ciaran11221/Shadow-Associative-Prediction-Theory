@@ -11,6 +11,10 @@ Everything in [the case file](../C02-cfc11-eastern-china.md) can be rebuilt from
 | [chart.png](chart.png) | The global reading against the 2002 to 2012 trend |
 | [agage.csv](agage.csv) | The AGAGE check under the first rule: no, 2 of 5 |
 | [agage_gaps.csv](agage_gaps.csv) | The AGAGE check under the gap rule: yes, 5 of 5 |
+| [clean_summary.csv](clean_summary.csv) | The false-flag run, one row per gas |
+| [clean_sources.csv](clean_sources.csv) | The false-flag run, one row per source: months tested, flags, first and last flag |
+| [clean_months.csv](clean_months.csv) | The false-flag run, one row per month: level, count and which sources |
+| [clean_by_year.csv](clean_by_year.csv) | Months at each level, per gas per year |
 
 ## Steps
 
@@ -107,6 +111,82 @@ Compare-Object (Get-Content "$env:TEMP\c02-check\agage-out\agage_gaps.csv") (Get
 
 AGAGE updates its files, so these ids will point to version 20260716 only for as long as AGAGE keeps it.
 
+## Flag count steps
+
+**10. Run the tests.** These use made-up data only.
+
+```powershell
+python scripts/test_flag_ladder.py
+```
+
+```powershell
+python scripts/test_clean_gases.py
+```
+
+You should see `Ran 20 tests` and `Ran 29 tests`, each with `OK`.
+
+**11. Rebuild the ladder on CFC-11.** This uses the files from steps 2 and 7.
+
+```powershell
+python scripts/flag_ladder.py "$env:TEMP\c02-check\HATS_global_F11.txt" "$env:TEMP\c02-check\agage"
+```
+
+You should see 62, 31, 3, 0 and 0 for levels 0 to 4 before 2013, then level 3 first in 2013-11 and level 4 first in 2014-12.
+
+**12. Download the clean gas files.** About 6.8 MB. AGAGE allows 35 files at a time, so there are two zips.
+
+```powershell
+New-Item -ItemType Directory -Force "$env:TEMP\c02-check\clean-noaa", "$env:TEMP\c02-check\clean-agage"
+```
+
+```powershell
+Invoke-WebRequest -Uri "https://www-air.larc.nasa.gov/missions/agage/api/data/download/11175,11173,11168,11172,11171,11174,11167,11176,11169,11166,11170,11095,11106,11256,11254,11248,11249,11253,11252,11255,11257,11250,11247,11251,11179,11190,11322" -OutFile "$env:TEMP\c02-check\clean1.zip" -UseBasicParsing
+```
+
+```powershell
+Invoke-WebRequest -Uri "https://www-air.larc.nasa.gov/missions/agage/api/data/download/11314,11320,11323,11316,11315,11319,11318,11321,11313,11317,11260,11271,10833,10831,10826,10824,10834,10827,10832,10828,10825,10830,10829,10823,10822,10713,10726" -OutFile "$env:TEMP\c02-check\clean2.zip" -UseBasicParsing
+```
+
+```powershell
+Expand-Archive -Force "$env:TEMP\c02-check\clean1.zip" "$env:TEMP\c02-check\clean-agage"
+```
+
+```powershell
+Expand-Archive -Force "$env:TEMP\c02-check\clean2.zip" "$env:TEMP\c02-check\clean-agage"
+```
+
+```powershell
+foreach ($f in "solvents/CH3CCl3/combined/HATS_global_MC.txt", "halons/flasks/HAL1211_GCMS_flask.txt", "halons/flasks/Hal2402_GCMS_flask.txt", "halons/flasks/H-1301_M2_PR1_MS_flask.txt") { Invoke-WebRequest -Uri "https://gml.noaa.gov/aftp/data/hats/$f" -OutFile "$env:TEMP\c02-check\clean-noaa\$(Split-Path $f -Leaf)" -UseBasicParsing }
+```
+
+**13. Run the check.**
+
+```powershell
+python scripts/clean_gases.py "$env:TEMP\c02-check\clean-noaa" "$env:TEMP\c02-check\clean-agage" --out "$env:TEMP\c02-check\clean-out"
+```
+
+You should see `gases reaching level 3: 2 of 4`, `gases reaching level 3 on the CFC-11 set: 1 of 4` and `gosan flagged on: H-1211, H-1301, H-2402`.
+
+**14. Compare with the files in this folder.** Each of these prints nothing if the files match.
+
+```powershell
+Compare-Object (Get-Content "$env:TEMP\c02-check\clean-out\summary.csv") (Get-Content "cases\C02\clean_summary.csv")
+```
+
+```powershell
+Compare-Object (Get-Content "$env:TEMP\c02-check\clean-out\sources.csv") (Get-Content "cases\C02\clean_sources.csv")
+```
+
+```powershell
+Compare-Object (Get-Content "$env:TEMP\c02-check\clean-out\months.csv") (Get-Content "cases\C02\clean_months.csv")
+```
+
+```powershell
+Compare-Object (Get-Content "$env:TEMP\c02-check\clean-out\by_year.csv") (Get-Content "cases\C02\clean_by_year.csv")
+```
+
+NOAA and AGAGE update their files, so a newer version may shift these numbers. The run also writes `checks.csv`, every tested month with its reading. That file isn't kept here, because it's about 3 MB and can be rebuilt.
+
 ## What these steps don't prove
 
-They show the arithmetic is right and repeatable. They don't remove the limits listed in the case file: the series was picked after seeing the data, all 16 come from one lab, and the table is smoothed.
+They show the arithmetic is right and repeatable. They don't remove the limits listed in the case file: the series was picked after seeing the data, all 16 come from one lab, and the table is smoothed. The clean gases were picked before their readings were opened, but one of them turned out not to be clean.

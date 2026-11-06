@@ -90,8 +90,58 @@ A separate lab flags in the same month as worth a look, and the station nearest 
 - Gosan's May 2013 is the strongest flag here, but it can't move worth a look yet. Only 45 of its 86 months were tested, and it has no false-alarm history. It needs the same measure run on gases with no scandal.
 - Trinidad Head's flag is a narrow one: a gap of 1.38 ppt against a cut-off of 1.339.
 
+## The flag count
+
+One flag is weak. Counting them isn't. [Issue 21](https://github.com/Ciaran11221/Shadow-Associative-Prediction-Theory/issues/21) set a ladder: for any month, how many sources flagged in that month or the 11 before it. A source is one lab's record at one station. The levels stack, so one lab alone stops at level 2 ([issue 23](https://github.com/Ciaran11221/Shadow-Associative-Prediction-Theory/issues/23)).
+
+| Level | Needs | Action |
+|---|---|---|
+| 1 | 1 source | Log it |
+| 2 | 2 or more sources | Worth a look |
+| 3 | 3 or more sources from both labs | Escalate |
+| 4 | 10 or more sources from both labs, in both hemispheres | Act |
+
+On CFC-11's 18 sources (12 NOAA stations, 5 long AGAGE records and Gosan), the 96 months before 2013 read 62 at level 0, 31 at level 1 and 3 at level 2, with none higher. Level 3 arrives in November 2013, and level 4 in December 2014 with 14 sources. The levels were picked after seeing this, so CFC-11 can't prove them. Code: [scripts/flag_ladder.py](../scripts/flag_ladder.py).
+
+## False flags
+
+A sign only means something if the check stays quiet when nothing is happening. Issue 23 picked 4 banned gases with no reported change before anyone opened their readings, and set the pass mark: none may reach level 3. Code: [scripts/clean_gases.py](../scripts/clean_gases.py). Output: the `clean_` files in [cases/C02](C02/).
+
+**Result: fails. 2 of 4 reached level 3.** That stays on record.
+
+| Gas | Sources tested | Source-months | Flags | Chance alone gives | Top level | Gas-years |
+|---|---|---|---|---|---|---|
+| Methyl chloroform | 22 | 3,927 | 0 | 7.1 | 0 | 20.5 |
+| H-1301 | 22 | 2,076 | 3 | 3.8 | 1 | 12.3 |
+| H-1211 | 24 | 4,312 | 11 | 7.8 | 3 | 21.1 |
+| H-2402 | 22 | 2,045 | 40 | 3.7 | 4 | 7.9 |
+
+"Chance alone" is 0.182% of tested months, the rate for a straight fall. A gas-year is one gas watched for a year, counting only months where level 3 was possible. That makes 3 level 3 runs in 61.8 gas-years. On the 18 sources CFC-11 had, 1 of 4 reached level 3: H-2402.
+
+Worth a look stays at November 2013. Issue 23 said Gosan could move it to May 2013 only if its measure flagged on none of the 4, and it flagged on 3.
+
+**H-2402 shouldn't have been on the list.** A paper from April 2026 reports its emissions rising since 2015, driven by East Asia (Choi et al.), and an abstract from the same group in April 2024 is the earliest public report found. The test on issue 23 would have put it out. The search leaned on the 2022 WMO assessment and missed it, and the paper turned up only after the run.
+
+In the run, H-2402's fall about halved in both labs between 2010–2015 and 2022–2025: NOAA from 0.0066 to 0.0033 ppt a year, AGAGE from 0.0071 to 0.0039. The ladder reached level 3 in May 2021 and level 4 in September 2022, 35 and 19 months before that abstract. This is an observation, not a result. Nobody set the run up as a test of H-2402, the paper was found after the flags, and April 2024 is the first public date found, not the date anyone first noticed.
+
+**H-1211 is the false alarm.** Its fall is steady and its flags are close to chance. Level 3 came from local things lining up: one-month spikes in NOAA's Wisconsin flasks, a one-month jump at Jungfraujoch that shows on all three halons in May 2021, and a hump at Ragged Point. On CFC-11's 18 sources it never reaches level 3.
+
+**Why the ladder failed.** A count of 3 is too low for 22 to 24 sources over 20 years. On a straight fall with nothing happening, chance alone takes a gas to level 3 6% to 18% of the time, so about 41% of the time at least one of the 4 gets there. That sum should have been done before the pass mark was set. The count stays as it is for now, because 5 gases can't set a new one.
+
+**Limits.**
+
+- A flag says a fall slowed, not why. A bend in a gas's global curve reaches every station in the same years, so two labs can agree on what happened without showing the cause.
+- The halons have no combined table, so they use plain monthly averages of flask samples, which aren't smoothed the way CFC-11's table is.
+- Only the abstracts of Choi et al. were read.
+- Searches after the run found no reported change for H-1211, H-1301 or methyl chloroform. That isn't proof there was none.
+- These 4 gases have now been seen, so they can't judge a new version of the ladder.
+
 ## Sources
 
+- [Choi et al. 2026, npj Climate and Atmospheric Science](https://doi.org/10.1038/s41612-026-01399-4)
+- [Choi et al. 2024, EGU General Assembly abstract](https://doi.org/10.5194/egusphere-egu24-13726)
+- [NOAA GML flask data notes, with the papers that first presented these records](https://gml.noaa.gov/aftp/data/hats/halons/flasks/ReadMe.txt)
+- [Montzka et al. 2003, Geophysical Research Letters](https://doi.org/10.1029/2003GL017745)
 - [Montzka et al. 2018, Nature](https://doi.org/10.1038/s41586-018-0106-2)
 - [Rigby et al. 2019, Nature](https://doi.org/10.1038/s41586-019-1193-4)
 - [Park et al. 2021, Nature](https://doi.org/10.1038/s41586-021-03277-w)
