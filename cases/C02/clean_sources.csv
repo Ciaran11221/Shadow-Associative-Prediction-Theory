@@ -1,0 +1,103 @@
+gas,source,lab,south,in_cfc11_set,tested,skipped,flags,first_flag,last_flag
+H-1211,NOAA alt,NOAA,false,true,248,2,0,,
+H-1211,NOAA amy,NOAA,false,false,0,251,0,,
+H-1211,NOAA brw,NOAA,false,true,253,0,0,,
+H-1211,NOAA cgo,NOAA,true,true,247,5,0,,
+H-1211,NOAA hfm,NOAA,false,false,239,13,0,,
+H-1211,NOAA kum,NOAA,false,true,253,0,0,,
+H-1211,NOAA lef,NOAA,false,false,221,32,6,2018-08,2025-02
+H-1211,NOAA mhd,NOAA,false,true,171,81,0,,
+H-1211,NOAA mlo,NOAA,false,true,253,0,1,2022-12,2022-12
+H-1211,NOAA nwr,NOAA,false,true,251,2,0,,
+H-1211,NOAA psa,NOAA,true,true,216,30,0,,
+H-1211,NOAA smo,NOAA,true,true,245,8,0,,
+H-1211,NOAA spo,NOAA,true,true,249,1,0,,
+H-1211,NOAA sum,NOAA,false,true,138,109,0,,
+H-1211,NOAA thd,NOAA,false,true,180,73,0,,
+H-1211,AGAGE cgo,AGAGE,true,true,215,31,0,,
+H-1211,AGAGE cmn,AGAGE,false,false,141,105,0,,
+H-1211,AGAGE gsn,AGAGE,false,true,42,20,1,2016-09,2016-09
+H-1211,AGAGE jfj,AGAGE,false,false,160,86,1,2021-05,2021-05
+H-1211,AGAGE mhd,AGAGE,false,true,236,10,0,,
+H-1211,AGAGE rpb,AGAGE,false,true,93,151,2,2021-12,2022-03
+H-1211,AGAGE smo,AGAGE,true,true,88,158,0,,
+H-1211,AGAGE tac,AGAGE,false,false,32,214,0,,
+H-1211,AGAGE thd,AGAGE,false,true,136,110,0,,
+H-1211,AGAGE tob,AGAGE,false,false,0,246,0,,
+H-1211,AGAGE zep,AGAGE,false,false,5,241,0,,
+H-1301,NOAA alt,NOAA,false,true,11,229,0,,
+H-1301,NOAA brw,NOAA,false,true,139,101,0,,
+H-1301,NOAA cgo,NOAA,true,true,135,105,0,,
+H-1301,NOAA hfm,NOAA,false,false,7,231,0,,
+H-1301,NOAA kum,NOAA,false,true,27,101,0,,
+H-1301,NOAA lef,NOAA,false,false,5,230,0,,
+H-1301,NOAA mhd,NOAA,false,true,4,236,0,,
+H-1301,NOAA mlo,NOAA,false,true,142,98,0,,
+H-1301,NOAA nwr,NOAA,false,true,12,228,0,,
+H-1301,NOAA psa,NOAA,true,true,0,240,0,,
+H-1301,NOAA smo,NOAA,true,true,87,153,0,,
+H-1301,NOAA spo,NOAA,true,true,132,108,0,,
+H-1301,NOAA sum,NOAA,false,true,8,230,0,,
+H-1301,NOAA thd,NOAA,false,true,142,98,1,2013-05,2013-05
+H-1301,AGAGE cgo,AGAGE,true,true,217,29,0,,
+H-1301,AGAGE cmn,AGAGE,false,false,93,153,0,,
+H-1301,AGAGE gsn,AGAGE,false,true,46,52,1,2016-09,2016-09
+H-1301,AGAGE jfj,AGAGE,false,false,187,59,1,2021-05,2021-05
+H-1301,AGAGE mhd,AGAGE,false,true,210,36,0,,
+H-1301,AGAGE rpb,AGAGE,false,true,92,152,0,,
+H-1301,AGAGE smo,AGAGE,true,true,110,136,0,,
+H-1301,AGAGE tac,AGAGE,false,false,0,246,0,,
+H-1301,AGAGE thd,AGAGE,false,true,136,110,0,,
+H-1301,AGAGE tob,AGAGE,false,false,0,246,0,,
+H-1301,AGAGE zep,AGAGE,false,false,134,112,0,,
+H-2402,NOAA alt,NOAA,false,true,86,164,1,2022-01,2022-01
+H-2402,NOAA amy,NOAA,false,false,0,251,0,,
+H-2402,NOAA brw,NOAA,false,true,89,164,0,,
+H-2402,NOAA cgo,NOAA,true,true,85,167,1,2023-01,2023-01
+H-2402,NOAA hfm,NOAA,false,false,84,168,1,2021-08,2021-08
+H-2402,NOAA kum,NOAA,false,true,90,163,1,2023-01,2023-01
+H-2402,NOAA lef,NOAA,false,false,88,165,1,2022-02,2022-02
+H-2402,NOAA mhd,NOAA,false,true,80,172,0,,
+H-2402,NOAA mlo,NOAA,false,true,90,163,2,2023-03,2023-09
+H-2402,NOAA nwr,NOAA,false,true,88,165,0,,
+H-2402,NOAA psa,NOAA,true,true,82,164,2,2021-02,2021-12
+H-2402,NOAA smo,NOAA,true,true,83,170,5,2022-01,2023-03
+H-2402,NOAA spo,NOAA,true,true,92,158,1,2023-01,2023-01
+H-2402,NOAA sum,NOAA,false,true,84,163,1,2022-06,2022-06
+H-2402,NOAA thd,NOAA,false,true,90,163,1,2022-08,2022-08
+H-2402,AGAGE cgo,AGAGE,true,true,148,98,1,2022-10,2022-10
+H-2402,AGAGE cmn,AGAGE,false,false,0,246,0,,
+H-2402,AGAGE gsn,AGAGE,false,true,69,65,4,2015-07,2022-09
+H-2402,AGAGE jfj,AGAGE,false,false,98,148,5,2018-11,2021-05
+H-2402,AGAGE mhd,AGAGE,false,true,144,101,1,2022-06,2022-06
+H-2402,AGAGE rpb,AGAGE,false,true,92,152,3,2021-10,2021-12
+H-2402,AGAGE smo,AGAGE,true,true,88,158,2,2023-01,2023-07
+H-2402,AGAGE tac,AGAGE,false,false,0,246,0,,
+H-2402,AGAGE thd,AGAGE,false,true,136,110,5,2019-04,2021-06
+H-2402,AGAGE tob,AGAGE,false,false,0,246,0,,
+H-2402,AGAGE zep,AGAGE,false,false,59,187,2,2021-12,2022-06
+methyl chloroform,NOAA alt,NOAA,false,true,242,0,0,,
+methyl chloroform,NOAA brw,NOAA,false,true,243,0,0,,
+methyl chloroform,NOAA cgo,NOAA,true,true,243,0,0,,
+methyl chloroform,NOAA kum,NOAA,false,true,161,82,0,,
+methyl chloroform,NOAA mhd,NOAA,false,true,178,64,0,,
+methyl chloroform,NOAA mlo,NOAA,false,true,215,0,0,,
+methyl chloroform,NOAA nwr,NOAA,false,true,243,0,0,,
+methyl chloroform,NOAA psa,NOAA,true,true,83,155,0,,
+methyl chloroform,NOAA smo,NOAA,true,true,243,0,0,,
+methyl chloroform,NOAA spo,NOAA,true,true,120,121,0,,
+methyl chloroform,NOAA sum,NOAA,false,true,134,101,0,,
+methyl chloroform,NOAA thd,NOAA,false,true,170,73,0,,
+methyl chloroform,AGAGE adr,AGAGE,false,false,0,0,0,,
+methyl chloroform,AGAGE cgo,AGAGE,true,true,246,0,0,,
+methyl chloroform,AGAGE cmn,AGAGE,false,false,146,100,0,,
+methyl chloroform,AGAGE cmo,AGAGE,false,false,0,0,0,,
+methyl chloroform,AGAGE gsn,AGAGE,false,true,45,17,0,,
+methyl chloroform,AGAGE jfj,AGAGE,false,false,183,63,0,,
+methyl chloroform,AGAGE mhd,AGAGE,false,true,240,6,0,,
+methyl chloroform,AGAGE rpb,AGAGE,false,true,205,39,0,,
+methyl chloroform,AGAGE smo,AGAGE,true,true,240,6,0,,
+methyl chloroform,AGAGE tac,AGAGE,false,false,7,239,0,,
+methyl chloroform,AGAGE thd,AGAGE,false,true,246,0,0,,
+methyl chloroform,AGAGE tob,AGAGE,false,false,0,246,0,,
+methyl chloroform,AGAGE zep,AGAGE,false,false,94,152,0,,
