@@ -32,7 +32,6 @@ GASES = [
 ]
 SAME_STATION = {"mlo_pfp": "mlo"}
 NOT_STATIONS = {"NH", "SH", "Global"}
-TABLE_COLUMN = re.compile(r"^HATS_(.+)_MC$")
 
 
 def fail(message):
@@ -124,8 +123,11 @@ def read_h1301(path):
     return monthly_average(samples)
 
 
-def read_table(path):
-    """Combined table: comment lines, a column line, rows. Station columns only; nan is no reading."""
+def read_table(path, tag="MC"):
+    """Combined table: comment lines, a column line, rows. Station columns only; nan is no reading.
+    tag is the gas tag in the column names: MC, F12 or CCl4."""
+    pattern = re.compile(rf"^HATS_(.+)_{re.escape(tag)}$")
+    year_col, month_col = f"HATS_{tag}_YYYY", f"HATS_{tag}_MM"
     names, cols = None, {}
     for n, text in enumerate(lines_of(path), 1):
         if text.startswith("#") or not text.strip():
@@ -133,18 +135,18 @@ def read_table(path):
         parts = text.split()
         if names is None:
             names = parts
-            for need in ("HATS_MC_YYYY", "HATS_MC_MM"):
+            for need in (year_col, month_col):
                 if need not in names:
                     fail(f"{path}: column {need} not found")
             cols = {}
             for k, name in enumerate(names):
-                m = TABLE_COLUMN.match(name)
+                m = pattern.match(name)
                 if m and m.group(1) not in NOT_STATIONS:
                     cols[k] = (site_code(m.group(1)), {})
             continue
         if len(parts) != len(names):
             fail(f"{path} line {n}: expected {len(names)} fields, found {len(parts)}")
-        i = c.idx(int(parts[names.index("HATS_MC_YYYY")]), int(parts[names.index("HATS_MC_MM")]))
+        i = c.idx(int(parts[names.index(year_col)]), int(parts[names.index(month_col)]))
         for k, (_, data) in cols.items():
             if i in data:
                 continue
@@ -195,7 +197,9 @@ def agage_stations(folder, gas):
 
 def noaa_data(folder, filename, kind):
     path = find_file(folder, filename)
-    return {"gcms": read_gcms, "h1301": read_h1301, "table": read_table}[kind](path)
+    if kind == "table" or kind.startswith("table:"):
+        return read_table(path, kind.partition(":")[2] or "MC")
+    return {"gcms": read_gcms, "h1301": read_h1301}[kind](path)
 
 
 def run_gas(name, noaa_folder, agage_folder, filename, kind, gas):
