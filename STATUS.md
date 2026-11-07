@@ -5,9 +5,9 @@
 | | |
 |---|---|
 | Stated | 3 laws, 9 working rules, 16 cases, 13 shadows (2 of them failures kept on record), 3 planned tests |
-| Run | One proven case checked against data: CFC-11, worth a look November 2013. Its flag count failed on gases picked as clean. T1, T2 and T3 not run yet |
+| Run | One proven case checked against data: CFC-11, worth a look November 2013. Its flag count failed on gases picked as clean, then caught 1 of 3 testable gas events. T1, T2 and T3 not run yet |
 | Archived | v0.1.1 on Zenodo; every release gets its own DOI |
-| Next | More gas events: the same rule on gases with a published change |
+| Next | Bursts of flags: whether a burst of false flags marks something real |
 
 Work happens in bursts, so every step says what done looks like, and any burst can start from the next step here.
 
@@ -19,12 +19,13 @@ Proven cases come first: real events where the truth is now known. For each one,
 
 Tests follow. How much each source counts is measured from their results, so weighting waits until they've run.
 
-1. **CFC-11, the banned gas ([C02](cases/C02-cfc11-eastern-china.md)).** NOAA's table shows the fall slowed, and a check set in advance puts worth a look at November 2013, 54 months before the May 2018 paper. AGAGE, a separate network, agrees under the gap rule. The flag count then failed on gases picked as clean: 2 of 4 reached level 3, and one of the two turned out to have a published rise. Five gases can't set a new count, so examples come first and the fix comes last. Accuracy is two numbers: how many real events get flagged, and how many quiet records do.
-   1. **More gas events.** The same rule on gases with a published change, each with the date people first said so, and the years before each event counted as quiet time. Done when the list and the rule are dated on an issue before those readings are opened, and both numbers are written down. If an event gas doesn't flag before its first public date, it counts as a miss.
-   2. **First-human dates.** Done when each event has the date people first noticed it, as well as the date of the paper. If that date can't be found, the case says so.
-   3. **The replacement gas.** If illegal CFC-11 pushed out legal HCFC-141b, the legal gas should bend the other way at about the same time. Done when a mirrored rule is dated and run. If it doesn't bend, the case says so.
-   4. **A blind test,** with names and dates hidden and decoys added. Done when the calls are locked before the reveal and scored on lead time, false alarms and direction.
-   5. **A new flag count,** set on those examples and judged on ones it never saw. Done when it's dated and its rate is written down. If it doesn't beat the old count, the old result stands.
+1. **CFC-11, the banned gas ([C02](cases/C02-cfc11-eastern-china.md)).** NOAA's table shows the fall slowed, and a check set in advance puts worth a look at November 2013, 54 months before the May 2018 paper. AGAGE, a separate network, agrees under the gap rule. The flag count then failed on gases picked as clean: 2 of 4 reached level 3, and one of the two turned out to have a published rise. Five gases can't set a new count, so examples come first and the fix comes last. Accuracy is two numbers: how many real events get flagged, and how many quiet records do. On gases with a published change it caught carbon tetrachloride early and missed CFC-12 and HCFC-141b.
+   1. **More gas events: done.** 1 hit, 2 misses, 1 not testable, and 1 false alarm in 3 quiet stretches ([C02](cases/C02-cfc11-eastern-china.md#gas-events)). Carbon tetrachloride reached level 3 45 to 73 months before the first reports. CFC-12 never rose above the line, because the rule can't see a fall that only slows. HCFC-141b missed, and its false alarm matches a real rise reported in 2014.
+   2. **Bursts of flags.** A run of false flags far above the usual rate may mark something real: a change in the air, a fault in an instrument, or a source next to one station. Done when the bar is set by a chance sum and dated on an issue before it runs on gases nobody has looked at, and the share of bursts with a known cause is written down. If bursts line up with known causes no more often than chance, the idea goes.
+   3. **First-human dates.** Done when each event has the date people first noticed it, as well as the date of the paper. If that date can't be found, the case says so.
+   4. **The replacement gas.** If illegal CFC-11 pushed out legal HCFC-141b, the legal gas should bend the other way at about the same time. Done when a mirrored rule is dated and run. If it doesn't bend, the case says so.
+   5. **A blind test,** with names and dates hidden and decoys added. Done when the calls are locked before the reveal and scored on lead time, false alarms and direction.
+   6. **A new flag count,** set on those examples and judged on ones it never saw. Done when it's dated and its rate is written down. If it doesn't beat the old count, the old result stands.
 2. **Volkswagen ([C04](cases/C04-volkswagen-test-cheat.md)).** Done when the road-test figures from the 2014 report sit next to the US limit in the case file, with the date they became public. If the report doesn't show that gap, the case file is wrong and gets corrected.
 3. **Chernobyl ([C01](cases/C01-chernobyl-1986.md)).** Done when the case file has a dated timeline from primary sources: what Sweden's Forsmark plant measured, how it ruled out its own reactors, and when Moscow spoke. If the sources don't support that order of events, the case file gets corrected.
 4. **T1 stage 1: rebuild the night-lights result, in six steps** ([tests/T1](tests/T1-night-lights.md)). Parked at step 1.2. Step 1.1 is done: the paper's replication files are linked there. Done when step 1.6 lands in the published range (about 35%). If it reads otherwise, compare against the paper's replication files before concluding anything.
@@ -45,4 +46,4 @@ These came from secondary sources or general reference works and should be check
 - **S05:** the 32% coverage figure comes from a preprint.
 - **S08:** 1.5 billion birds is the authors' scaled estimate, not a count.
 - **Zenodo:** one release (v0.1.1) has been archived so far; later releases should work the same way but haven't been tried.
-- **C02:** worth a look was picked after seeing the data, all 16 series come from one lab, and NOAA's table is smoothed. Only abstracts of the papers were read, including Choi et al. 2026 on H-2402.
+- **C02:** worth a look was picked after seeing the data, all 16 series come from one lab, and NOAA's table is smoothed. Only abstracts of the papers were read, including Choi et al. 2026 on H-2402, Park et al. 2021 and Lunt et al. 2018, and only the summary of the 2014 assessment. The gas events' first public dates are the first found, and carbon tetrachloride's turned out to have an earlier one.

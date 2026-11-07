@@ -1,0 +1,93 @@
+gas,source,lab,south,in_cfc11_set,tested,skipped,flags,first_flag,last_flag
+HCFC-141b,NOAA alt,NOAA,false,true,215,35,6,2011-11,2013-01
+HCFC-141b,NOAA amy,NOAA,false,false,0,251,0,,
+HCFC-141b,NOAA brw,NOAA,false,true,252,1,3,2011-11,2012-01
+HCFC-141b,NOAA cgo,NOAA,true,true,245,7,2,2013-08,2013-09
+HCFC-141b,NOAA hfm,NOAA,false,false,230,22,2,2020-10,2025-09
+HCFC-141b,NOAA kum,NOAA,false,true,253,0,1,2011-11,2011-11
+HCFC-141b,NOAA lef,NOAA,false,false,234,19,3,2013-10,2025-09
+HCFC-141b,NOAA mhd,NOAA,false,true,170,82,2,2011-11,2011-12
+HCFC-141b,NOAA mlo,NOAA,false,true,252,1,2,2013-02,2013-03
+HCFC-141b,NOAA nwr,NOAA,false,true,250,3,4,2011-10,2012-09
+HCFC-141b,NOAA smo,NOAA,true,true,241,12,3,2012-02,2013-02
+HCFC-141b,NOAA spo,NOAA,true,true,240,10,1,2013-08,2013-08
+HCFC-141b,NOAA thd,NOAA,false,true,180,73,3,2011-10,2011-12
+HCFC-141b,AGAGE cgo,AGAGE,true,true,208,38,0,,
+HCFC-141b,AGAGE cmn,AGAGE,false,false,38,208,0,,
+HCFC-141b,AGAGE gsn,AGAGE,false,true,43,55,1,2014-06,2014-06
+HCFC-141b,AGAGE jfj,AGAGE,false,false,138,108,0,,
+HCFC-141b,AGAGE mhd,AGAGE,false,true,201,45,3,2011-11,2012-12
+HCFC-141b,AGAGE rpb,AGAGE,false,true,93,151,0,,
+HCFC-141b,AGAGE smo,AGAGE,true,true,97,149,0,,
+HCFC-141b,AGAGE tac,AGAGE,false,false,0,246,0,,
+HCFC-141b,AGAGE thd,AGAGE,false,true,135,111,0,,
+HCFC-141b,AGAGE tob,AGAGE,false,false,0,246,0,,
+HCFC-141b,AGAGE zep,AGAGE,false,false,124,122,5,2011-11,2012-12
+CFC-115,NOAA brw,NOAA,false,true,0,127,0,,
+CFC-115,NOAA cgo,NOAA,true,true,0,128,0,,
+CFC-115,NOAA kum,NOAA,false,true,0,127,0,,
+CFC-115,NOAA mlo,NOAA,false,true,0,127,0,,
+CFC-115,NOAA smo,NOAA,true,true,0,127,0,,
+CFC-115,NOAA spo,NOAA,true,true,0,122,0,,
+CFC-115,NOAA thd,NOAA,false,true,0,127,0,,
+CFC-115,AGAGE cgo,AGAGE,true,true,148,98,4,2019-09,2019-12
+CFC-115,AGAGE cmn,AGAGE,false,false,94,152,2,2019-01,2019-02
+CFC-115,AGAGE gsn,AGAGE,false,true,46,16,7,2013-01,2014-06
+CFC-115,AGAGE jfj,AGAGE,false,false,76,170,3,2021-05,2023-09
+CFC-115,AGAGE mhd,AGAGE,false,true,138,108,0,,
+CFC-115,AGAGE rpb,AGAGE,false,true,62,182,11,2017-01,2018-02
+CFC-115,AGAGE smo,AGAGE,true,true,63,183,1,2024-02,2024-02
+CFC-115,AGAGE tac,AGAGE,false,false,0,246,0,,
+CFC-115,AGAGE thd,AGAGE,false,true,136,110,6,2015-12,2017-10
+CFC-115,AGAGE tob,AGAGE,false,false,0,246,0,,
+CFC-115,AGAGE zep,AGAGE,false,false,56,190,0,,
+CFC-12,NOAA alt,NOAA,false,true,258,0,0,,
+CFC-12,NOAA brw,NOAA,false,true,258,0,0,,
+CFC-12,NOAA cgo,NOAA,true,true,258,0,0,,
+CFC-12,NOAA kum,NOAA,false,true,258,0,0,,
+CFC-12,NOAA mhd,NOAA,false,true,194,64,0,,
+CFC-12,NOAA mlo,NOAA,false,true,258,0,4,2026-03,2026-06
+CFC-12,NOAA nwr,NOAA,false,true,258,0,0,,
+CFC-12,NOAA psa,NOAA,true,true,194,62,0,,
+CFC-12,NOAA smo,NOAA,true,true,258,0,0,,
+CFC-12,NOAA spo,NOAA,true,true,258,0,0,,
+CFC-12,NOAA sum,NOAA,false,true,152,101,0,,
+CFC-12,NOAA thd,NOAA,false,true,185,73,0,,
+CFC-12,AGAGE adr,AGAGE,false,false,0,0,0,,
+CFC-12,AGAGE cgo,AGAGE,true,true,242,0,0,,
+CFC-12,AGAGE cmn,AGAGE,false,false,93,153,0,,
+CFC-12,AGAGE cmo,AGAGE,false,false,0,0,0,,
+CFC-12,AGAGE gsn,AGAGE,false,true,40,40,1,2013-05,2013-05
+CFC-12,AGAGE jfj,AGAGE,false,false,23,223,0,,
+CFC-12,AGAGE mhd,AGAGE,false,true,246,0,0,,
+CFC-12,AGAGE rpb,AGAGE,false,true,241,5,0,,
+CFC-12,AGAGE smo,AGAGE,true,true,171,8,0,,
+CFC-12,AGAGE tac,AGAGE,false,false,0,246,0,,
+CFC-12,AGAGE thd,AGAGE,false,true,246,0,0,,
+CFC-12,AGAGE tob,AGAGE,false,false,0,246,0,,
+CFC-12,AGAGE zep,AGAGE,false,false,0,246,0,,
+carbon tetrachloride,NOAA alt,NOAA,false,true,254,4,5,2024-06,2025-08
+carbon tetrachloride,NOAA brw,NOAA,false,true,258,0,1,2025-06,2025-06
+carbon tetrachloride,NOAA cgo,NOAA,true,true,258,0,5,2017-12,2019-06
+carbon tetrachloride,NOAA kum,NOAA,false,true,258,0,0,,
+carbon tetrachloride,NOAA mhd,NOAA,false,true,194,64,1,2024-06,2024-06
+carbon tetrachloride,NOAA mlo,NOAA,false,true,215,43,1,2014-03,2014-03
+carbon tetrachloride,NOAA nwr,NOAA,false,true,257,0,2,2025-04,2025-05
+carbon tetrachloride,NOAA psa,NOAA,true,true,108,148,5,2018-10,2019-02
+carbon tetrachloride,NOAA smo,NOAA,true,true,258,0,4,2019-02,2019-05
+carbon tetrachloride,NOAA spo,NOAA,true,true,258,0,0,,
+carbon tetrachloride,NOAA sum,NOAA,false,true,74,179,5,2018-09,2019-01
+carbon tetrachloride,NOAA thd,NOAA,false,true,184,74,4,2016-12,2025-11
+carbon tetrachloride,AGAGE adr,AGAGE,false,false,0,0,0,,
+carbon tetrachloride,AGAGE cgo,AGAGE,true,true,238,4,4,2005-02,2018-03
+carbon tetrachloride,AGAGE cmn,AGAGE,false,false,113,133,0,,
+carbon tetrachloride,AGAGE cmo,AGAGE,false,false,0,0,0,,
+carbon tetrachloride,AGAGE gsn,AGAGE,false,true,35,45,2,2013-05,2016-05
+carbon tetrachloride,AGAGE jfj,AGAGE,false,false,64,182,0,,
+carbon tetrachloride,AGAGE mhd,AGAGE,false,true,241,5,3,2014-08,2014-10
+carbon tetrachloride,AGAGE rpb,AGAGE,false,true,162,84,1,2017-12,2017-12
+carbon tetrachloride,AGAGE smo,AGAGE,true,true,172,7,2,2015-01,2015-02
+carbon tetrachloride,AGAGE tac,AGAGE,false,false,0,246,0,,
+carbon tetrachloride,AGAGE thd,AGAGE,false,true,246,0,11,2018-04,2025-06
+carbon tetrachloride,AGAGE tob,AGAGE,false,false,0,246,0,,
+carbon tetrachloride,AGAGE zep,AGAGE,false,false,0,246,0,,

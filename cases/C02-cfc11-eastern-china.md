@@ -136,6 +136,58 @@ In the run, H-2402's fall about halved in both labs between 2010–2015 and 2022
 - Searches after the run found no reported change for H-1211, H-1301 or methyl chloroform. That isn't proof there was none.
 - These 4 gases have now been seen, so they can't judge a new version of the ladder.
 
+## Gas events
+
+A check also has to fire when something real happens. [Issue 25](https://github.com/Ciaran11221/Shadow-Associative-Prediction-Theory/issues/25) listed every gas with a published change that both labs could test, and dated the list and the scoring before any of their readings were opened. A [comment on 6 November](https://github.com/Ciaran11221/Shadow-Associative-Prediction-Theory/issues/25#issuecomment-6690511615), also before the run, tightened what counts as a hit. Code: [scripts/gas_events.py](../scripts/gas_events.py). Output: the `events` files in [cases/C02](C02/).
+
+- **Event stretch:** from the month the change began up to the month before the first public date. A hit is the level going from under 3 to 3 or more inside it. A level 3 carried over from before the change doesn't count.
+- **Quiet stretch:** from January 2005 up to the month the change began. Level 3 there is a false alarm.
+- **Not testable:** fewer than 3 sources, or only one lab, tested in the event stretch.
+
+**Result: 1 hit, 2 misses, 1 not testable, and 1 false alarm in 3 quiet stretches.** That stays on record.
+
+| Gas | Change began | First public date, as dated | Result | First level 3 | Lead | False alarm |
+|---|---|---|---|---|---|---|
+| Carbon tetrachloride | 2013 | 10 Feb 2021, Park et al. | Hit | Jan 2015 | 73 months | No |
+| CFC-12 | 2013 | 10 Feb 2021, Park et al. | Miss | None | None | No |
+| HCFC-141b | 2017 | 27 Apr 2022, Western et al. | Miss | None | None | Nov 2011 |
+| CFC-115 | 2011 | 10 Oct 2017, Vollmer et al. | Not testable | None | None | None |
+
+CFC-12 and carbon tetrachloride are tied to CFC-11, so the three of them count as one event. Before the run, the code met copies of the real files with every reading replaced by a made-up one, and each planted result read right. After it, a separate program that shares no code agreed on all 12,596 source-months and every outcome.
+
+**How much luck can do.** Before the run, a sum using each source's tested months, and no readings, gave each gas's chance of a hit and of a false alarm from luck alone. Each gas reads against the row nearest its own flag rate in its quiet stretch, a reading set before the run.
+
+| Month flag rate | HCFC-141b | CFC-12 | Carbon tetrachloride |
+|---|---|---|---|
+| 0.182%, a straight fall | 5.7% / 5.0% | 7.9% / 3.9% | 7.6% / 3.9% |
+| 0.305%, noise that carries over | 18.9% / 18.0% | 26.2% / 14.4% | 25.3% / 14.4% |
+| 0.472%, CFC-11's own rate before 2013 | 44.2% / 42.2% | 56.0% / 35.9% | 53.9% / 35.9% |
+
+Each cell is a lucky hit, then a lucky false alarm. A level of 3 is a low bar, which is why a single hit proves little.
+
+**Carbon tetrachloride is the hit.** Level 3 came in January 2015 from three sources: NOAA Mauna Loa in March 2014, AGAGE Mace Head from August to October 2014, and AGAGE Samoa in January 2015. Two of those only just cleared the line, at 3.19 and 3.06 times the usual miss, and none of the three flagged on another gas within a month. Its quiet stretch flagged 3 times in 1,324 source-months, 0.227%, which picks the 0.182% row: a lucky hit 7.6% of the time, or 12.8% at its exact rate. The stronger sign is the stretch as a whole. Gosan aside, 68% of readings sat above the line, against 30% in the quiet years, flags came 9 times as often, and a second run at level 3 lasted from December 2017 to October 2019.
+
+**An earlier report turned up after the run.** Lunt et al., online 18 October 2018, reported a new source of carbon tetrachloride in China's Shandong province after 2012. Measured from it, the lead is 45 months, not 73. The scored result stays as dated and this sits beside it, as with H-2402. Park et al. 2018, a discussion paper from March 2018, reported large unreported emissions from China for 2011 to 2015 but not a change, so it isn't counted.
+
+**CFC-12 is a clean miss.** Apart from one Gosan flag in May 2013, its readings sat below the line the whole time: the highest in the event stretch was 1.52 times the usual miss. The extra emissions made its fall a little shallower without ever turning it upward. The rule only sees readings above the line, so a fall that only slows can't flag. That blind spot is now on record.
+
+**HCFC-141b missed, and its false alarm was a real rise.** Gosan aside, only 3% of its readings sat above the line in its event stretch, as issue 25 expected for a gas that was still bending over. The false alarm came in November 2011 from 8 northern sources in both labs within two months, with southern stations following 3 to 22 months later, which is how a change in the air spreads. The 2014 ozone assessment, public on 10 September 2014, reported HCFC-141b emissions rising since the previous assessment, in line with reported production, which peaked again in 2011. So the alert saw a real rise, a legal and reported one, 34 months before that assessment said so. Under the dated rules it stays a false alarm.
+
+**CFC-115 couldn't be tested,** as expected: NOAA's file runs only from January 2010 to August 2015, too short for the 10-year rule. AGAGE stations flagged it 9 times in 2017 before the October paper, but one lab alone stops at level 2.
+
+**Seen in passing, not scored.**
+
+- Gosan flagged CFC-11, CFC-12, carbon tetrachloride and CFC-115 in May 2013, and none of its other four gases that spring. A plume from eastern China fits, and so does a shift in the winds.
+- Carbon tetrachloride reached level 3 again from June 2024 to May 2026, and was back at level 2 in June 2026, the latest month. The newest data are often revised.
+
+**Limits.**
+
+- Stations measure at fixed points, so a flag can come from a change in how air is carried to them as well as from emissions. A hit shows timing, not cause.
+- The lead runs to the first public report found, not to when anyone first noticed.
+- Only the abstracts of Park et al. 2021 and Lunt et al. 2018 were read, and only the summary of the 2014 assessment.
+- Quiet stretches keep turning out not to be quiet: H-2402 last time, HCFC-141b now. That makes false alarms look more common than they are.
+- These four gases have now been seen, so they can't judge a new version of the ladder.
+
 ## Sources
 
 - [Choi et al. 2026, npj Climate and Atmospheric Science](https://doi.org/10.1038/s41612-026-01399-4)
@@ -143,6 +195,11 @@ In the run, H-2402's fall about halved in both labs between 2010–2015 and 2022
 - [NOAA GML flask data notes, with the papers that first presented these records](https://gml.noaa.gov/aftp/data/hats/halons/flasks/ReadMe.txt)
 - [Montzka et al. 2003, Geophysical Research Letters](https://doi.org/10.1029/2003GL017745)
 - [Montzka et al. 2018, Nature](https://doi.org/10.1038/s41586-018-0106-2)
+- [Lunt et al. 2018, Geophysical Research Letters](https://doi.org/10.1029/2018GL079500)
+- [Park et al. 2018, Atmospheric Chemistry and Physics](https://doi.org/10.5194/acp-18-11729-2018)
+- [Vollmer et al. 2018, Atmospheric Chemistry and Physics](https://doi.org/10.5194/acp-18-979-2018)
+- [Western et al. 2022, Atmospheric Chemistry and Physics](https://doi.org/10.5194/acp-22-9601-2022)
+- [WMO/UNEP Scientific Assessment of Ozone Depletion: 2014](https://csl.noaa.gov/assessments/ozone/2014/)
 - [Rigby et al. 2019, Nature](https://doi.org/10.1038/s41586-019-1193-4)
 - [Park et al. 2021, Nature](https://doi.org/10.1038/s41586-021-03277-w)
 - [Chen et al. 2020, JGR Atmospheres](https://doi.org/10.1029/2020JD033051)

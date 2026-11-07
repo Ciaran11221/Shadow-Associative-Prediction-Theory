@@ -1,0 +1,5 @@
+gas,group,began,first_public,outcome,first_level_3,lead_months,sources_at_first_level_3,tested_noaa,tested_agage,false_alarm,first_false_level_3,quiet_months,quiet_months_possible,quiet_gas_years
+HCFC-141b,HCFC-141b,2017-01,2022-04-27,miss,,,,12,8,true,2011-11,144,118,9.833333333333334
+CFC-115,CFC-115,2011-01,2017-10-10,not testable,,,,0,6,false,,72,0,0.0
+CFC-12,CFC-11,2013-01,2021-02-10,miss,,,,12,8,false,,96,96,8.0
+carbon tetrachloride,CFC-11,2013-01,2021-02-10,hit,2015-01,73,3,12,8,false,,96,96,8.0
