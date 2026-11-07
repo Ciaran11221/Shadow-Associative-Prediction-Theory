@@ -1,0 +1,1016 @@
+gas,month,possible,level,count,labs,sources,level_18,count_18,one_lab_3plus
+HCFC-141b,2005-01,false,0,0,,,0,0,false
+HCFC-141b,2005-02,false,0,0,,,0,0,false
+HCFC-141b,2005-03,false,0,0,,,0,0,false
+HCFC-141b,2005-04,false,0,0,,,0,0,false
+HCFC-141b,2005-05,false,0,0,,,0,0,false
+HCFC-141b,2005-06,false,0,0,,,0,0,false
+HCFC-141b,2005-07,false,0,0,,,0,0,false
+HCFC-141b,2005-08,false,0,0,,,0,0,false
+HCFC-141b,2005-09,false,0,0,,,0,0,false
+HCFC-141b,2005-10,false,0,0,,,0,0,false
+HCFC-141b,2005-11,false,0,0,,,0,0,false
+HCFC-141b,2005-12,false,0,0,,,0,0,false
+HCFC-141b,2006-01,false,0,0,,,0,0,false
+HCFC-141b,2006-02,false,0,0,,,0,0,false
+HCFC-141b,2006-03,false,0,0,,,0,0,false
+HCFC-141b,2006-04,false,0,0,,,0,0,false
+HCFC-141b,2006-05,false,0,0,,,0,0,false
+HCFC-141b,2006-06,false,0,0,,,0,0,false
+HCFC-141b,2006-07,false,0,0,,,0,0,false
+HCFC-141b,2006-08,false,0,0,,,0,0,false
+HCFC-141b,2006-09,false,0,0,,,0,0,false
+HCFC-141b,2006-10,false,0,0,,,0,0,false
+HCFC-141b,2006-11,false,0,0,,,0,0,false
+HCFC-141b,2006-12,false,0,0,,,0,0,false
+HCFC-141b,2007-01,false,0,0,,,0,0,false
+HCFC-141b,2007-02,false,0,0,,,0,0,false
+HCFC-141b,2007-03,true,0,0,,,0,0,false
+HCFC-141b,2007-04,true,0,0,,,0,0,false
+HCFC-141b,2007-05,true,0,0,,,0,0,false
+HCFC-141b,2007-06,true,0,0,,,0,0,false
+HCFC-141b,2007-07,true,0,0,,,0,0,false
+HCFC-141b,2007-08,true,0,0,,,0,0,false
+HCFC-141b,2007-09,true,0,0,,,0,0,false
+HCFC-141b,2007-10,true,0,0,,,0,0,false
+HCFC-141b,2007-11,true,0,0,,,0,0,false
+HCFC-141b,2007-12,true,0,0,,,0,0,false
+HCFC-141b,2008-01,true,0,0,,,0,0,false
+HCFC-141b,2008-02,true,0,0,,,0,0,false
+HCFC-141b,2008-03,true,0,0,,,0,0,false
+HCFC-141b,2008-04,true,0,0,,,0,0,false
+HCFC-141b,2008-05,true,0,0,,,0,0,false
+HCFC-141b,2008-06,true,0,0,,,0,0,false
+HCFC-141b,2008-07,true,0,0,,,0,0,false
+HCFC-141b,2008-08,true,0,0,,,0,0,false
+HCFC-141b,2008-09,true,0,0,,,0,0,false
+HCFC-141b,2008-10,true,0,0,,,0,0,false
+HCFC-141b,2008-11,true,0,0,,,0,0,false
+HCFC-141b,2008-12,true,0,0,,,0,0,false
+HCFC-141b,2009-01,true,0,0,,,0,0,false
+HCFC-141b,2009-02,true,0,0,,,0,0,false
+HCFC-141b,2009-03,true,0,0,,,0,0,false
+HCFC-141b,2009-04,true,0,0,,,0,0,false
+HCFC-141b,2009-05,true,0,0,,,0,0,false
+HCFC-141b,2009-06,true,0,0,,,0,0,false
+HCFC-141b,2009-07,true,0,0,,,0,0,false
+HCFC-141b,2009-08,true,0,0,,,0,0,false
+HCFC-141b,2009-09,true,0,0,,,0,0,false
+HCFC-141b,2009-10,true,0,0,,,0,0,false
+HCFC-141b,2009-11,true,0,0,,,0,0,false
+HCFC-141b,2009-12,true,0,0,,,0,0,false
+HCFC-141b,2010-01,true,0,0,,,0,0,false
+HCFC-141b,2010-02,true,0,0,,,0,0,false
+HCFC-141b,2010-03,true,0,0,,,0,0,false
+HCFC-141b,2010-04,true,0,0,,,0,0,false
+HCFC-141b,2010-05,true,0,0,,,0,0,false
+HCFC-141b,2010-06,true,0,0,,,0,0,false
+HCFC-141b,2010-07,true,0,0,,,0,0,false
+HCFC-141b,2010-08,true,0,0,,,0,0,false
+HCFC-141b,2010-09,true,0,0,,,0,0,false
+HCFC-141b,2010-10,true,0,0,,,0,0,false
+HCFC-141b,2010-11,true,0,0,,,0,0,false
+HCFC-141b,2010-12,true,0,0,,,0,0,false
+HCFC-141b,2011-01,true,0,0,,,0,0,false
+HCFC-141b,2011-02,true,0,0,,,0,0,false
+HCFC-141b,2011-03,true,0,0,,,0,0,false
+HCFC-141b,2011-04,true,0,0,,,0,0,false
+HCFC-141b,2011-05,true,0,0,,,0,0,false
+HCFC-141b,2011-06,true,0,0,,,0,0,false
+HCFC-141b,2011-07,true,0,0,,,0,0,false
+HCFC-141b,2011-08,true,0,0,,,0,0,false
+HCFC-141b,2011-09,true,0,0,,,0,0,false
+HCFC-141b,2011-10,true,2,2,NOAA,NOAA nwr;NOAA thd,2,2,false
+HCFC-141b,2011-11,true,3,8,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA brw;NOAA kum;NOAA mhd;NOAA nwr;NOAA thd,3,7,true
+HCFC-141b,2011-12,true,3,8,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA brw;NOAA kum;NOAA mhd;NOAA nwr;NOAA thd,3,7,true
+HCFC-141b,2012-01,true,3,8,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA brw;NOAA kum;NOAA mhd;NOAA nwr;NOAA thd,3,7,true
+HCFC-141b,2012-02,true,3,9,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA brw;NOAA kum;NOAA mhd;NOAA nwr;NOAA smo;NOAA thd,3,8,true
+HCFC-141b,2012-03,true,3,9,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA brw;NOAA kum;NOAA mhd;NOAA nwr;NOAA smo;NOAA thd,3,8,true
+HCFC-141b,2012-04,true,3,9,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA brw;NOAA kum;NOAA mhd;NOAA nwr;NOAA smo;NOAA thd,3,8,true
+HCFC-141b,2012-05,true,3,9,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA brw;NOAA kum;NOAA mhd;NOAA nwr;NOAA smo;NOAA thd,3,8,true
+HCFC-141b,2012-06,true,3,9,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA brw;NOAA kum;NOAA mhd;NOAA nwr;NOAA smo;NOAA thd,3,8,true
+HCFC-141b,2012-07,true,3,9,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA brw;NOAA kum;NOAA mhd;NOAA nwr;NOAA smo;NOAA thd,3,8,true
+HCFC-141b,2012-08,true,3,9,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA brw;NOAA kum;NOAA mhd;NOAA nwr;NOAA smo;NOAA thd,3,8,true
+HCFC-141b,2012-09,true,3,9,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA brw;NOAA kum;NOAA mhd;NOAA nwr;NOAA smo;NOAA thd,3,8,true
+HCFC-141b,2012-10,true,3,9,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA brw;NOAA kum;NOAA mhd;NOAA nwr;NOAA smo;NOAA thd,3,8,true
+HCFC-141b,2012-11,true,3,8,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA brw;NOAA mhd;NOAA nwr;NOAA smo;NOAA thd,3,7,true
+HCFC-141b,2012-12,true,3,6,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA brw;NOAA nwr;NOAA smo,3,5,true
+HCFC-141b,2013-01,true,3,5,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA nwr;NOAA smo,3,4,true
+HCFC-141b,2013-02,true,3,6,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA mlo;NOAA nwr;NOAA smo,3,5,true
+HCFC-141b,2013-03,true,3,6,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA mlo;NOAA nwr;NOAA smo,3,5,true
+HCFC-141b,2013-04,true,3,6,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA mlo;NOAA nwr;NOAA smo,3,5,true
+HCFC-141b,2013-05,true,3,6,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA mlo;NOAA nwr;NOAA smo,3,5,true
+HCFC-141b,2013-06,true,3,6,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA mlo;NOAA nwr;NOAA smo,3,5,true
+HCFC-141b,2013-07,true,3,6,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA mlo;NOAA nwr;NOAA smo,3,5,true
+HCFC-141b,2013-08,true,3,8,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA cgo;NOAA mlo;NOAA nwr;NOAA smo;NOAA spo,3,7,true
+HCFC-141b,2013-09,true,3,7,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA cgo;NOAA mlo;NOAA smo;NOAA spo,3,6,true
+HCFC-141b,2013-10,true,3,8,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA cgo;NOAA lef;NOAA mlo;NOAA smo;NOAA spo,3,6,true
+HCFC-141b,2013-11,true,3,8,AGAGE;NOAA,AGAGE mhd;AGAGE zep;NOAA alt;NOAA cgo;NOAA lef;NOAA mlo;NOAA smo;NOAA spo,3,6,true
+HCFC-141b,2013-12,true,2,6,NOAA,NOAA alt;NOAA cgo;NOAA lef;NOAA mlo;NOAA smo;NOAA spo,2,5,true
+HCFC-141b,2014-01,true,2,5,NOAA,NOAA cgo;NOAA lef;NOAA mlo;NOAA smo;NOAA spo,2,4,true
+HCFC-141b,2014-02,true,2,4,NOAA,NOAA cgo;NOAA lef;NOAA mlo;NOAA spo,2,3,true
+HCFC-141b,2014-03,true,2,3,NOAA,NOAA cgo;NOAA lef;NOAA spo,2,2,true
+HCFC-141b,2014-04,true,2,3,NOAA,NOAA cgo;NOAA lef;NOAA spo,2,2,true
+HCFC-141b,2014-05,true,2,3,NOAA,NOAA cgo;NOAA lef;NOAA spo,2,2,true
+HCFC-141b,2014-06,true,3,4,AGAGE;NOAA,AGAGE gsn;NOAA cgo;NOAA lef;NOAA spo,3,3,true
+HCFC-141b,2014-07,true,3,4,AGAGE;NOAA,AGAGE gsn;NOAA cgo;NOAA lef;NOAA spo,3,3,true
+HCFC-141b,2014-08,true,3,3,AGAGE;NOAA,AGAGE gsn;NOAA cgo;NOAA lef,2,2,false
+HCFC-141b,2014-09,true,2,2,AGAGE;NOAA,AGAGE gsn;NOAA lef,1,1,false
+HCFC-141b,2014-10,true,1,1,AGAGE,AGAGE gsn,1,1,false
+HCFC-141b,2014-11,true,1,1,AGAGE,AGAGE gsn,1,1,false
+HCFC-141b,2014-12,true,1,1,AGAGE,AGAGE gsn,1,1,false
+HCFC-141b,2015-01,true,1,1,AGAGE,AGAGE gsn,1,1,false
+HCFC-141b,2015-02,true,1,1,AGAGE,AGAGE gsn,1,1,false
+HCFC-141b,2015-03,true,1,1,AGAGE,AGAGE gsn,1,1,false
+HCFC-141b,2015-04,true,1,1,AGAGE,AGAGE gsn,1,1,false
+HCFC-141b,2015-05,true,1,1,AGAGE,AGAGE gsn,1,1,false
+HCFC-141b,2015-06,true,0,0,,,0,0,false
+HCFC-141b,2015-07,true,0,0,,,0,0,false
+HCFC-141b,2015-08,true,0,0,,,0,0,false
+HCFC-141b,2015-09,true,0,0,,,0,0,false
+HCFC-141b,2015-10,true,0,0,,,0,0,false
+HCFC-141b,2015-11,true,0,0,,,0,0,false
+HCFC-141b,2015-12,true,0,0,,,0,0,false
+HCFC-141b,2016-01,true,0,0,,,0,0,false
+HCFC-141b,2016-02,true,0,0,,,0,0,false
+HCFC-141b,2016-03,true,0,0,,,0,0,false
+HCFC-141b,2016-04,true,0,0,,,0,0,false
+HCFC-141b,2016-05,true,0,0,,,0,0,false
+HCFC-141b,2016-06,true,0,0,,,0,0,false
+HCFC-141b,2016-07,true,0,0,,,0,0,false
+HCFC-141b,2016-08,true,0,0,,,0,0,false
+HCFC-141b,2016-09,true,0,0,,,0,0,false
+HCFC-141b,2016-10,true,0,0,,,0,0,false
+HCFC-141b,2016-11,true,0,0,,,0,0,false
+HCFC-141b,2016-12,true,0,0,,,0,0,false
+HCFC-141b,2017-01,true,0,0,,,0,0,false
+HCFC-141b,2017-02,true,0,0,,,0,0,false
+HCFC-141b,2017-03,true,0,0,,,0,0,false
+HCFC-141b,2017-04,true,0,0,,,0,0,false
+HCFC-141b,2017-05,true,0,0,,,0,0,false
+HCFC-141b,2017-06,true,0,0,,,0,0,false
+HCFC-141b,2017-07,true,0,0,,,0,0,false
+HCFC-141b,2017-08,true,0,0,,,0,0,false
+HCFC-141b,2017-09,true,0,0,,,0,0,false
+HCFC-141b,2017-10,true,0,0,,,0,0,false
+HCFC-141b,2017-11,true,0,0,,,0,0,false
+HCFC-141b,2017-12,true,0,0,,,0,0,false
+HCFC-141b,2018-01,true,0,0,,,0,0,false
+HCFC-141b,2018-02,true,0,0,,,0,0,false
+HCFC-141b,2018-03,true,0,0,,,0,0,false
+HCFC-141b,2018-04,true,0,0,,,0,0,false
+HCFC-141b,2018-05,true,0,0,,,0,0,false
+HCFC-141b,2018-06,true,0,0,,,0,0,false
+HCFC-141b,2018-07,true,0,0,,,0,0,false
+HCFC-141b,2018-08,true,0,0,,,0,0,false
+HCFC-141b,2018-09,true,0,0,,,0,0,false
+HCFC-141b,2018-10,true,0,0,,,0,0,false
+HCFC-141b,2018-11,true,0,0,,,0,0,false
+HCFC-141b,2018-12,true,0,0,,,0,0,false
+HCFC-141b,2019-01,true,0,0,,,0,0,false
+HCFC-141b,2019-02,true,0,0,,,0,0,false
+HCFC-141b,2019-03,true,0,0,,,0,0,false
+HCFC-141b,2019-04,true,0,0,,,0,0,false
+HCFC-141b,2019-05,true,0,0,,,0,0,false
+HCFC-141b,2019-06,true,0,0,,,0,0,false
+HCFC-141b,2019-07,true,0,0,,,0,0,false
+HCFC-141b,2019-08,true,0,0,,,0,0,false
+HCFC-141b,2019-09,true,0,0,,,0,0,false
+HCFC-141b,2019-10,true,0,0,,,0,0,false
+HCFC-141b,2019-11,true,0,0,,,0,0,false
+HCFC-141b,2019-12,true,0,0,,,0,0,false
+HCFC-141b,2020-01,true,0,0,,,0,0,false
+HCFC-141b,2020-02,true,0,0,,,0,0,false
+HCFC-141b,2020-03,true,0,0,,,0,0,false
+HCFC-141b,2020-04,true,0,0,,,0,0,false
+HCFC-141b,2020-05,true,0,0,,,0,0,false
+HCFC-141b,2020-06,true,0,0,,,0,0,false
+HCFC-141b,2020-07,true,0,0,,,0,0,false
+HCFC-141b,2020-08,true,0,0,,,0,0,false
+HCFC-141b,2020-09,true,0,0,,,0,0,false
+HCFC-141b,2020-10,true,1,1,NOAA,NOAA hfm,0,0,false
+HCFC-141b,2020-11,true,1,1,NOAA,NOAA hfm,0,0,false
+HCFC-141b,2020-12,true,1,1,NOAA,NOAA hfm,0,0,false
+HCFC-141b,2021-01,true,1,1,NOAA,NOAA hfm,0,0,false
+HCFC-141b,2021-02,true,1,1,NOAA,NOAA hfm,0,0,false
+HCFC-141b,2021-03,true,1,1,NOAA,NOAA hfm,0,0,false
+HCFC-141b,2021-04,true,1,1,NOAA,NOAA hfm,0,0,false
+HCFC-141b,2021-05,true,1,1,NOAA,NOAA hfm,0,0,false
+HCFC-141b,2021-06,true,1,1,NOAA,NOAA hfm,0,0,false
+HCFC-141b,2021-07,true,1,1,NOAA,NOAA hfm,0,0,false
+HCFC-141b,2021-08,true,1,1,NOAA,NOAA hfm,0,0,false
+HCFC-141b,2021-09,true,1,1,NOAA,NOAA hfm,0,0,false
+HCFC-141b,2021-10,true,0,0,,,0,0,false
+HCFC-141b,2021-11,true,0,0,,,0,0,false
+HCFC-141b,2021-12,true,0,0,,,0,0,false
+HCFC-141b,2022-01,true,0,0,,,0,0,false
+HCFC-141b,2022-02,true,0,0,,,0,0,false
+HCFC-141b,2022-03,true,0,0,,,0,0,false
+HCFC-141b,2022-04,true,0,0,,,0,0,false
+HCFC-141b,2022-05,true,0,0,,,0,0,false
+HCFC-141b,2022-06,true,0,0,,,0,0,false
+HCFC-141b,2022-07,true,0,0,,,0,0,false
+HCFC-141b,2022-08,true,0,0,,,0,0,false
+HCFC-141b,2022-09,true,0,0,,,0,0,false
+HCFC-141b,2022-10,true,0,0,,,0,0,false
+HCFC-141b,2022-11,true,0,0,,,0,0,false
+HCFC-141b,2022-12,true,0,0,,,0,0,false
+HCFC-141b,2023-01,true,0,0,,,0,0,false
+HCFC-141b,2023-02,true,0,0,,,0,0,false
+HCFC-141b,2023-03,true,0,0,,,0,0,false
+HCFC-141b,2023-04,true,0,0,,,0,0,false
+HCFC-141b,2023-05,true,0,0,,,0,0,false
+HCFC-141b,2023-06,true,0,0,,,0,0,false
+HCFC-141b,2023-07,true,0,0,,,0,0,false
+HCFC-141b,2023-08,true,0,0,,,0,0,false
+HCFC-141b,2023-09,true,0,0,,,0,0,false
+HCFC-141b,2023-10,true,0,0,,,0,0,false
+HCFC-141b,2023-11,true,0,0,,,0,0,false
+HCFC-141b,2023-12,true,0,0,,,0,0,false
+HCFC-141b,2024-01,true,0,0,,,0,0,false
+HCFC-141b,2024-02,true,0,0,,,0,0,false
+HCFC-141b,2024-03,true,0,0,,,0,0,false
+HCFC-141b,2024-04,true,0,0,,,0,0,false
+HCFC-141b,2024-05,true,0,0,,,0,0,false
+HCFC-141b,2024-06,true,0,0,,,0,0,false
+HCFC-141b,2024-07,true,0,0,,,0,0,false
+HCFC-141b,2024-08,true,0,0,,,0,0,false
+HCFC-141b,2024-09,true,1,1,NOAA,NOAA lef,0,0,false
+HCFC-141b,2024-10,true,1,1,NOAA,NOAA lef,0,0,false
+HCFC-141b,2024-11,true,1,1,NOAA,NOAA lef,0,0,false
+HCFC-141b,2024-12,true,1,1,NOAA,NOAA lef,0,0,false
+HCFC-141b,2025-01,true,1,1,NOAA,NOAA lef,0,0,false
+HCFC-141b,2025-02,true,1,1,NOAA,NOAA lef,0,0,false
+HCFC-141b,2025-03,true,1,1,NOAA,NOAA lef,0,0,false
+HCFC-141b,2025-04,true,1,1,NOAA,NOAA lef,0,0,false
+HCFC-141b,2025-05,true,1,1,NOAA,NOAA lef,0,0,false
+HCFC-141b,2025-06,true,1,1,NOAA,NOAA lef,0,0,false
+HCFC-141b,2025-07,true,1,1,NOAA,NOAA lef,0,0,false
+HCFC-141b,2025-08,true,1,1,NOAA,NOAA lef,0,0,false
+HCFC-141b,2025-09,true,2,2,NOAA,NOAA hfm;NOAA lef,0,0,false
+HCFC-141b,2025-10,true,2,2,NOAA,NOAA hfm;NOAA lef,0,0,false
+HCFC-141b,2025-11,true,2,2,NOAA,NOAA hfm;NOAA lef,0,0,false
+HCFC-141b,2025-12,true,2,2,NOAA,NOAA hfm;NOAA lef,0,0,false
+HCFC-141b,2026-01,true,2,2,NOAA,NOAA hfm;NOAA lef,0,0,false
+CFC-115,2005-01,false,0,0,,,0,0,false
+CFC-115,2005-02,false,0,0,,,0,0,false
+CFC-115,2005-03,false,0,0,,,0,0,false
+CFC-115,2005-04,false,0,0,,,0,0,false
+CFC-115,2005-05,false,0,0,,,0,0,false
+CFC-115,2005-06,false,0,0,,,0,0,false
+CFC-115,2005-07,false,0,0,,,0,0,false
+CFC-115,2005-08,false,0,0,,,0,0,false
+CFC-115,2005-09,false,0,0,,,0,0,false
+CFC-115,2005-10,false,0,0,,,0,0,false
+CFC-115,2005-11,false,0,0,,,0,0,false
+CFC-115,2005-12,false,0,0,,,0,0,false
+CFC-115,2006-01,false,0,0,,,0,0,false
+CFC-115,2006-02,false,0,0,,,0,0,false
+CFC-115,2006-03,false,0,0,,,0,0,false
+CFC-115,2006-04,false,0,0,,,0,0,false
+CFC-115,2006-05,false,0,0,,,0,0,false
+CFC-115,2006-06,false,0,0,,,0,0,false
+CFC-115,2006-07,false,0,0,,,0,0,false
+CFC-115,2006-08,false,0,0,,,0,0,false
+CFC-115,2006-09,false,0,0,,,0,0,false
+CFC-115,2006-10,false,0,0,,,0,0,false
+CFC-115,2006-11,false,0,0,,,0,0,false
+CFC-115,2006-12,false,0,0,,,0,0,false
+CFC-115,2007-01,false,0,0,,,0,0,false
+CFC-115,2007-02,false,0,0,,,0,0,false
+CFC-115,2007-03,false,0,0,,,0,0,false
+CFC-115,2007-04,false,0,0,,,0,0,false
+CFC-115,2007-05,false,0,0,,,0,0,false
+CFC-115,2007-06,false,0,0,,,0,0,false
+CFC-115,2007-07,false,0,0,,,0,0,false
+CFC-115,2007-08,false,0,0,,,0,0,false
+CFC-115,2007-09,false,0,0,,,0,0,false
+CFC-115,2007-10,false,0,0,,,0,0,false
+CFC-115,2007-11,false,0,0,,,0,0,false
+CFC-115,2007-12,false,0,0,,,0,0,false
+CFC-115,2008-01,false,0,0,,,0,0,false
+CFC-115,2008-02,false,0,0,,,0,0,false
+CFC-115,2008-03,false,0,0,,,0,0,false
+CFC-115,2008-04,false,0,0,,,0,0,false
+CFC-115,2008-05,false,0,0,,,0,0,false
+CFC-115,2008-06,false,0,0,,,0,0,false
+CFC-115,2008-07,false,0,0,,,0,0,false
+CFC-115,2008-08,false,0,0,,,0,0,false
+CFC-115,2008-09,false,0,0,,,0,0,false
+CFC-115,2008-10,false,0,0,,,0,0,false
+CFC-115,2008-11,false,0,0,,,0,0,false
+CFC-115,2008-12,false,0,0,,,0,0,false
+CFC-115,2009-01,false,0,0,,,0,0,false
+CFC-115,2009-02,false,0,0,,,0,0,false
+CFC-115,2009-03,false,0,0,,,0,0,false
+CFC-115,2009-04,false,0,0,,,0,0,false
+CFC-115,2009-05,false,0,0,,,0,0,false
+CFC-115,2009-06,false,0,0,,,0,0,false
+CFC-115,2009-07,false,0,0,,,0,0,false
+CFC-115,2009-08,false,0,0,,,0,0,false
+CFC-115,2009-09,false,0,0,,,0,0,false
+CFC-115,2009-10,false,0,0,,,0,0,false
+CFC-115,2009-11,false,0,0,,,0,0,false
+CFC-115,2009-12,false,0,0,,,0,0,false
+CFC-115,2010-01,false,0,0,,,0,0,false
+CFC-115,2010-02,false,0,0,,,0,0,false
+CFC-115,2010-03,false,0,0,,,0,0,false
+CFC-115,2010-04,false,0,0,,,0,0,false
+CFC-115,2010-05,false,0,0,,,0,0,false
+CFC-115,2010-06,false,0,0,,,0,0,false
+CFC-115,2010-07,false,0,0,,,0,0,false
+CFC-115,2010-08,false,0,0,,,0,0,false
+CFC-115,2010-09,false,0,0,,,0,0,false
+CFC-115,2010-10,false,0,0,,,0,0,false
+CFC-115,2010-11,false,0,0,,,0,0,false
+CFC-115,2010-12,false,0,0,,,0,0,false
+CFC-115,2011-01,false,0,0,,,0,0,false
+CFC-115,2011-02,false,0,0,,,0,0,false
+CFC-115,2011-03,false,0,0,,,0,0,false
+CFC-115,2011-04,false,0,0,,,0,0,false
+CFC-115,2011-05,false,0,0,,,0,0,false
+CFC-115,2011-06,false,0,0,,,0,0,false
+CFC-115,2011-07,false,0,0,,,0,0,false
+CFC-115,2011-08,false,0,0,,,0,0,false
+CFC-115,2011-09,false,0,0,,,0,0,false
+CFC-115,2011-10,false,0,0,,,0,0,false
+CFC-115,2011-11,false,0,0,,,0,0,false
+CFC-115,2011-12,false,0,0,,,0,0,false
+CFC-115,2012-01,false,0,0,,,0,0,false
+CFC-115,2012-02,false,0,0,,,0,0,false
+CFC-115,2012-03,false,0,0,,,0,0,false
+CFC-115,2012-04,false,0,0,,,0,0,false
+CFC-115,2012-05,false,0,0,,,0,0,false
+CFC-115,2012-06,false,0,0,,,0,0,false
+CFC-115,2012-07,false,0,0,,,0,0,false
+CFC-115,2012-08,false,0,0,,,0,0,false
+CFC-115,2012-09,false,0,0,,,0,0,false
+CFC-115,2012-10,false,0,0,,,0,0,false
+CFC-115,2012-11,false,0,0,,,0,0,false
+CFC-115,2012-12,false,0,0,,,0,0,false
+CFC-115,2013-01,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2013-02,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2013-03,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2013-04,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2013-05,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2013-06,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2013-07,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2013-08,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2013-09,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2013-10,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2013-11,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2013-12,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2014-01,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2014-02,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2014-03,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2014-04,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2014-05,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2014-06,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2014-07,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2014-08,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2014-09,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2014-10,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2014-11,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2014-12,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2015-01,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2015-02,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2015-03,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2015-04,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2015-05,false,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-115,2015-06,false,0,0,,,0,0,false
+CFC-115,2015-07,false,0,0,,,0,0,false
+CFC-115,2015-08,false,0,0,,,0,0,false
+CFC-115,2015-09,false,0,0,,,0,0,false
+CFC-115,2015-10,false,0,0,,,0,0,false
+CFC-115,2015-11,false,0,0,,,0,0,false
+CFC-115,2015-12,false,1,1,AGAGE,AGAGE thd,1,1,false
+CFC-115,2016-01,false,1,1,AGAGE,AGAGE thd,1,1,false
+CFC-115,2016-02,false,1,1,AGAGE,AGAGE thd,1,1,false
+CFC-115,2016-03,false,1,1,AGAGE,AGAGE thd,1,1,false
+CFC-115,2016-04,false,1,1,AGAGE,AGAGE thd,1,1,false
+CFC-115,2016-05,false,1,1,AGAGE,AGAGE thd,1,1,false
+CFC-115,2016-06,false,1,1,AGAGE,AGAGE thd,1,1,false
+CFC-115,2016-07,false,1,1,AGAGE,AGAGE thd,1,1,false
+CFC-115,2016-08,false,1,1,AGAGE,AGAGE thd,1,1,false
+CFC-115,2016-09,false,1,1,AGAGE,AGAGE thd,1,1,false
+CFC-115,2016-10,false,1,1,AGAGE,AGAGE thd,1,1,false
+CFC-115,2016-11,false,1,1,AGAGE,AGAGE thd,1,1,false
+CFC-115,2016-12,false,1,1,AGAGE,AGAGE thd,1,1,false
+CFC-115,2017-01,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2017-02,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2017-03,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2017-04,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2017-05,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2017-06,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2017-07,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2017-08,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2017-09,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2017-10,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2017-11,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2017-12,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2018-01,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2018-02,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2018-03,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2018-04,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2018-05,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2018-06,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2018-07,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2018-08,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2018-09,false,2,2,AGAGE,AGAGE rpb;AGAGE thd,2,2,false
+CFC-115,2018-10,false,1,1,AGAGE,AGAGE rpb,1,1,false
+CFC-115,2018-11,false,1,1,AGAGE,AGAGE rpb,1,1,false
+CFC-115,2018-12,false,1,1,AGAGE,AGAGE rpb,1,1,false
+CFC-115,2019-01,false,2,2,AGAGE,AGAGE cmn;AGAGE rpb,1,1,false
+CFC-115,2019-02,false,1,1,AGAGE,AGAGE cmn,0,0,false
+CFC-115,2019-03,false,1,1,AGAGE,AGAGE cmn,0,0,false
+CFC-115,2019-04,false,1,1,AGAGE,AGAGE cmn,0,0,false
+CFC-115,2019-05,false,1,1,AGAGE,AGAGE cmn,0,0,false
+CFC-115,2019-06,false,1,1,AGAGE,AGAGE cmn,0,0,false
+CFC-115,2019-07,false,1,1,AGAGE,AGAGE cmn,0,0,false
+CFC-115,2019-08,false,1,1,AGAGE,AGAGE cmn,0,0,false
+CFC-115,2019-09,false,2,2,AGAGE,AGAGE cgo;AGAGE cmn,1,1,false
+CFC-115,2019-10,false,2,2,AGAGE,AGAGE cgo;AGAGE cmn,1,1,false
+CFC-115,2019-11,false,2,2,AGAGE,AGAGE cgo;AGAGE cmn,1,1,false
+CFC-115,2019-12,false,2,2,AGAGE,AGAGE cgo;AGAGE cmn,1,1,false
+CFC-115,2020-01,false,2,2,AGAGE,AGAGE cgo;AGAGE cmn,1,1,false
+CFC-115,2020-02,false,1,1,AGAGE,AGAGE cgo,1,1,false
+CFC-115,2020-03,false,1,1,AGAGE,AGAGE cgo,1,1,false
+CFC-115,2020-04,false,1,1,AGAGE,AGAGE cgo,1,1,false
+CFC-115,2020-05,false,1,1,AGAGE,AGAGE cgo,1,1,false
+CFC-115,2020-06,false,1,1,AGAGE,AGAGE cgo,1,1,false
+CFC-115,2020-07,false,1,1,AGAGE,AGAGE cgo,1,1,false
+CFC-115,2020-08,false,1,1,AGAGE,AGAGE cgo,1,1,false
+CFC-115,2020-09,false,1,1,AGAGE,AGAGE cgo,1,1,false
+CFC-115,2020-10,false,1,1,AGAGE,AGAGE cgo,1,1,false
+CFC-115,2020-11,false,1,1,AGAGE,AGAGE cgo,1,1,false
+CFC-115,2020-12,false,0,0,,,0,0,false
+CFC-115,2021-01,false,0,0,,,0,0,false
+CFC-115,2021-02,false,0,0,,,0,0,false
+CFC-115,2021-03,false,0,0,,,0,0,false
+CFC-115,2021-04,false,0,0,,,0,0,false
+CFC-115,2021-05,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2021-06,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2021-07,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2021-08,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2021-09,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2021-10,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2021-11,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2021-12,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2022-01,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2022-02,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2022-03,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2022-04,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2022-05,false,0,0,,,0,0,false
+CFC-115,2022-06,false,0,0,,,0,0,false
+CFC-115,2022-07,false,0,0,,,0,0,false
+CFC-115,2022-08,false,0,0,,,0,0,false
+CFC-115,2022-09,false,0,0,,,0,0,false
+CFC-115,2022-10,false,0,0,,,0,0,false
+CFC-115,2022-11,false,0,0,,,0,0,false
+CFC-115,2022-12,false,0,0,,,0,0,false
+CFC-115,2023-01,false,0,0,,,0,0,false
+CFC-115,2023-02,false,0,0,,,0,0,false
+CFC-115,2023-03,false,0,0,,,0,0,false
+CFC-115,2023-04,false,0,0,,,0,0,false
+CFC-115,2023-05,false,0,0,,,0,0,false
+CFC-115,2023-06,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2023-07,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2023-08,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2023-09,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2023-10,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2023-11,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2023-12,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2024-01,false,1,1,AGAGE,AGAGE jfj,0,0,false
+CFC-115,2024-02,false,2,2,AGAGE,AGAGE jfj;AGAGE smo,1,1,false
+CFC-115,2024-03,false,2,2,AGAGE,AGAGE jfj;AGAGE smo,1,1,false
+CFC-115,2024-04,false,2,2,AGAGE,AGAGE jfj;AGAGE smo,1,1,false
+CFC-115,2024-05,false,2,2,AGAGE,AGAGE jfj;AGAGE smo,1,1,false
+CFC-115,2024-06,false,2,2,AGAGE,AGAGE jfj;AGAGE smo,1,1,false
+CFC-115,2024-07,false,2,2,AGAGE,AGAGE jfj;AGAGE smo,1,1,false
+CFC-115,2024-08,false,2,2,AGAGE,AGAGE jfj;AGAGE smo,1,1,false
+CFC-115,2024-09,false,1,1,AGAGE,AGAGE smo,1,1,false
+CFC-115,2024-10,false,1,1,AGAGE,AGAGE smo,1,1,false
+CFC-115,2024-11,false,1,1,AGAGE,AGAGE smo,1,1,false
+CFC-115,2024-12,false,1,1,AGAGE,AGAGE smo,1,1,false
+CFC-115,2025-01,false,1,1,AGAGE,AGAGE smo,1,1,false
+CFC-115,2025-02,false,0,0,,,0,0,false
+CFC-115,2025-03,false,0,0,,,0,0,false
+CFC-115,2025-04,false,0,0,,,0,0,false
+CFC-115,2025-05,false,0,0,,,0,0,false
+CFC-115,2025-06,false,0,0,,,0,0,false
+CFC-12,2005-01,true,0,0,,,0,0,false
+CFC-12,2005-02,true,0,0,,,0,0,false
+CFC-12,2005-03,true,0,0,,,0,0,false
+CFC-12,2005-04,true,0,0,,,0,0,false
+CFC-12,2005-05,true,0,0,,,0,0,false
+CFC-12,2005-06,true,0,0,,,0,0,false
+CFC-12,2005-07,true,0,0,,,0,0,false
+CFC-12,2005-08,true,0,0,,,0,0,false
+CFC-12,2005-09,true,0,0,,,0,0,false
+CFC-12,2005-10,true,0,0,,,0,0,false
+CFC-12,2005-11,true,0,0,,,0,0,false
+CFC-12,2005-12,true,0,0,,,0,0,false
+CFC-12,2006-01,true,0,0,,,0,0,false
+CFC-12,2006-02,true,0,0,,,0,0,false
+CFC-12,2006-03,true,0,0,,,0,0,false
+CFC-12,2006-04,true,0,0,,,0,0,false
+CFC-12,2006-05,true,0,0,,,0,0,false
+CFC-12,2006-06,true,0,0,,,0,0,false
+CFC-12,2006-07,true,0,0,,,0,0,false
+CFC-12,2006-08,true,0,0,,,0,0,false
+CFC-12,2006-09,true,0,0,,,0,0,false
+CFC-12,2006-10,true,0,0,,,0,0,false
+CFC-12,2006-11,true,0,0,,,0,0,false
+CFC-12,2006-12,true,0,0,,,0,0,false
+CFC-12,2007-01,true,0,0,,,0,0,false
+CFC-12,2007-02,true,0,0,,,0,0,false
+CFC-12,2007-03,true,0,0,,,0,0,false
+CFC-12,2007-04,true,0,0,,,0,0,false
+CFC-12,2007-05,true,0,0,,,0,0,false
+CFC-12,2007-06,true,0,0,,,0,0,false
+CFC-12,2007-07,true,0,0,,,0,0,false
+CFC-12,2007-08,true,0,0,,,0,0,false
+CFC-12,2007-09,true,0,0,,,0,0,false
+CFC-12,2007-10,true,0,0,,,0,0,false
+CFC-12,2007-11,true,0,0,,,0,0,false
+CFC-12,2007-12,true,0,0,,,0,0,false
+CFC-12,2008-01,true,0,0,,,0,0,false
+CFC-12,2008-02,true,0,0,,,0,0,false
+CFC-12,2008-03,true,0,0,,,0,0,false
+CFC-12,2008-04,true,0,0,,,0,0,false
+CFC-12,2008-05,true,0,0,,,0,0,false
+CFC-12,2008-06,true,0,0,,,0,0,false
+CFC-12,2008-07,true,0,0,,,0,0,false
+CFC-12,2008-08,true,0,0,,,0,0,false
+CFC-12,2008-09,true,0,0,,,0,0,false
+CFC-12,2008-10,true,0,0,,,0,0,false
+CFC-12,2008-11,true,0,0,,,0,0,false
+CFC-12,2008-12,true,0,0,,,0,0,false
+CFC-12,2009-01,true,0,0,,,0,0,false
+CFC-12,2009-02,true,0,0,,,0,0,false
+CFC-12,2009-03,true,0,0,,,0,0,false
+CFC-12,2009-04,true,0,0,,,0,0,false
+CFC-12,2009-05,true,0,0,,,0,0,false
+CFC-12,2009-06,true,0,0,,,0,0,false
+CFC-12,2009-07,true,0,0,,,0,0,false
+CFC-12,2009-08,true,0,0,,,0,0,false
+CFC-12,2009-09,true,0,0,,,0,0,false
+CFC-12,2009-10,true,0,0,,,0,0,false
+CFC-12,2009-11,true,0,0,,,0,0,false
+CFC-12,2009-12,true,0,0,,,0,0,false
+CFC-12,2010-01,true,0,0,,,0,0,false
+CFC-12,2010-02,true,0,0,,,0,0,false
+CFC-12,2010-03,true,0,0,,,0,0,false
+CFC-12,2010-04,true,0,0,,,0,0,false
+CFC-12,2010-05,true,0,0,,,0,0,false
+CFC-12,2010-06,true,0,0,,,0,0,false
+CFC-12,2010-07,true,0,0,,,0,0,false
+CFC-12,2010-08,true,0,0,,,0,0,false
+CFC-12,2010-09,true,0,0,,,0,0,false
+CFC-12,2010-10,true,0,0,,,0,0,false
+CFC-12,2010-11,true,0,0,,,0,0,false
+CFC-12,2010-12,true,0,0,,,0,0,false
+CFC-12,2011-01,true,0,0,,,0,0,false
+CFC-12,2011-02,true,0,0,,,0,0,false
+CFC-12,2011-03,true,0,0,,,0,0,false
+CFC-12,2011-04,true,0,0,,,0,0,false
+CFC-12,2011-05,true,0,0,,,0,0,false
+CFC-12,2011-06,true,0,0,,,0,0,false
+CFC-12,2011-07,true,0,0,,,0,0,false
+CFC-12,2011-08,true,0,0,,,0,0,false
+CFC-12,2011-09,true,0,0,,,0,0,false
+CFC-12,2011-10,true,0,0,,,0,0,false
+CFC-12,2011-11,true,0,0,,,0,0,false
+CFC-12,2011-12,true,0,0,,,0,0,false
+CFC-12,2012-01,true,0,0,,,0,0,false
+CFC-12,2012-02,true,0,0,,,0,0,false
+CFC-12,2012-03,true,0,0,,,0,0,false
+CFC-12,2012-04,true,0,0,,,0,0,false
+CFC-12,2012-05,true,0,0,,,0,0,false
+CFC-12,2012-06,true,0,0,,,0,0,false
+CFC-12,2012-07,true,0,0,,,0,0,false
+CFC-12,2012-08,true,0,0,,,0,0,false
+CFC-12,2012-09,true,0,0,,,0,0,false
+CFC-12,2012-10,true,0,0,,,0,0,false
+CFC-12,2012-11,true,0,0,,,0,0,false
+CFC-12,2012-12,true,0,0,,,0,0,false
+CFC-12,2013-01,true,0,0,,,0,0,false
+CFC-12,2013-02,true,0,0,,,0,0,false
+CFC-12,2013-03,true,0,0,,,0,0,false
+CFC-12,2013-04,true,0,0,,,0,0,false
+CFC-12,2013-05,true,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-12,2013-06,true,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-12,2013-07,true,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-12,2013-08,true,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-12,2013-09,true,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-12,2013-10,true,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-12,2013-11,true,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-12,2013-12,true,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-12,2014-01,true,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-12,2014-02,true,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-12,2014-03,true,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-12,2014-04,true,1,1,AGAGE,AGAGE gsn,1,1,false
+CFC-12,2014-05,true,0,0,,,0,0,false
+CFC-12,2014-06,true,0,0,,,0,0,false
+CFC-12,2014-07,true,0,0,,,0,0,false
+CFC-12,2014-08,true,0,0,,,0,0,false
+CFC-12,2014-09,true,0,0,,,0,0,false
+CFC-12,2014-10,true,0,0,,,0,0,false
+CFC-12,2014-11,true,0,0,,,0,0,false
+CFC-12,2014-12,true,0,0,,,0,0,false
+CFC-12,2015-01,true,0,0,,,0,0,false
+CFC-12,2015-02,true,0,0,,,0,0,false
+CFC-12,2015-03,true,0,0,,,0,0,false
+CFC-12,2015-04,true,0,0,,,0,0,false
+CFC-12,2015-05,true,0,0,,,0,0,false
+CFC-12,2015-06,true,0,0,,,0,0,false
+CFC-12,2015-07,true,0,0,,,0,0,false
+CFC-12,2015-08,true,0,0,,,0,0,false
+CFC-12,2015-09,true,0,0,,,0,0,false
+CFC-12,2015-10,true,0,0,,,0,0,false
+CFC-12,2015-11,true,0,0,,,0,0,false
+CFC-12,2015-12,true,0,0,,,0,0,false
+CFC-12,2016-01,true,0,0,,,0,0,false
+CFC-12,2016-02,true,0,0,,,0,0,false
+CFC-12,2016-03,true,0,0,,,0,0,false
+CFC-12,2016-04,true,0,0,,,0,0,false
+CFC-12,2016-05,true,0,0,,,0,0,false
+CFC-12,2016-06,true,0,0,,,0,0,false
+CFC-12,2016-07,true,0,0,,,0,0,false
+CFC-12,2016-08,true,0,0,,,0,0,false
+CFC-12,2016-09,true,0,0,,,0,0,false
+CFC-12,2016-10,true,0,0,,,0,0,false
+CFC-12,2016-11,true,0,0,,,0,0,false
+CFC-12,2016-12,true,0,0,,,0,0,false
+CFC-12,2017-01,true,0,0,,,0,0,false
+CFC-12,2017-02,true,0,0,,,0,0,false
+CFC-12,2017-03,true,0,0,,,0,0,false
+CFC-12,2017-04,true,0,0,,,0,0,false
+CFC-12,2017-05,true,0,0,,,0,0,false
+CFC-12,2017-06,true,0,0,,,0,0,false
+CFC-12,2017-07,true,0,0,,,0,0,false
+CFC-12,2017-08,true,0,0,,,0,0,false
+CFC-12,2017-09,true,0,0,,,0,0,false
+CFC-12,2017-10,true,0,0,,,0,0,false
+CFC-12,2017-11,true,0,0,,,0,0,false
+CFC-12,2017-12,true,0,0,,,0,0,false
+CFC-12,2018-01,true,0,0,,,0,0,false
+CFC-12,2018-02,true,0,0,,,0,0,false
+CFC-12,2018-03,true,0,0,,,0,0,false
+CFC-12,2018-04,true,0,0,,,0,0,false
+CFC-12,2018-05,true,0,0,,,0,0,false
+CFC-12,2018-06,true,0,0,,,0,0,false
+CFC-12,2018-07,true,0,0,,,0,0,false
+CFC-12,2018-08,true,0,0,,,0,0,false
+CFC-12,2018-09,true,0,0,,,0,0,false
+CFC-12,2018-10,true,0,0,,,0,0,false
+CFC-12,2018-11,true,0,0,,,0,0,false
+CFC-12,2018-12,true,0,0,,,0,0,false
+CFC-12,2019-01,true,0,0,,,0,0,false
+CFC-12,2019-02,true,0,0,,,0,0,false
+CFC-12,2019-03,true,0,0,,,0,0,false
+CFC-12,2019-04,true,0,0,,,0,0,false
+CFC-12,2019-05,true,0,0,,,0,0,false
+CFC-12,2019-06,true,0,0,,,0,0,false
+CFC-12,2019-07,true,0,0,,,0,0,false
+CFC-12,2019-08,true,0,0,,,0,0,false
+CFC-12,2019-09,true,0,0,,,0,0,false
+CFC-12,2019-10,true,0,0,,,0,0,false
+CFC-12,2019-11,true,0,0,,,0,0,false
+CFC-12,2019-12,true,0,0,,,0,0,false
+CFC-12,2020-01,true,0,0,,,0,0,false
+CFC-12,2020-02,true,0,0,,,0,0,false
+CFC-12,2020-03,true,0,0,,,0,0,false
+CFC-12,2020-04,true,0,0,,,0,0,false
+CFC-12,2020-05,true,0,0,,,0,0,false
+CFC-12,2020-06,true,0,0,,,0,0,false
+CFC-12,2020-07,true,0,0,,,0,0,false
+CFC-12,2020-08,true,0,0,,,0,0,false
+CFC-12,2020-09,true,0,0,,,0,0,false
+CFC-12,2020-10,true,0,0,,,0,0,false
+CFC-12,2020-11,true,0,0,,,0,0,false
+CFC-12,2020-12,true,0,0,,,0,0,false
+CFC-12,2021-01,true,0,0,,,0,0,false
+CFC-12,2021-02,true,0,0,,,0,0,false
+CFC-12,2021-03,true,0,0,,,0,0,false
+CFC-12,2021-04,true,0,0,,,0,0,false
+CFC-12,2021-05,true,0,0,,,0,0,false
+CFC-12,2021-06,true,0,0,,,0,0,false
+CFC-12,2021-07,true,0,0,,,0,0,false
+CFC-12,2021-08,true,0,0,,,0,0,false
+CFC-12,2021-09,true,0,0,,,0,0,false
+CFC-12,2021-10,true,0,0,,,0,0,false
+CFC-12,2021-11,true,0,0,,,0,0,false
+CFC-12,2021-12,true,0,0,,,0,0,false
+CFC-12,2022-01,true,0,0,,,0,0,false
+CFC-12,2022-02,true,0,0,,,0,0,false
+CFC-12,2022-03,true,0,0,,,0,0,false
+CFC-12,2022-04,true,0,0,,,0,0,false
+CFC-12,2022-05,true,0,0,,,0,0,false
+CFC-12,2022-06,true,0,0,,,0,0,false
+CFC-12,2022-07,true,0,0,,,0,0,false
+CFC-12,2022-08,true,0,0,,,0,0,false
+CFC-12,2022-09,true,0,0,,,0,0,false
+CFC-12,2022-10,true,0,0,,,0,0,false
+CFC-12,2022-11,true,0,0,,,0,0,false
+CFC-12,2022-12,true,0,0,,,0,0,false
+CFC-12,2023-01,true,0,0,,,0,0,false
+CFC-12,2023-02,true,0,0,,,0,0,false
+CFC-12,2023-03,true,0,0,,,0,0,false
+CFC-12,2023-04,true,0,0,,,0,0,false
+CFC-12,2023-05,true,0,0,,,0,0,false
+CFC-12,2023-06,true,0,0,,,0,0,false
+CFC-12,2023-07,true,0,0,,,0,0,false
+CFC-12,2023-08,true,0,0,,,0,0,false
+CFC-12,2023-09,true,0,0,,,0,0,false
+CFC-12,2023-10,true,0,0,,,0,0,false
+CFC-12,2023-11,true,0,0,,,0,0,false
+CFC-12,2023-12,true,0,0,,,0,0,false
+CFC-12,2024-01,true,0,0,,,0,0,false
+CFC-12,2024-02,true,0,0,,,0,0,false
+CFC-12,2024-03,true,0,0,,,0,0,false
+CFC-12,2024-04,true,0,0,,,0,0,false
+CFC-12,2024-05,true,0,0,,,0,0,false
+CFC-12,2024-06,true,0,0,,,0,0,false
+CFC-12,2024-07,true,0,0,,,0,0,false
+CFC-12,2024-08,true,0,0,,,0,0,false
+CFC-12,2024-09,true,0,0,,,0,0,false
+CFC-12,2024-10,true,0,0,,,0,0,false
+CFC-12,2024-11,true,0,0,,,0,0,false
+CFC-12,2024-12,true,0,0,,,0,0,false
+CFC-12,2025-01,true,0,0,,,0,0,false
+CFC-12,2025-02,true,0,0,,,0,0,false
+CFC-12,2025-03,true,0,0,,,0,0,false
+CFC-12,2025-04,true,0,0,,,0,0,false
+CFC-12,2025-05,true,0,0,,,0,0,false
+CFC-12,2025-06,true,0,0,,,0,0,false
+CFC-12,2025-07,true,0,0,,,0,0,false
+CFC-12,2025-08,true,0,0,,,0,0,false
+CFC-12,2025-09,true,0,0,,,0,0,false
+CFC-12,2025-10,true,0,0,,,0,0,false
+CFC-12,2025-11,true,0,0,,,0,0,false
+CFC-12,2025-12,true,0,0,,,0,0,false
+CFC-12,2026-01,true,0,0,,,0,0,false
+CFC-12,2026-02,true,0,0,,,0,0,false
+CFC-12,2026-03,true,1,1,NOAA,NOAA mlo,1,1,false
+CFC-12,2026-04,true,1,1,NOAA,NOAA mlo,1,1,false
+CFC-12,2026-05,true,1,1,NOAA,NOAA mlo,1,1,false
+CFC-12,2026-06,false,1,1,NOAA,NOAA mlo,1,1,false
+carbon tetrachloride,2005-01,true,0,0,,,0,0,false
+carbon tetrachloride,2005-02,true,1,1,AGAGE,AGAGE cgo,1,1,false
+carbon tetrachloride,2005-03,true,1,1,AGAGE,AGAGE cgo,1,1,false
+carbon tetrachloride,2005-04,true,1,1,AGAGE,AGAGE cgo,1,1,false
+carbon tetrachloride,2005-05,true,1,1,AGAGE,AGAGE cgo,1,1,false
+carbon tetrachloride,2005-06,true,1,1,AGAGE,AGAGE cgo,1,1,false
+carbon tetrachloride,2005-07,true,1,1,AGAGE,AGAGE cgo,1,1,false
+carbon tetrachloride,2005-08,true,1,1,AGAGE,AGAGE cgo,1,1,false
+carbon tetrachloride,2005-09,true,1,1,AGAGE,AGAGE cgo,1,1,false
+carbon tetrachloride,2005-10,true,1,1,AGAGE,AGAGE cgo,1,1,false
+carbon tetrachloride,2005-11,true,1,1,AGAGE,AGAGE cgo,1,1,false
+carbon tetrachloride,2005-12,true,1,1,AGAGE,AGAGE cgo,1,1,false
+carbon tetrachloride,2006-01,true,1,1,AGAGE,AGAGE cgo,1,1,false
+carbon tetrachloride,2006-02,true,1,1,AGAGE,AGAGE cgo,1,1,false
+carbon tetrachloride,2006-03,true,1,1,AGAGE,AGAGE cgo,1,1,false
+carbon tetrachloride,2006-04,true,0,0,,,0,0,false
+carbon tetrachloride,2006-05,true,0,0,,,0,0,false
+carbon tetrachloride,2006-06,true,0,0,,,0,0,false
+carbon tetrachloride,2006-07,true,0,0,,,0,0,false
+carbon tetrachloride,2006-08,true,0,0,,,0,0,false
+carbon tetrachloride,2006-09,true,0,0,,,0,0,false
+carbon tetrachloride,2006-10,true,0,0,,,0,0,false
+carbon tetrachloride,2006-11,true,0,0,,,0,0,false
+carbon tetrachloride,2006-12,true,0,0,,,0,0,false
+carbon tetrachloride,2007-01,true,0,0,,,0,0,false
+carbon tetrachloride,2007-02,true,0,0,,,0,0,false
+carbon tetrachloride,2007-03,true,0,0,,,0,0,false
+carbon tetrachloride,2007-04,true,0,0,,,0,0,false
+carbon tetrachloride,2007-05,true,0,0,,,0,0,false
+carbon tetrachloride,2007-06,true,0,0,,,0,0,false
+carbon tetrachloride,2007-07,true,0,0,,,0,0,false
+carbon tetrachloride,2007-08,true,0,0,,,0,0,false
+carbon tetrachloride,2007-09,true,0,0,,,0,0,false
+carbon tetrachloride,2007-10,true,0,0,,,0,0,false
+carbon tetrachloride,2007-11,true,0,0,,,0,0,false
+carbon tetrachloride,2007-12,true,0,0,,,0,0,false
+carbon tetrachloride,2008-01,true,0,0,,,0,0,false
+carbon tetrachloride,2008-02,true,0,0,,,0,0,false
+carbon tetrachloride,2008-03,true,0,0,,,0,0,false
+carbon tetrachloride,2008-04,true,0,0,,,0,0,false
+carbon tetrachloride,2008-05,true,0,0,,,0,0,false
+carbon tetrachloride,2008-06,true,0,0,,,0,0,false
+carbon tetrachloride,2008-07,true,0,0,,,0,0,false
+carbon tetrachloride,2008-08,true,0,0,,,0,0,false
+carbon tetrachloride,2008-09,true,0,0,,,0,0,false
+carbon tetrachloride,2008-10,true,0,0,,,0,0,false
+carbon tetrachloride,2008-11,true,0,0,,,0,0,false
+carbon tetrachloride,2008-12,true,0,0,,,0,0,false
+carbon tetrachloride,2009-01,true,0,0,,,0,0,false
+carbon tetrachloride,2009-02,true,0,0,,,0,0,false
+carbon tetrachloride,2009-03,true,0,0,,,0,0,false
+carbon tetrachloride,2009-04,true,0,0,,,0,0,false
+carbon tetrachloride,2009-05,true,0,0,,,0,0,false
+carbon tetrachloride,2009-06,true,0,0,,,0,0,false
+carbon tetrachloride,2009-07,true,0,0,,,0,0,false
+carbon tetrachloride,2009-08,true,0,0,,,0,0,false
+carbon tetrachloride,2009-09,true,0,0,,,0,0,false
+carbon tetrachloride,2009-10,true,0,0,,,0,0,false
+carbon tetrachloride,2009-11,true,0,0,,,0,0,false
+carbon tetrachloride,2009-12,true,0,0,,,0,0,false
+carbon tetrachloride,2010-01,true,0,0,,,0,0,false
+carbon tetrachloride,2010-02,true,0,0,,,0,0,false
+carbon tetrachloride,2010-03,true,0,0,,,0,0,false
+carbon tetrachloride,2010-04,true,0,0,,,0,0,false
+carbon tetrachloride,2010-05,true,0,0,,,0,0,false
+carbon tetrachloride,2010-06,true,0,0,,,0,0,false
+carbon tetrachloride,2010-07,true,0,0,,,0,0,false
+carbon tetrachloride,2010-08,true,0,0,,,0,0,false
+carbon tetrachloride,2010-09,true,0,0,,,0,0,false
+carbon tetrachloride,2010-10,true,0,0,,,0,0,false
+carbon tetrachloride,2010-11,true,0,0,,,0,0,false
+carbon tetrachloride,2010-12,true,0,0,,,0,0,false
+carbon tetrachloride,2011-01,true,0,0,,,0,0,false
+carbon tetrachloride,2011-02,true,0,0,,,0,0,false
+carbon tetrachloride,2011-03,true,0,0,,,0,0,false
+carbon tetrachloride,2011-04,true,0,0,,,0,0,false
+carbon tetrachloride,2011-05,true,0,0,,,0,0,false
+carbon tetrachloride,2011-06,true,0,0,,,0,0,false
+carbon tetrachloride,2011-07,true,0,0,,,0,0,false
+carbon tetrachloride,2011-08,true,0,0,,,0,0,false
+carbon tetrachloride,2011-09,true,0,0,,,0,0,false
+carbon tetrachloride,2011-10,true,0,0,,,0,0,false
+carbon tetrachloride,2011-11,true,0,0,,,0,0,false
+carbon tetrachloride,2011-12,true,0,0,,,0,0,false
+carbon tetrachloride,2012-01,true,0,0,,,0,0,false
+carbon tetrachloride,2012-02,true,0,0,,,0,0,false
+carbon tetrachloride,2012-03,true,0,0,,,0,0,false
+carbon tetrachloride,2012-04,true,0,0,,,0,0,false
+carbon tetrachloride,2012-05,true,0,0,,,0,0,false
+carbon tetrachloride,2012-06,true,0,0,,,0,0,false
+carbon tetrachloride,2012-07,true,0,0,,,0,0,false
+carbon tetrachloride,2012-08,true,0,0,,,0,0,false
+carbon tetrachloride,2012-09,true,0,0,,,0,0,false
+carbon tetrachloride,2012-10,true,0,0,,,0,0,false
+carbon tetrachloride,2012-11,true,0,0,,,0,0,false
+carbon tetrachloride,2012-12,true,0,0,,,0,0,false
+carbon tetrachloride,2013-01,true,0,0,,,0,0,false
+carbon tetrachloride,2013-02,true,0,0,,,0,0,false
+carbon tetrachloride,2013-03,true,0,0,,,0,0,false
+carbon tetrachloride,2013-04,true,0,0,,,0,0,false
+carbon tetrachloride,2013-05,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2013-06,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2013-07,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2013-08,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2013-09,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2013-10,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2013-11,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2013-12,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2014-01,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2014-02,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2014-03,true,2,2,AGAGE;NOAA,AGAGE gsn;NOAA mlo,2,2,false
+carbon tetrachloride,2014-04,true,2,2,AGAGE;NOAA,AGAGE gsn;NOAA mlo,2,2,false
+carbon tetrachloride,2014-05,true,1,1,NOAA,NOAA mlo,1,1,false
+carbon tetrachloride,2014-06,true,1,1,NOAA,NOAA mlo,1,1,false
+carbon tetrachloride,2014-07,true,1,1,NOAA,NOAA mlo,1,1,false
+carbon tetrachloride,2014-08,true,2,2,AGAGE;NOAA,AGAGE mhd;NOAA mlo,2,2,false
+carbon tetrachloride,2014-09,true,2,2,AGAGE;NOAA,AGAGE mhd;NOAA mlo,2,2,false
+carbon tetrachloride,2014-10,true,2,2,AGAGE;NOAA,AGAGE mhd;NOAA mlo,2,2,false
+carbon tetrachloride,2014-11,true,2,2,AGAGE;NOAA,AGAGE mhd;NOAA mlo,2,2,false
+carbon tetrachloride,2014-12,true,2,2,AGAGE;NOAA,AGAGE mhd;NOAA mlo,2,2,false
+carbon tetrachloride,2015-01,true,3,3,AGAGE;NOAA,AGAGE mhd;AGAGE smo;NOAA mlo,3,3,false
+carbon tetrachloride,2015-02,true,3,3,AGAGE;NOAA,AGAGE mhd;AGAGE smo;NOAA mlo,3,3,false
+carbon tetrachloride,2015-03,true,2,2,AGAGE,AGAGE mhd;AGAGE smo,2,2,false
+carbon tetrachloride,2015-04,true,2,2,AGAGE,AGAGE mhd;AGAGE smo,2,2,false
+carbon tetrachloride,2015-05,true,2,2,AGAGE,AGAGE mhd;AGAGE smo,2,2,false
+carbon tetrachloride,2015-06,true,2,2,AGAGE,AGAGE mhd;AGAGE smo,2,2,false
+carbon tetrachloride,2015-07,true,2,2,AGAGE,AGAGE mhd;AGAGE smo,2,2,false
+carbon tetrachloride,2015-08,true,2,2,AGAGE,AGAGE mhd;AGAGE smo,2,2,false
+carbon tetrachloride,2015-09,true,2,2,AGAGE,AGAGE mhd;AGAGE smo,2,2,false
+carbon tetrachloride,2015-10,true,1,1,AGAGE,AGAGE smo,1,1,false
+carbon tetrachloride,2015-11,true,1,1,AGAGE,AGAGE smo,1,1,false
+carbon tetrachloride,2015-12,true,1,1,AGAGE,AGAGE smo,1,1,false
+carbon tetrachloride,2016-01,true,1,1,AGAGE,AGAGE smo,1,1,false
+carbon tetrachloride,2016-02,true,0,0,,,0,0,false
+carbon tetrachloride,2016-03,true,0,0,,,0,0,false
+carbon tetrachloride,2016-04,true,0,0,,,0,0,false
+carbon tetrachloride,2016-05,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2016-06,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2016-07,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2016-08,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2016-09,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2016-10,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2016-11,true,1,1,AGAGE,AGAGE gsn,1,1,false
+carbon tetrachloride,2016-12,true,2,2,AGAGE;NOAA,AGAGE gsn;NOAA thd,2,2,false
+carbon tetrachloride,2017-01,true,2,2,AGAGE;NOAA,AGAGE gsn;NOAA thd,2,2,false
+carbon tetrachloride,2017-02,true,2,2,AGAGE;NOAA,AGAGE gsn;NOAA thd,2,2,false
+carbon tetrachloride,2017-03,true,2,2,AGAGE;NOAA,AGAGE gsn;NOAA thd,2,2,false
+carbon tetrachloride,2017-04,true,2,2,AGAGE;NOAA,AGAGE gsn;NOAA thd,2,2,false
+carbon tetrachloride,2017-05,true,1,1,NOAA,NOAA thd,1,1,false
+carbon tetrachloride,2017-06,true,1,1,NOAA,NOAA thd,1,1,false
+carbon tetrachloride,2017-07,true,1,1,NOAA,NOAA thd,1,1,false
+carbon tetrachloride,2017-08,true,1,1,NOAA,NOAA thd,1,1,false
+carbon tetrachloride,2017-09,true,1,1,NOAA,NOAA thd,1,1,false
+carbon tetrachloride,2017-10,true,1,1,NOAA,NOAA thd,1,1,false
+carbon tetrachloride,2017-11,true,1,1,NOAA,NOAA thd,1,1,false
+carbon tetrachloride,2017-12,true,3,3,AGAGE;NOAA,AGAGE rpb;NOAA cgo;NOAA thd,3,3,false
+carbon tetrachloride,2018-01,true,3,3,AGAGE;NOAA,AGAGE rpb;NOAA cgo;NOAA thd,3,3,false
+carbon tetrachloride,2018-02,true,3,3,AGAGE;NOAA,AGAGE rpb;NOAA cgo;NOAA thd,3,3,false
+carbon tetrachloride,2018-03,true,3,4,AGAGE;NOAA,AGAGE cgo;AGAGE rpb;NOAA cgo;NOAA thd,3,4,false
+carbon tetrachloride,2018-04,true,3,4,AGAGE;NOAA,AGAGE cgo;AGAGE rpb;AGAGE thd;NOAA cgo,3,4,true
+carbon tetrachloride,2018-05,true,3,4,AGAGE;NOAA,AGAGE cgo;AGAGE rpb;AGAGE thd;NOAA cgo,3,4,true
+carbon tetrachloride,2018-06,true,3,4,AGAGE;NOAA,AGAGE cgo;AGAGE rpb;AGAGE thd;NOAA cgo,3,4,true
+carbon tetrachloride,2018-07,true,3,4,AGAGE;NOAA,AGAGE cgo;AGAGE rpb;AGAGE thd;NOAA cgo,3,4,true
+carbon tetrachloride,2018-08,true,3,4,AGAGE;NOAA,AGAGE cgo;AGAGE rpb;AGAGE thd;NOAA cgo,3,4,true
+carbon tetrachloride,2018-09,true,3,5,AGAGE;NOAA,AGAGE cgo;AGAGE rpb;AGAGE thd;NOAA cgo;NOAA sum,3,5,true
+carbon tetrachloride,2018-10,true,3,6,AGAGE;NOAA,AGAGE cgo;AGAGE rpb;AGAGE thd;NOAA cgo;NOAA psa;NOAA sum,3,6,true
+carbon tetrachloride,2018-11,true,3,6,AGAGE;NOAA,AGAGE cgo;AGAGE rpb;AGAGE thd;NOAA cgo;NOAA psa;NOAA sum,3,6,true
+carbon tetrachloride,2018-12,true,3,4,AGAGE;NOAA,AGAGE cgo;AGAGE thd;NOAA psa;NOAA sum,3,4,false
+carbon tetrachloride,2019-01,true,3,4,AGAGE;NOAA,AGAGE cgo;AGAGE thd;NOAA psa;NOAA sum,3,4,false
+carbon tetrachloride,2019-02,true,3,6,AGAGE;NOAA,AGAGE cgo;AGAGE thd;NOAA cgo;NOAA psa;NOAA smo;NOAA sum,3,6,true
+carbon tetrachloride,2019-03,true,3,5,AGAGE;NOAA,AGAGE thd;NOAA cgo;NOAA psa;NOAA smo;NOAA sum,3,5,true
+carbon tetrachloride,2019-04,true,3,5,AGAGE;NOAA,AGAGE thd;NOAA cgo;NOAA psa;NOAA smo;NOAA sum,3,5,true
+carbon tetrachloride,2019-05,true,3,5,AGAGE;NOAA,AGAGE thd;NOAA cgo;NOAA psa;NOAA smo;NOAA sum,3,5,true
+carbon tetrachloride,2019-06,true,3,5,AGAGE;NOAA,AGAGE thd;NOAA cgo;NOAA psa;NOAA smo;NOAA sum,3,5,true
+carbon tetrachloride,2019-07,true,3,5,AGAGE;NOAA,AGAGE thd;NOAA cgo;NOAA psa;NOAA smo;NOAA sum,3,5,true
+carbon tetrachloride,2019-08,true,3,5,AGAGE;NOAA,AGAGE thd;NOAA cgo;NOAA psa;NOAA smo;NOAA sum,3,5,true
+carbon tetrachloride,2019-09,true,3,5,AGAGE;NOAA,AGAGE thd;NOAA cgo;NOAA psa;NOAA smo;NOAA sum,3,5,true
+carbon tetrachloride,2019-10,true,3,5,AGAGE;NOAA,AGAGE thd;NOAA cgo;NOAA psa;NOAA smo;NOAA sum,3,5,true
+carbon tetrachloride,2019-11,true,2,4,NOAA,NOAA cgo;NOAA psa;NOAA smo;NOAA sum,2,4,true
+carbon tetrachloride,2019-12,true,2,4,NOAA,NOAA cgo;NOAA psa;NOAA smo;NOAA sum,2,4,true
+carbon tetrachloride,2020-01,true,2,3,NOAA,NOAA cgo;NOAA psa;NOAA smo,2,3,true
+carbon tetrachloride,2020-02,true,2,2,NOAA,NOAA cgo;NOAA smo,2,2,false
+carbon tetrachloride,2020-03,true,2,2,NOAA,NOAA cgo;NOAA smo,2,2,false
+carbon tetrachloride,2020-04,true,2,2,NOAA,NOAA cgo;NOAA smo,2,2,false
+carbon tetrachloride,2020-05,true,1,1,NOAA,NOAA cgo,1,1,false
+carbon tetrachloride,2020-06,true,0,0,,,0,0,false
+carbon tetrachloride,2020-07,true,0,0,,,0,0,false
+carbon tetrachloride,2020-08,true,0,0,,,0,0,false
+carbon tetrachloride,2020-09,true,0,0,,,0,0,false
+carbon tetrachloride,2020-10,true,0,0,,,0,0,false
+carbon tetrachloride,2020-11,true,0,0,,,0,0,false
+carbon tetrachloride,2020-12,true,0,0,,,0,0,false
+carbon tetrachloride,2021-01,true,0,0,,,0,0,false
+carbon tetrachloride,2021-02,true,0,0,,,0,0,false
+carbon tetrachloride,2021-03,true,0,0,,,0,0,false
+carbon tetrachloride,2021-04,true,0,0,,,0,0,false
+carbon tetrachloride,2021-05,true,0,0,,,0,0,false
+carbon tetrachloride,2021-06,true,0,0,,,0,0,false
+carbon tetrachloride,2021-07,true,0,0,,,0,0,false
+carbon tetrachloride,2021-08,true,0,0,,,0,0,false
+carbon tetrachloride,2021-09,true,0,0,,,0,0,false
+carbon tetrachloride,2021-10,true,0,0,,,0,0,false
+carbon tetrachloride,2021-11,true,0,0,,,0,0,false
+carbon tetrachloride,2021-12,true,0,0,,,0,0,false
+carbon tetrachloride,2022-01,true,0,0,,,0,0,false
+carbon tetrachloride,2022-02,true,0,0,,,0,0,false
+carbon tetrachloride,2022-03,true,0,0,,,0,0,false
+carbon tetrachloride,2022-04,true,0,0,,,0,0,false
+carbon tetrachloride,2022-05,true,0,0,,,0,0,false
+carbon tetrachloride,2022-06,true,0,0,,,0,0,false
+carbon tetrachloride,2022-07,true,0,0,,,0,0,false
+carbon tetrachloride,2022-08,true,0,0,,,0,0,false
+carbon tetrachloride,2022-09,true,0,0,,,0,0,false
+carbon tetrachloride,2022-10,true,0,0,,,0,0,false
+carbon tetrachloride,2022-11,true,0,0,,,0,0,false
+carbon tetrachloride,2022-12,true,0,0,,,0,0,false
+carbon tetrachloride,2023-01,true,0,0,,,0,0,false
+carbon tetrachloride,2023-02,true,0,0,,,0,0,false
+carbon tetrachloride,2023-03,true,0,0,,,0,0,false
+carbon tetrachloride,2023-04,true,0,0,,,0,0,false
+carbon tetrachloride,2023-05,true,0,0,,,0,0,false
+carbon tetrachloride,2023-06,true,0,0,,,0,0,false
+carbon tetrachloride,2023-07,true,0,0,,,0,0,false
+carbon tetrachloride,2023-08,true,0,0,,,0,0,false
+carbon tetrachloride,2023-09,true,0,0,,,0,0,false
+carbon tetrachloride,2023-10,true,0,0,,,0,0,false
+carbon tetrachloride,2023-11,true,1,1,AGAGE,AGAGE thd,1,1,false
+carbon tetrachloride,2023-12,true,1,1,AGAGE,AGAGE thd,1,1,false
+carbon tetrachloride,2024-01,true,1,1,AGAGE,AGAGE thd,1,1,false
+carbon tetrachloride,2024-02,true,1,1,AGAGE,AGAGE thd,1,1,false
+carbon tetrachloride,2024-03,true,1,1,AGAGE,AGAGE thd,1,1,false
+carbon tetrachloride,2024-04,true,1,1,AGAGE,AGAGE thd,1,1,false
+carbon tetrachloride,2024-05,true,1,1,AGAGE,AGAGE thd,1,1,false
+carbon tetrachloride,2024-06,true,3,3,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA mhd,3,3,false
+carbon tetrachloride,2024-07,true,3,3,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA mhd,3,3,false
+carbon tetrachloride,2024-08,true,3,3,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA mhd,3,3,false
+carbon tetrachloride,2024-09,true,3,3,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA mhd,3,3,false
+carbon tetrachloride,2024-10,true,3,3,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA mhd,3,3,false
+carbon tetrachloride,2024-11,true,3,3,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA mhd,3,3,false
+carbon tetrachloride,2024-12,true,3,3,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA mhd,3,3,false
+carbon tetrachloride,2025-01,true,3,3,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA mhd,3,3,false
+carbon tetrachloride,2025-02,true,3,3,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA mhd,3,3,false
+carbon tetrachloride,2025-03,true,3,3,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA mhd,3,3,false
+carbon tetrachloride,2025-04,true,3,4,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA mhd;NOAA nwr,3,4,true
+carbon tetrachloride,2025-05,true,3,4,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA mhd;NOAA nwr,3,4,true
+carbon tetrachloride,2025-06,true,3,4,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA brw;NOAA nwr,3,4,true
+carbon tetrachloride,2025-07,true,3,4,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA brw;NOAA nwr,3,4,true
+carbon tetrachloride,2025-08,true,3,4,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA brw;NOAA nwr,3,4,true
+carbon tetrachloride,2025-09,true,3,4,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA brw;NOAA nwr,3,4,true
+carbon tetrachloride,2025-10,true,3,4,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA brw;NOAA nwr,3,4,true
+carbon tetrachloride,2025-11,true,3,5,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA brw;NOAA nwr;NOAA thd,3,5,true
+carbon tetrachloride,2025-12,true,3,5,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA brw;NOAA nwr;NOAA thd,3,5,true
+carbon tetrachloride,2026-01,true,3,5,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA brw;NOAA nwr;NOAA thd,3,5,true
+carbon tetrachloride,2026-02,true,3,5,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA brw;NOAA nwr;NOAA thd,3,5,true
+carbon tetrachloride,2026-03,true,3,5,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA brw;NOAA nwr;NOAA thd,3,5,true
+carbon tetrachloride,2026-04,true,3,5,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA brw;NOAA nwr;NOAA thd,3,5,true
+carbon tetrachloride,2026-05,true,3,4,AGAGE;NOAA,AGAGE thd;NOAA alt;NOAA brw;NOAA thd,3,4,true
+carbon tetrachloride,2026-06,false,2,2,NOAA,NOAA alt;NOAA thd,2,2,false

@@ -15,6 +15,11 @@ Everything in [the case file](../C02-cfc11-eastern-china.md) can be rebuilt from
 | [clean_sources.csv](clean_sources.csv) | The false-flag run, one row per source: months tested, flags, first and last flag |
 | [clean_months.csv](clean_months.csv) | The false-flag run, one row per month: level, count and which sources |
 | [clean_by_year.csv](clean_by_year.csv) | Months at each level, per gas per year |
+| [events.csv](events.csv) | The gas events run, one row per gas: outcome, first level 3, lead and false alarm |
+| [events_summary.csv](events_summary.csv) | The gas events run, one row per gas, in the same columns as the clean run |
+| [events_sources.csv](events_sources.csv) | The gas events run, one row per source: months tested, flags, first and last flag |
+| [events_months.csv](events_months.csv) | The gas events run, one row per month: level, count and which sources |
+| [events_by_year.csv](events_by_year.csv) | Months at each level, per event gas per year |
 
 ## Steps
 
@@ -187,6 +192,74 @@ Compare-Object (Get-Content "$env:TEMP\c02-check\clean-out\by_year.csv") (Get-Co
 
 NOAA and AGAGE update their files, so a newer version may shift these numbers. The run also writes `checks.csv`, every tested month with its reading. That file isn't kept here, because it's about 3 MB and can be rebuilt.
 
+## Gas events steps
+
+**15. Run the tests.** These use made-up data only.
+
+```powershell
+python scripts/test_gas_events.py
+```
+
+You should see `Ran 42 tests` and `OK`.
+
+**16. Download the event gas files.** About 4.7 MB. AGAGE allows 35 files at a time, so there are two zips.
+
+```powershell
+New-Item -ItemType Directory -Force "$env:TEMP\c02-check\events-noaa", "$env:TEMP\c02-check\events-agage"
+```
+
+```powershell
+Invoke-WebRequest -Uri "https://www-air.larc.nasa.gov/missions/agage/api/data/download/10476,10474,10477,10377,10469,10470,10467,10475,10471,10468,10472,10466,10473,10465,9987,9988,9985,9981,9888,9980,9978,9986,9982,9979,9976,9983" -OutFile "$env:TEMP\c02-check\events1.zip" -UseBasicParsing
+```
+
+```powershell
+Invoke-WebRequest -Uri "https://www-air.larc.nasa.gov/missions/agage/api/data/download/9977,9984,10371,10369,10372,10365,10363,10306,10364,10368,10367,10370,10362,10366,11622,11620,11614,11542,11615,11619,11618,11621,11616,11623,11613,11617" -OutFile "$env:TEMP\c02-check\events2.zip" -UseBasicParsing
+```
+
+```powershell
+Expand-Archive -Force "$env:TEMP\c02-check\events1.zip" "$env:TEMP\c02-check\events-agage"
+```
+
+```powershell
+Expand-Archive -Force "$env:TEMP\c02-check\events2.zip" "$env:TEMP\c02-check\events-agage"
+```
+
+```powershell
+foreach ($f in "cfcs/cfc12/combined/HATS_global_F12.txt", "solvents/CCl4/combined/HATS_global_CCl4.txt", "hcfcs/hcfc141b/HCFC141B_GCMS_flask.txt", "cfcs/cfc115/CFC115_M2.txt") { Invoke-WebRequest -Uri "https://gml.noaa.gov/aftp/data/hats/$f" -OutFile "$env:TEMP\c02-check\events-noaa\$(Split-Path $f -Leaf)" -UseBasicParsing }
+```
+
+**17. Run the scoring.**
+
+```powershell
+python scripts/gas_events.py "$env:TEMP\c02-check\events-noaa" "$env:TEMP\c02-check\events-agage" --out "$env:TEMP\c02-check\events-out"
+```
+
+You should see `hits 1, misses 2, not testable 1 of 4 gases, which are 3 separate events` and `false alarms 1 of 3 gases where level 3 was possible in the quiet stretch`.
+
+**18. Compare with the files in this folder.** Each of these prints nothing if the files match.
+
+```powershell
+Compare-Object (Get-Content "$env:TEMP\c02-check\events-out\events.csv") (Get-Content "cases\C02\events.csv")
+```
+
+```powershell
+Compare-Object (Get-Content "$env:TEMP\c02-check\events-out\summary.csv") (Get-Content "cases\C02\events_summary.csv")
+```
+
+```powershell
+Compare-Object (Get-Content "$env:TEMP\c02-check\events-out\sources.csv") (Get-Content "cases\C02\events_sources.csv")
+```
+
+```powershell
+Compare-Object (Get-Content "$env:TEMP\c02-check\events-out\months.csv") (Get-Content "cases\C02\events_months.csv")
+```
+
+```powershell
+Compare-Object (Get-Content "$env:TEMP\c02-check\events-outy_year.csv") (Get-Content "cases\C02\events_by_year.csv")
+```
+
+As before, a newer version of the files may shift these numbers, and `checks.csv` isn't kept here because it's about 2.6 MB and can be rebuilt.
+
 ## What these steps don't prove
 
-They show the arithmetic is right and repeatable. They don't remove the limits listed in the case file: the series was picked after seeing the data, all 16 come from one lab, and the table is smoothed. The clean gases were picked before their readings were opened, but one of them turned out not to be clean.
+They show the arithmetic is right and repeatable. They don't remove the limits listed in the case file: the series was picked after seeing the data, all 16 come from one lab, and the table is smoothed. The clean gases were picked before their readings were opened, but one of them turned out not to be clean. The event gases were picked and scored before their readings were opened too, but their first public dates are the first found, and one turned out to have an earlier report.

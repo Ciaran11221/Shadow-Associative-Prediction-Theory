@@ -45,6 +45,7 @@ The full statement, definitions, nine working rules and the strongest objections
 | [scripts/c02_agage.py](scripts/c02_agage.py) | The AGAGE cross-check for case C02; its tests are in scripts/test_c02_agage.py |
 | [scripts/flag_ladder.py](scripts/flag_ladder.py) | The flag count: how many sources flagged in the last 12 months; its tests are in scripts/test_flag_ladder.py |
 | [scripts/clean_gases.py](scripts/clean_gases.py) | The false-flag run on gases picked as clean; its tests are in scripts/test_clean_gases.py |
+| [scripts/gas_events.py](scripts/gas_events.py) | The flag count scored on gases with a published change; its tests are in scripts/test_gas_events.py |
 | [cases/C02/](cases/C02/) | That check's output: each month's sums, every series, and the chart |
 | [.github/workflows/check.yml](.github/workflows/check.yml) | Runs that check on every push |
 | [LICENSE](LICENSE) | The CC BY 4.0 legal text |
