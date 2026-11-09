@@ -1,0 +1,108 @@
+{
+  "gas": "Methyl bromide",
+  "year": 2016,
+  "tested": 254,
+  "flags": 19,
+  "expected": 1.214584578601315,
+  "chance": 1.0439249195787891e-16,
+  "sources": [
+    {
+      "source": "NOAA cgo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2016-01",
+        "2016-02",
+        "2016-03",
+        "2016-04"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA kum",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2016-04"
+      ],
+      "other_gases_flagged": [
+        "SF6"
+      ]
+    },
+    {
+      "source": "NOAA mlo",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2016-02",
+        "2016-04"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA psa",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2016-01",
+        "2016-02",
+        "2016-03",
+        "2016-05"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA smo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2016-02",
+        "2016-03"
+      ],
+      "other_gases_flagged": [
+        "CFC-113",
+        "HFC-134a",
+        "Dichloromethane"
+      ]
+    },
+    {
+      "source": "NOAA spo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2016-03",
+        "2016-07"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE rpb",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2016-01",
+        "2016-05"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE smo",
+      "lab": "AGAGE",
+      "south": true,
+      "months": [
+        "2016-03",
+        "2016-04"
+      ],
+      "other_gases_flagged": []
+    }
+  ],
+  "labs": [
+    "AGAGE",
+    "NOAA"
+  ],
+  "first_flag_north": "2016-01",
+  "first_flag_south": "2016-01",
+  "build": "air",
+  "top_share": 0.21052631578947367,
+  "stretches": []
+}

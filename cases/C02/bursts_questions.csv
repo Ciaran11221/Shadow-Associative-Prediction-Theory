@@ -1,0 +1,37 @@
+question,item,value
+bursts,gas_years_judged,271
+bursts,bar,0.0001845018450184502
+bursts,bursts,17
+question 1,eligible_gases,13
+question 1,inside_years,98
+question 1,outside_years,131
+question 1,bursts_inside,9
+question 1,bursts_outside,5
+question 1,shuffles,10000
+question 1,seed,28001
+question 1,rate_inside,0.09183673469387756
+question 1,rate_outside,0.03816793893129771
+question 1,ratio,2.406122448979592
+question 1,chance,0.3183681631836816
+question 1,verdict,fail
+question 2,air_bursts,9
+question 2,air_inside_up,4
+question 2,station_bursts,3
+question 2,station_inside_up,1
+question 2,air_share,0.4444444444444444
+question 2,station_share,0.3333333333333333
+question 2,shuffles,10000
+question 2,seed,28002
+question 2,ratio,
+question 2,chance,
+question 2,verdict,void
+down check,down_only_years,11
+down check,down_only_bursts,0
+down check,no_stretch_years,162
+down check,no_stretch_bursts,8
+down check,shuffles,10000
+down check,seed,28003
+down check,rate_down_only,0.0
+down check,rate_no_stretch,0.04938271604938271
+down check,chance,1.0
+down check,verdict,ok

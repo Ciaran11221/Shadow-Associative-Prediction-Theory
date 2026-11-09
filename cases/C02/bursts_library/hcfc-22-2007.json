@@ -1,0 +1,140 @@
+{
+  "gas": "HCFC-22",
+  "year": 2007,
+  "tested": 129,
+  "flags": 27,
+  "expected": 3.3419689119170983,
+  "chance": 5.183382666656198e-16,
+  "sources": [
+    {
+      "source": "NOAA alt",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2007-12"
+      ],
+      "other_gases_flagged": [
+        "SF6"
+      ]
+    },
+    {
+      "source": "NOAA brw",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2007-01",
+        "2007-11",
+        "2007-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA cgo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2007-07",
+        "2007-08",
+        "2007-09",
+        "2007-10",
+        "2007-11",
+        "2007-12"
+      ],
+      "other_gases_flagged": [
+        "SF6"
+      ]
+    },
+    {
+      "source": "NOAA mlo",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2007-02",
+        "2007-04",
+        "2007-09"
+      ],
+      "other_gases_flagged": [
+        "Dichloromethane"
+      ]
+    },
+    {
+      "source": "NOAA nwr",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2007-05",
+        "2007-09"
+      ],
+      "other_gases_flagged": [
+        "HFC-134a",
+        "SF6",
+        "Methyl bromide"
+      ]
+    },
+    {
+      "source": "NOAA psa",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2007-10"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA smo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2007-02",
+        "2007-11"
+      ],
+      "other_gases_flagged": [
+        "HFC-134a",
+        "SF6",
+        "Dichloromethane"
+      ]
+    },
+    {
+      "source": "NOAA spo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2007-05",
+        "2007-06",
+        "2007-07",
+        "2007-08",
+        "2007-09",
+        "2007-10",
+        "2007-11"
+      ],
+      "other_gases_flagged": [
+        "SF6"
+      ]
+    },
+    {
+      "source": "AGAGE cgo",
+      "lab": "AGAGE",
+      "south": true,
+      "months": [
+        "2007-09",
+        "2007-11"
+      ],
+      "other_gases_flagged": [
+        "HFC-152a",
+        "HFC-125"
+      ]
+    }
+  ],
+  "labs": [
+    "AGAGE",
+    "NOAA"
+  ],
+  "first_flag_north": "2007-01",
+  "first_flag_south": "2007-02",
+  "build": "air",
+  "top_share": 0.25925925925925924,
+  "stretches": [
+    "up 2004-01 to 2009-01",
+    "up 2005-01 to 2012-06"
+  ]
+}

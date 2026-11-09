@@ -1,0 +1,165 @@
+{
+  "gas": "CFC-11",
+  "year": 2014,
+  "tested": 213,
+  "flags": 33,
+  "expected": 1.655440414507772,
+  "chance": 3.873988262832756e-31,
+  "sources": [
+    {
+      "source": "NOAA alt",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2014-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA brw",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2014-11",
+        "2014-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA kum",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2014-05",
+        "2014-09",
+        "2014-10",
+        "2014-11",
+        "2014-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA mhd",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2014-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA mlo",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2014-08",
+        "2014-09",
+        "2014-10",
+        "2014-11"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA nwr",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2014-09",
+        "2014-10",
+        "2014-11",
+        "2014-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA smo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2014-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA spo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2014-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA sum",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2014-10",
+        "2014-11",
+        "2014-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA thd",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2014-05",
+        "2014-06",
+        "2014-09",
+        "2014-10",
+        "2014-11"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE gsn",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2014-05"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE mhd",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2014-11"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE rpb",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2014-11",
+        "2014-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE thd",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2014-10",
+        "2014-11"
+      ],
+      "other_gases_flagged": []
+    }
+  ],
+  "labs": [
+    "AGAGE",
+    "NOAA"
+  ],
+  "first_flag_north": "2014-05",
+  "first_flag_south": "2014-12",
+  "build": "air",
+  "top_share": 0.15151515151515152,
+  "stretches": [],
+  "seen": true
+}

@@ -1,0 +1,124 @@
+{
+  "gas": "HFC-134a",
+  "year": 2011,
+  "tested": 199,
+  "flags": 20,
+  "expected": 5.508650519031142,
+  "chance": 1.4866381772259801e-06,
+  "sources": [
+    {
+      "source": "NOAA alt",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2011-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA brw",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2011-01",
+        "2011-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA cgo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2011-05",
+        "2011-08",
+        "2011-10",
+        "2011-11"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA kum",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2011-10",
+        "2011-11"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA lef",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2011-12"
+      ],
+      "other_gases_flagged": [
+        "HFC-152a"
+      ]
+    },
+    {
+      "source": "NOAA mhd",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2011-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA psa",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2011-07",
+        "2011-08"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA smo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2011-01"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA spo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2011-06",
+        "2011-08",
+        "2011-09",
+        "2011-10",
+        "2011-11"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA thd",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2011-10"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22",
+        "HFC-152a",
+        "Methyl bromide"
+      ]
+    }
+  ],
+  "labs": [
+    "NOAA"
+  ],
+  "first_flag_north": "2011-01",
+  "first_flag_south": "2011-01",
+  "build": "unsorted",
+  "top_share": 0.25,
+  "stretches": []
+}

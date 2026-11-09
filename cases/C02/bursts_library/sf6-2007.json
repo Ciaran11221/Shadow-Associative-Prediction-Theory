@@ -1,0 +1,126 @@
+{
+  "gas": "SF6",
+  "year": 2007,
+  "tested": 132,
+  "flags": 30,
+  "expected": 0.24024,
+  "chance": 7.847702277538645e-52,
+  "sources": [
+    {
+      "source": "NOAA alt",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2007-12"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22"
+      ]
+    },
+    {
+      "source": "NOAA cgo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2007-04",
+        "2007-05",
+        "2007-06",
+        "2007-10",
+        "2007-11",
+        "2007-12"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22"
+      ]
+    },
+    {
+      "source": "NOAA kum",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2007-01",
+        "2007-03",
+        "2007-05",
+        "2007-06"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA mlo",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2007-01",
+        "2007-05",
+        "2007-10",
+        "2007-11",
+        "2007-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA nwr",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2007-05"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22"
+      ]
+    },
+    {
+      "source": "NOAA psa",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2007-06",
+        "2007-07",
+        "2007-08"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA smo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2007-02",
+        "2007-03",
+        "2007-12"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22",
+        "HFC-134a",
+        "Dichloromethane"
+      ]
+    },
+    {
+      "source": "NOAA spo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2007-05",
+        "2007-06",
+        "2007-07",
+        "2007-08",
+        "2007-09",
+        "2007-10",
+        "2007-11"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22"
+      ]
+    }
+  ],
+  "labs": [
+    "NOAA"
+  ],
+  "first_flag_north": "2007-01",
+  "first_flag_south": "2007-02",
+  "build": "unsorted",
+  "top_share": 0.23333333333333334,
+  "stretches": [
+    "up 2001-01 to 2010-04"
+  ]
+}

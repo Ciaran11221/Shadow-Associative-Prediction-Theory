@@ -1,0 +1,66 @@
+{
+  "gas": "CFC-11",
+  "year": 2013,
+  "tested": 211,
+  "flags": 6,
+  "expected": 0.9497374343585896,
+  "chance": 0.0004548843914876362,
+  "sources": [
+    {
+      "source": "NOAA kum",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2013-11"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA nwr",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2013-11",
+        "2013-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE gsn",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2013-05"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE rpb",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2013-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE thd",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2013-11"
+      ],
+      "other_gases_flagged": []
+    }
+  ],
+  "labs": [
+    "AGAGE",
+    "NOAA"
+  ],
+  "first_flag_north": "2013-05",
+  "first_flag_south": null,
+  "build": "air",
+  "top_share": 0.3333333333333333,
+  "stretches": [],
+  "seen": true
+}

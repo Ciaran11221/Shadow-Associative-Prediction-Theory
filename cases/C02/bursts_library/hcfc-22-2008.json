@@ -1,0 +1,171 @@
+{
+  "gas": "HCFC-22",
+  "year": 2008,
+  "tested": 154,
+  "flags": 35,
+  "expected": 15.304347826086955,
+  "chance": 1.1023337992477393e-05,
+  "sources": [
+    {
+      "source": "NOAA alt",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2008-01",
+        "2008-02",
+        "2008-11",
+        "2008-12"
+      ],
+      "other_gases_flagged": [
+        "SF6"
+      ]
+    },
+    {
+      "source": "NOAA brw",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2008-02",
+        "2008-10",
+        "2008-11",
+        "2008-12"
+      ],
+      "other_gases_flagged": [
+        "HCFC-142b",
+        "SF6"
+      ]
+    },
+    {
+      "source": "NOAA cgo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2008-05",
+        "2008-07",
+        "2008-08",
+        "2008-09",
+        "2008-10",
+        "2008-11"
+      ],
+      "other_gases_flagged": [
+        "SF6",
+        "Methyl bromide"
+      ]
+    },
+    {
+      "source": "NOAA lef",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2008-08"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA mlo",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2008-01",
+        "2008-10"
+      ],
+      "other_gases_flagged": [
+        "SF6",
+        "Dichloromethane"
+      ]
+    },
+    {
+      "source": "NOAA nwr",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2008-09"
+      ],
+      "other_gases_flagged": [
+        "HFC-134a",
+        "SF6"
+      ]
+    },
+    {
+      "source": "NOAA psa",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2008-08",
+        "2008-09"
+      ],
+      "other_gases_flagged": [
+        "SF6"
+      ]
+    },
+    {
+      "source": "NOAA smo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2008-01"
+      ],
+      "other_gases_flagged": [
+        "HCFC-142b",
+        "SF6",
+        "Dichloromethane"
+      ]
+    },
+    {
+      "source": "NOAA spo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2008-04",
+        "2008-05",
+        "2008-06",
+        "2008-07",
+        "2008-10"
+      ],
+      "other_gases_flagged": [
+        "SF6"
+      ]
+    },
+    {
+      "source": "AGAGE cgo",
+      "lab": "AGAGE",
+      "south": true,
+      "months": [
+        "2008-04",
+        "2008-05",
+        "2008-06",
+        "2008-08",
+        "2008-09",
+        "2008-10"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE mhd",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2008-02",
+        "2008-05",
+        "2008-11"
+      ],
+      "other_gases_flagged": [
+        "HCFC-142b",
+        "HFC-125"
+      ]
+    }
+  ],
+  "labs": [
+    "AGAGE",
+    "NOAA"
+  ],
+  "first_flag_north": "2008-01",
+  "first_flag_south": "2008-01",
+  "build": "air",
+  "top_share": 0.17142857142857143,
+  "stretches": [
+    "up 2004-01 to 2009-01",
+    "up 2005-01 to 2012-06",
+    "instrument 2008-07 to 2009-06"
+  ]
+}

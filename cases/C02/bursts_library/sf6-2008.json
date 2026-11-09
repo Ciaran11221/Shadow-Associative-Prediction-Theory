@@ -1,0 +1,167 @@
+{
+  "gas": "SF6",
+  "year": 2008,
+  "tested": 132,
+  "flags": 37,
+  "expected": 11.379310344827587,
+  "chance": 1.4067338372312934e-09,
+  "sources": [
+    {
+      "source": "NOAA alt",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2008-01",
+        "2008-02",
+        "2008-03",
+        "2008-07",
+        "2008-11",
+        "2008-12"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22"
+      ]
+    },
+    {
+      "source": "NOAA brw",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2008-12"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22",
+        "HCFC-142b"
+      ]
+    },
+    {
+      "source": "NOAA cgo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2008-01",
+        "2008-02",
+        "2008-03",
+        "2008-04",
+        "2008-05",
+        "2008-09"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22",
+        "Methyl bromide"
+      ]
+    },
+    {
+      "source": "NOAA kum",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2008-05",
+        "2008-06"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA mhd",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2008-11",
+        "2008-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA mlo",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2008-10",
+        "2008-11"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22"
+      ]
+    },
+    {
+      "source": "NOAA nwr",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2008-09",
+        "2008-10"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22",
+        "HFC-134a"
+      ]
+    },
+    {
+      "source": "NOAA psa",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2008-08",
+        "2008-09",
+        "2008-10"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22"
+      ]
+    },
+    {
+      "source": "NOAA smo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2008-01",
+        "2008-02",
+        "2008-12"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22",
+        "HCFC-142b",
+        "Dichloromethane"
+      ]
+    },
+    {
+      "source": "NOAA spo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2008-03",
+        "2008-04",
+        "2008-05",
+        "2008-06",
+        "2008-07",
+        "2008-08",
+        "2008-09",
+        "2008-10",
+        "2008-11"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22"
+      ]
+    },
+    {
+      "source": "NOAA sum",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2008-12"
+      ],
+      "other_gases_flagged": []
+    }
+  ],
+  "labs": [
+    "NOAA"
+  ],
+  "first_flag_north": "2008-01",
+  "first_flag_south": "2008-01",
+  "build": "unsorted",
+  "top_share": 0.24324324324324326,
+  "stretches": [
+    "up 2001-01 to 2010-04",
+    "up 2008-01 to 2020-02"
+  ]
+}

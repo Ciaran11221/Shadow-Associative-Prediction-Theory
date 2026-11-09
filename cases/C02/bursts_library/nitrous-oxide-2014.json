@@ -1,0 +1,54 @@
+{
+  "gas": "Nitrous oxide",
+  "year": 2014,
+  "tested": 203,
+  "flags": 10,
+  "expected": 1.423728813559322,
+  "chance": 2.6039072503847325e-06,
+  "sources": [
+    {
+      "source": "NOAA mlo",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2014-05",
+        "2014-06",
+        "2014-07"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA nwr",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2014-04",
+        "2014-05",
+        "2014-08",
+        "2014-09"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA thd",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2014-06",
+        "2014-07",
+        "2014-08"
+      ],
+      "other_gases_flagged": [
+        "SF6"
+      ]
+    }
+  ],
+  "labs": [
+    "NOAA"
+  ],
+  "first_flag_north": "2014-04",
+  "first_flag_south": null,
+  "build": "unsorted",
+  "top_share": 0.4,
+  "stretches": []
+}

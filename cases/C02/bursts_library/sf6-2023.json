@@ -1,0 +1,169 @@
+{
+  "gas": "SF6",
+  "year": 2023,
+  "tested": 201,
+  "flags": 29,
+  "expected": 13.28279883381924,
+  "chance": 0.00012775780313226871,
+  "sources": [
+    {
+      "source": "NOAA alt",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2023-07",
+        "2023-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA brw",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2023-07",
+        "2023-12"
+      ],
+      "other_gases_flagged": [
+        "HFC-32",
+        "HFC-125"
+      ]
+    },
+    {
+      "source": "NOAA kum",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2023-05",
+        "2023-06"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA mhd",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2023-05",
+        "2023-06",
+        "2023-11",
+        "2023-12"
+      ],
+      "other_gases_flagged": [
+        "HFC-152a",
+        "HFC-227ea"
+      ]
+    },
+    {
+      "source": "NOAA mlo",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2023-05",
+        "2023-06"
+      ],
+      "other_gases_flagged": [
+        "HFC-32",
+        "HFC-125",
+        "HFC-143a",
+        "HFC-227ea",
+        "Dichloromethane"
+      ]
+    },
+    {
+      "source": "NOAA smo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2023-01",
+        "2023-02",
+        "2023-03"
+      ],
+      "other_gases_flagged": [
+        "CFC-113",
+        "HFC-32",
+        "HFC-125",
+        "HFC-143a",
+        "Nitrous oxide"
+      ]
+    },
+    {
+      "source": "NOAA spo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2023-08",
+        "2023-09"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA sum",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2023-11",
+        "2023-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE cgo",
+      "lab": "AGAGE",
+      "south": true,
+      "months": [
+        "2023-08",
+        "2023-09",
+        "2023-11"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE jfj",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2023-05",
+        "2023-06"
+      ],
+      "other_gases_flagged": [
+        "HFC-143a",
+        "HFC-227ea"
+      ]
+    },
+    {
+      "source": "AGAGE mhd",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2023-05",
+        "2023-06"
+      ],
+      "other_gases_flagged": [
+        "HFC-143a",
+        "HFC-227ea",
+        "Methyl bromide"
+      ]
+    },
+    {
+      "source": "AGAGE thd",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2023-05",
+        "2023-06",
+        "2023-07"
+      ],
+      "other_gases_flagged": []
+    }
+  ],
+  "labs": [
+    "AGAGE",
+    "NOAA"
+  ],
+  "first_flag_north": "2023-05",
+  "first_flag_south": "2023-01",
+  "build": "air",
+  "top_share": 0.13793103448275862,
+  "stretches": []
+}

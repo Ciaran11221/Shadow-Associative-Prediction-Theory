@@ -1,0 +1,69 @@
+{
+  "gas": "HCFC-142b",
+  "year": 2008,
+  "tested": 143,
+  "flags": 6,
+  "expected": 0.26026,
+  "chance": 3.455078392101933e-07,
+  "sources": [
+    {
+      "source": "NOAA brw",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2008-10",
+        "2008-11",
+        "2008-12"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22",
+        "SF6"
+      ]
+    },
+    {
+      "source": "NOAA kum",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2008-10"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA smo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2008-01"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22",
+        "SF6",
+        "Dichloromethane"
+      ]
+    },
+    {
+      "source": "AGAGE mhd",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2008-11"
+      ],
+      "other_gases_flagged": [
+        "HCFC-22"
+      ]
+    }
+  ],
+  "labs": [
+    "AGAGE",
+    "NOAA"
+  ],
+  "first_flag_north": "2008-10",
+  "first_flag_south": "2008-01",
+  "build": "one station, many gases",
+  "top_share": 0.5,
+  "stretches": [
+    "up 2004-01 to 2009-01",
+    "instrument 2008-07 to 2009-06"
+  ]
+}

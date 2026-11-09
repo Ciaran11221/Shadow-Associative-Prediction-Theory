@@ -1,0 +1,96 @@
+{
+  "gas": "CFC-11",
+  "year": 2017,
+  "tested": 202,
+  "flags": 20,
+  "expected": 7.2142857142857135,
+  "chance": 6.645824870121914e-05,
+  "sources": [
+    {
+      "source": "NOAA cgo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2017-10",
+        "2017-11",
+        "2017-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA nwr",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2017-09"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA psa",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2017-09",
+        "2017-10",
+        "2017-11",
+        "2017-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA smo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2017-01",
+        "2017-02"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA spo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2017-10",
+        "2017-11"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE cgo",
+      "lab": "AGAGE",
+      "south": true,
+      "months": [
+        "2017-08",
+        "2017-09",
+        "2017-10",
+        "2017-11",
+        "2017-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE smo",
+      "lab": "AGAGE",
+      "south": true,
+      "months": [
+        "2017-02",
+        "2017-10",
+        "2017-11"
+      ],
+      "other_gases_flagged": []
+    }
+  ],
+  "labs": [
+    "AGAGE",
+    "NOAA"
+  ],
+  "first_flag_north": "2017-09",
+  "first_flag_south": "2017-01",
+  "build": "air",
+  "top_share": 0.25,
+  "stretches": [],
+  "seen": true
+}

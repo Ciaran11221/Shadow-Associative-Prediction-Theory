@@ -1,0 +1,31 @@
+{
+  "gas": "CFC-12",
+  "year": 2026,
+  "tested": 65,
+  "flags": 4,
+  "expected": 0.1183,
+  "chance": 7.42519212346484e-06,
+  "sources": [
+    {
+      "source": "NOAA mlo",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "other_gases_flagged": []
+    }
+  ],
+  "labs": [
+    "NOAA"
+  ],
+  "first_flag_north": "2026-03",
+  "first_flag_south": null,
+  "build": "one station, one gas",
+  "top_share": 1.0,
+  "stretches": [],
+  "seen": true
+}

@@ -1,0 +1,62 @@
+{
+  "gas": "carbon tetrachloride",
+  "year": 2019,
+  "tested": 187,
+  "flags": 11,
+  "expected": 1.935224223840552,
+  "chance": 6.13257149320958e-06,
+  "sources": [
+    {
+      "source": "NOAA cgo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2019-02",
+        "2019-03",
+        "2019-04",
+        "2019-06"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA psa",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2019-01",
+        "2019-02"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA smo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2019-02",
+        "2019-03",
+        "2019-04",
+        "2019-05"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA sum",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2019-01"
+      ],
+      "other_gases_flagged": []
+    }
+  ],
+  "labs": [
+    "NOAA"
+  ],
+  "first_flag_north": "2019-01",
+  "first_flag_south": "2019-01",
+  "build": "unsorted",
+  "top_share": 0.36363636363636365,
+  "stretches": [],
+  "seen": true
+}
