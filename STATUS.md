@@ -4,7 +4,7 @@
 
 | | |
 |---|---|
-| Stated | 3 laws, 9 working rules, 16 cases, 13 shadows (2 of them failures kept on record), 3 planned tests |
+| Stated | 3 laws, 9 working rules, 16 cases, 14 shadows (2 of them failures kept on record), 3 planned tests |
 | Run | One proven case checked against data: CFC-11, worth a look November 2013, shown on today's files, not proven. Its flag count failed on gases picked as clean, then caught 1 of 3 testable gas events. The bursts test ran on 16 new gases and failed its main question. T1, T2 and T3 not run yet |
 | Archived | v0.1.1 on Zenodo; every release gets its own DOI |
 | Next | Write up the bursts test; then the as-of replay and the proof gate |
