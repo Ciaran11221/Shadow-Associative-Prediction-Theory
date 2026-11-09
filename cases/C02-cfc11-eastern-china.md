@@ -188,6 +188,60 @@ Each cell is a lucky hit, then a lucky false alarm. A level of 3 is a low bar, w
 - Quiet stretches keep turning out not to be quiet: H-2402 last time, HCFC-141b now. That makes false alarms look more common than they are.
 - These four gases have now been seen, so they can't judge a new version of the ladder.
 
+## Bursts
+
+A false alarm is a flag when nothing known is happening. A run of them far above a gas's usual rate might still mark something real: a change in the air, a fault in an instrument, or a source next to one station. [Issue 28](https://github.com/Ciaran11221/Shadow-Associative-Prediction-Theory/issues/28) set the rules for the 16 gases both labs publish that hadn't been run, before any of their readings were opened. Two comments tightened them before the files were downloaded ([fixes](https://github.com/Ciaran11221/Shadow-Associative-Prediction-Theory/issues/28#issuecomment-6713603483), [wording](https://github.com/Ciaran11221/Shadow-Associative-Prediction-Theory/issues/28#issuecomment-6713893752)), and a [third](https://github.com/Ciaran11221/Shadow-Associative-Prediction-Theory/issues/28#issuecomment-6730478369), posted before the run, said how the result would be read. Code: [scripts/flag_bursts.py](../scripts/flag_bursts.py). Output: the `bursts` files in [cases/C02](C02/).
+
+- **Burst:** a gas in a calendar year with far more flags than its usual rate in earlier years gives, so many that luck gives that count less than 1 time in 20 divided by the gas years judged. With 271 judged, that's about 1 in 5,400.
+- **Question 1:** do bursts land in years touching a known change (a rise from the papers, or an instrument change in NOAA's notes) more often than in other years? It's judged inside each gas, so which gas it is can't fake the answer.
+- **Question 2:** do bursts seen at 3 or more stations in both labs (air) sit in rising years more often than bursts at one station?
+- **Down check:** years that only touch a known fall shouldn't burst more than years with no known change.
+
+**Result: Question 1 fails.** 17 bursts. Bursts per year were 2.4 times as common in years with a known change (9 in 98) as in other years (5 in 131), but with each gas's bursts shuffled among its own years, luck gives that 32 times in 100, and a pass needed under 5. Question 2 couldn't be judged: 3 one-station bursts, and it needs 5. With 12 air and one-station bursts, under the 40 the third comment named, that reads as too few to tell. The down check is fine: no bursts in 11 years with only a known fall, against 8 in 162 years with no known change. Issue 28 said that if bursts don't land in known changes more than elsewhere, the idea goes. It goes, and the result stays on record.
+
+| Gas | Year | Kind | Flags, against expected | Known change in that year |
+|---|---|---|---|---|
+| HCFC-22 | 2007 | air | 27, against 3.3 | Rise: Montzka 2009, Saikawa 2012 |
+| HCFC-22 | 2008 | air | 35, against 15.3 | Rise: Montzka 2009, Saikawa 2012; NOAA instrument note |
+| HCFC-142b | 2008 | one station, many gases | 6, against 0.3 | Rise: Montzka 2009; NOAA instrument note |
+| HFC-134a | 2010 | air | 19, against 1.1 | None |
+| HFC-134a | 2011 | unsorted | 20, against 5.5 | None |
+| HFC-134a | 2016 | air | 31, against 9.4 | Rise: Choi 2024 |
+| HFC-134a | 2017 | air | 39, against 11.5 | Rise: Choi 2024 |
+| HFC-32 | 2017 | unsorted | 15, against 0.3 | Rise: Choi 2024 |
+| HFC-227ea | 2016 | one station, many gases | 8, against 1.5 | None |
+| SF6 | 2007 | unsorted | 30, against 0.2 | Rise: Rigby 2010 |
+| SF6 | 2008 | unsorted | 37, against 11.4 | Rise: Rigby 2010, Simmonds 2020 |
+| SF6 | 2022 | air | 50, against 11.5 | NOAA replaced its SF6 flask system |
+| SF6 | 2023 | air | 29, against 13.3 | None |
+| SF6 | 2025 | air | 37, against 12.2 | None |
+| Nitrous oxide | 2014 | unsorted | 10, against 1.4 | None |
+| Nitrous oxide | 2022 | one station, one gas | 11, against 1.7 | None |
+| Methyl bromide | 2016 | air | 19, against 1.2 | None |
+
+Before the run, the code met copies of the real files with every reading replaced by a made-up one, and every planted burst read right. After it, a separate program that shares no code agreed on all 51,026 tested source-months, every burst and all three answers.
+
+**How much noise can do.** Before the run, a chance sum laid made-up flags on the real tested months. Flags that come one at a time give about 0.011 bursts a run at 0.182% a month, but the same rate in streaks of 3 months at one station gives about 1.5. So the third comment promised to measure the real noise after the run. Outside the 17 burst years the real flags were 632 in 48,163 tested source-months, mostly single months. Copied into 1,000 made-up runs with nothing real in them, that noise gave 2.3 bursts a run, and none of the 1,000 reached 17. About 2 of the 17 could be noise.
+
+**What the bursts look like.** All 17 build up and stay. At the middle station of each burst, readings sat above the line in 83 to 100% of the 6 months before its first flag and in all 12 after, and most stations flagged again within a year. A one-off spike, like Jungfraujoch's halons in May 2021, looks different: nothing builds before it and nothing repeats. Where both labs measure the same air they mostly move together, so the bursts aren't one lab's fault. HCFC-22 at Cape Grim in 2008 flagged 6 months in each lab, and SF6 in 2022, the year NOAA's new flask system came in, flagged 7 months at AGAGE's Cape Grim and Mace Head against 2 and 0 at NOAA's.
+
+**The 2007 to 2008 group.** HCFC-22 and SF6 flagged at the same NOAA stations in the same months, mostly in the south. Each gas rose on its own: the other lab agrees on HCFC-22 at Cape Grim, every station built up for months first, and the north rose as much as the south or more. The south flagged more because its readings are steadier. Cape Grim and the South Pole wobble about half as much as Alert or Mauna Loa, so the same rise counts as more of their usual misses.
+
+**8 bursts sit in years with no known change.** A blind search, with 8 quiet years of the same or similar gases mixed in and the searcher not told which were which, found later reports around 2 bursts and 2 quiet years: no difference. Around the bursts: a fall in US HFC-134a emissions in 2009 (Hu et al. 2015), the wrong way for an upward burst, and a rise in methyl bromide from 2015 to 2016. Around the quiet years: nitrous oxide emissions rising faster from 2009 (Thompson et al. 2019), and an AGAGE calibration change for nitrous oxide in June 2017. Methyl bromide 2016 is the one that lines up: flags from January 2016, 14 of its 19 at southern and tropical stations, and a rise that a UN note mentions in November 2020 and a paper in September 2021 (Choi et al. 2022). It's probably natural, from El Niño fires, although methyl chloride, which fires also give off, didn't flag at those stations then. Nitrous oxide 2014 and 2022 are two of the five fastest yearly rises since 2001 in NOAA's own record, but the other three of those years didn't burst.
+
+**Seen in passing, not scored.**
+
+- The timing the third comment wrote down: Gosan could be checked in only 1 of the 5 bursts in rises the papers put in Asia (HFC-134a 2016, no flags), so the order it predicted couldn't be seen. HFC-32 2017 went north first, in April, and south in September.
+- Lead times: 5 of the 8 known rises had a burst inside their window, from 13 to 146 months before the paper. Single flags also ring inside all 8 windows, so a lead time on its own proves nothing.
+
+**Limits.**
+
+- The years counted as quiet weren't checked as quiet. The bursts aren't noise and they build up and stay, so some of those years held real changes no paper dated, as H-2402 and HCFC-141b did before. A fair next test checks its quiet years before the run. The result stays as dated.
+- A burst shows when and where readings bent upward, not why. Emissions, winds and slow instrument drift can all do that.
+- In 11 rising years only one lab could be checked (HFC-125 2011 to 2015 and HFC-32 2015 to 2017, AGAGE only; SF6 2007 to 2009, NOAA only), so a burst there couldn't count as air.
+- The search for later reports ran only a few searches per year, read some sources in abstract or summary only, and checked NOAA's notes for some gases only.
+- These 16 gases have now been seen, so they can't judge a new version of the rule.
+
 ## Sources
 
 - [Choi et al. 2026, npj Climate and Atmospheric Science](https://doi.org/10.1038/s41612-026-01399-4)
@@ -205,3 +259,18 @@ Each cell is a lucky hit, then a lucky false alarm. A level of 3 is a low bar, w
 - [Chen et al. 2020, JGR Atmospheres](https://doi.org/10.1029/2020JD033051)
 - [NOAA combined CFC-11 table](https://doi.org/10.15138/BVQ6-2S69)
 - [AGAGE data, version 20260716](https://www-air.larc.nasa.gov/missions/agage/data/)
+- [Montzka et al. 2009, Geophysical Research Letters](https://doi.org/10.1029/2008GL036475)
+- [Saikawa et al. 2012, Atmospheric Chemistry and Physics](https://doi.org/10.5194/acp-12-10033-2012)
+- [Simmonds et al. 2016, Atmospheric Chemistry and Physics](https://doi.org/10.5194/acp-16-365-2016)
+- [Simmonds et al. 2017, Atmospheric Chemistry and Physics](https://doi.org/10.5194/acp-17-4641-2017)
+- [Choi et al. 2024, Atmospheric Chemistry and Physics](https://doi.org/10.5194/acp-24-7309-2024)
+- [Rigby et al. 2010, Atmospheric Chemistry and Physics](https://doi.org/10.5194/acp-10-10305-2010)
+- [Simmonds et al. 2020, Atmospheric Chemistry and Physics](https://doi.org/10.5194/acp-20-7271-2020)
+- [Leedham Elvidge et al. 2015, Atmospheric Chemistry and Physics](https://doi.org/10.5194/acp-15-1939-2015)
+- [An et al. 2021, Nature Communications](https://doi.org/10.1038/s41467-021-27592-y)
+- [Hu et al. 2015, JGR Atmospheres](https://doi.org/10.1002/2014JD022617)
+- [Thompson et al. 2019, Nature Climate Change](https://doi.org/10.1038/s41558-019-0613-7)
+- [Choi et al. 2022, Atmospheric Chemistry and Physics](https://doi.org/10.5194/acp-22-5157-2022)
+- [UNEP Montreal Protocol note on methyl bromide, 27 November 2020](https://www.informea.org/uuid/node/b85dfd3c-1f7e-4a02-979b-8f1fdfa8eb3a)
+- [AGAGE data description, nitrous oxide scale SIO-16 from June 2017](https://knb.ecoinformatics.org/knb/d1/mn/v2/object/ess-dive-214f357a336c60a-20220527T213205777)
+- [NOAA Annual Greenhouse Gas Index](https://gml.noaa.gov/aggi/aggi.html)

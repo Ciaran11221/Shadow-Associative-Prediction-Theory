@@ -31,7 +31,7 @@ GASES = [
     ("methyl chloroform", "HATS_global_MC.txt", "table", "ch3ccl3"),
 ]
 SAME_STATION = {"mlo_pfp": "mlo"}
-NOT_STATIONS = {"NH", "SH", "Global"}
+NOT_STATIONS = {"NH", "SH", "Global", "Programs"}
 
 
 def fail(message):
@@ -93,9 +93,10 @@ def read_gcms(path):
     return monthly_average(samples)
 
 
-def read_h1301(path):
-    """26 comment lines, a column line, rows. Same site, date and time from M2 and PR1 is one sample: keep PR1."""
-    rows, header = [], False
+def _read_h1301_layout(path, leave_out_flagged):
+    """The H-1301 layout. -> ({site: {month: average}}, number of rows left out for a flag that isn't '-').
+    leave_out_flagged False: a flag that isn't '-' stops with an error, as read_h1301 always has."""
+    rows, header, left_out = [], False, 0
     for n, text in enumerate(lines_of(path), 1):
         if text.startswith("#") or not text.strip():
             continue
@@ -109,6 +110,9 @@ def read_h1301(path):
             fail(f"{path} line {n}: expected 10 fields, found {len(parts)}")
         where = f"{Path(path).name} line {n}"
         if parts[8] != "-":
+            if leave_out_flagged:
+                left_out += 1
+                continue
             fail(f"{where}: flag {parts[8]!r} is not '-'; no rule exists for it")
         rows.append((site_code(parts[0]), parts[2], parts[3], parts[9],
                      month_from_yyyymmdd(parts[2], where), number(parts[6], where)))
@@ -120,14 +124,26 @@ def read_h1301(path):
         if instr == "M2" and (site, day, hhmm) in pr1:
             continue
         samples.setdefault(site, {}).setdefault(month, []).append(value)
-    return monthly_average(samples)
+    return monthly_average(samples), left_out
 
 
-def read_table(path, tag="MC"):
+def read_h1301(path):
+    """26 comment lines, a column line, rows. Same site, date and time from M2 and PR1 is one sample: keep PR1.
+    A flag that isn't '-' stops with an error."""
+    return _read_h1301_layout(path, False)[0]
+
+
+def read_m2pr1(path):
+    """The H-1301 layout, for the HFC files. Rows whose flag isn't '-' are left out and counted.
+    -> ({site: {month: average}}, number of rows left out)."""
+    return _read_h1301_layout(path, True)
+
+
+def read_table(path, tag="MC", prefix="HATS"):
     """Combined table: comment lines, a column line, rows. Station columns only; nan is no reading.
-    tag is the gas tag in the column names: MC, F12 or CCl4."""
-    pattern = re.compile(rf"^HATS_(.+)_{re.escape(tag)}$")
-    year_col, month_col = f"HATS_{tag}_YYYY", f"HATS_{tag}_MM"
+    prefix and tag are in the column names: HATS_MC_YYYY, GML_SF6_YYYY. Tag: MC, F12, CCl4, SF6."""
+    pattern = re.compile(rf"^{re.escape(prefix)}_(.+)_{re.escape(tag)}$")
+    year_col, month_col = f"{prefix}_{tag}_YYYY", f"{prefix}_{tag}_MM"
     names, cols = None, {}
     for n, text in enumerate(lines_of(path), 1):
         if text.startswith("#") or not text.strip():
@@ -198,7 +214,16 @@ def agage_stations(folder, gas):
 def noaa_data(folder, filename, kind):
     path = find_file(folder, filename)
     if kind == "table" or kind.startswith("table:"):
-        return read_table(path, kind.partition(":")[2] or "MC")
+        parts = kind.split(":")[1:]  # table, table:<tag> or table:<prefix>:<tag>
+        if len(parts) > 2:
+            fail(f"kind {kind!r}: expected table, table:<tag> or table:<prefix>:<tag>")
+        if len(parts) == 2:
+            return read_table(path, parts[1] or "MC", parts[0])
+        return read_table(path, parts[0] if parts and parts[0] else "MC")
+    if kind == "m2pr1":
+        data, left_out = read_m2pr1(path)
+        print(f"{Path(path).name}: {left_out} rows with a flag other than '-' left out")
+        return data
     return {"gcms": read_gcms, "h1301": read_h1301}[kind](path)
 
 

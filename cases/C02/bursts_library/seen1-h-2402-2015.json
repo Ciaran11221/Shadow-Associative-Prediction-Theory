@@ -1,0 +1,30 @@
+{
+  "gas": "H-2402",
+  "year": 2015,
+  "tested": 59,
+  "flags": 3,
+  "expected": 0.10738,
+  "chance": 0.00019043093318581473,
+  "sources": [
+    {
+      "source": "AGAGE gsn",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2015-07",
+        "2015-10",
+        "2015-12"
+      ],
+      "other_gases_flagged": []
+    }
+  ],
+  "labs": [
+    "AGAGE"
+  ],
+  "first_flag_north": "2015-07",
+  "first_flag_south": null,
+  "build": "one station, one gas",
+  "top_share": 1.0,
+  "stretches": [],
+  "seen": true
+}

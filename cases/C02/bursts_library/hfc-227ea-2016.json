@@ -1,0 +1,55 @@
+{
+  "gas": "HFC-227ea",
+  "year": 2016,
+  "tested": 39,
+  "flags": 8,
+  "expected": 1.5,
+  "chance": 0.00016956572886967031,
+  "sources": [
+    {
+      "source": "AGAGE jfj",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2016-03",
+        "2016-04",
+        "2016-05"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE mhd",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2016-02",
+        "2016-05",
+        "2016-06",
+        "2016-10"
+      ],
+      "other_gases_flagged": [
+        "HFC-134a",
+        "HFC-143a"
+      ]
+    },
+    {
+      "source": "AGAGE thd",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2016-12"
+      ],
+      "other_gases_flagged": [
+        "HFC-134a"
+      ]
+    }
+  ],
+  "labs": [
+    "AGAGE"
+  ],
+  "first_flag_north": "2016-02",
+  "first_flag_south": null,
+  "build": "one station, many gases",
+  "top_share": 0.5,
+  "stretches": []
+}

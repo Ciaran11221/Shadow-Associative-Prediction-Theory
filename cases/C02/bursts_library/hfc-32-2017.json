@@ -1,0 +1,67 @@
+{
+  "gas": "HFC-32",
+  "year": 2017,
+  "tested": 28,
+  "flags": 15,
+  "expected": 0.3010752688172043,
+  "chance": 8.731965726811588e-21,
+  "sources": [
+    {
+      "source": "AGAGE cgo",
+      "lab": "AGAGE",
+      "south": true,
+      "months": [
+        "2017-09",
+        "2017-10",
+        "2017-11"
+      ],
+      "other_gases_flagged": [
+        "HFC-134a",
+        "HFC-143a"
+      ]
+    },
+    {
+      "source": "AGAGE cmn",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2017-07",
+        "2017-08",
+        "2017-09",
+        "2017-10",
+        "2017-11",
+        "2017-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE jfj",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2017-04",
+        "2017-05",
+        "2017-06",
+        "2017-07",
+        "2017-08",
+        "2017-09"
+      ],
+      "other_gases_flagged": [
+        "HFC-134a",
+        "HFC-143a",
+        "HFC-227ea",
+        "SF6"
+      ]
+    }
+  ],
+  "labs": [
+    "AGAGE"
+  ],
+  "first_flag_north": "2017-04",
+  "first_flag_south": "2017-09",
+  "build": "unsorted",
+  "top_share": 0.4,
+  "stretches": [
+    "up 2016-01 to 2023-12"
+  ]
+}

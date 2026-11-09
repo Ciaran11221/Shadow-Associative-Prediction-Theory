@@ -1,0 +1,49 @@
+{
+  "gas": "CFC-115",
+  "year": 2017,
+  "tested": 55,
+  "flags": 12,
+  "expected": 2.849740932642487,
+  "chance": 4.4147983266713136e-05,
+  "sources": [
+    {
+      "source": "AGAGE rpb",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2017-01",
+        "2017-03",
+        "2017-04",
+        "2017-05",
+        "2017-06",
+        "2017-07",
+        "2017-09",
+        "2017-10",
+        "2017-12"
+      ],
+      "other_gases_flagged": [
+        "carbon tetrachloride"
+      ]
+    },
+    {
+      "source": "AGAGE thd",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2017-07",
+        "2017-09",
+        "2017-10"
+      ],
+      "other_gases_flagged": []
+    }
+  ],
+  "labs": [
+    "AGAGE"
+  ],
+  "first_flag_north": "2017-01",
+  "first_flag_south": null,
+  "build": "unsorted",
+  "top_share": 0.75,
+  "stretches": [],
+  "seen": true
+}

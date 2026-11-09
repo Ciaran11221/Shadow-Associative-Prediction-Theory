@@ -1,0 +1,112 @@
+{
+  "gas": "HFC-134a",
+  "year": 2010,
+  "tested": 162,
+  "flags": 19,
+  "expected": 1.1489361702127658,
+  "chance": 3.865174031295681e-17,
+  "sources": [
+    {
+      "source": "NOAA alt",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2010-10",
+        "2010-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA brw",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2010-10",
+        "2010-11",
+        "2010-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA hfm",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2010-09"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA kum",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2010-09",
+        "2010-10",
+        "2010-11"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA lef",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2010-11"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA mlo",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2010-09"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA smo",
+      "lab": "NOAA",
+      "south": true,
+      "months": [
+        "2010-11"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE cgo",
+      "lab": "AGAGE",
+      "south": true,
+      "months": [
+        "2010-05",
+        "2010-08",
+        "2010-09"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE mhd",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2010-09",
+        "2010-10",
+        "2010-11",
+        "2010-12"
+      ],
+      "other_gases_flagged": [
+        "HFC-125"
+      ]
+    }
+  ],
+  "labs": [
+    "AGAGE",
+    "NOAA"
+  ],
+  "first_flag_north": "2010-09",
+  "first_flag_south": "2010-05",
+  "build": "air",
+  "top_share": 0.21052631578947367,
+  "stretches": []
+}

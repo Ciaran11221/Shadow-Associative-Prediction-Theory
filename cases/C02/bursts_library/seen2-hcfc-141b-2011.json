@@ -1,0 +1,100 @@
+{
+  "gas": "HCFC-141b",
+  "year": 2011,
+  "tested": 171,
+  "flags": 16,
+  "expected": 0.31122,
+  "chance": 2.762582305423469e-22,
+  "sources": [
+    {
+      "source": "NOAA alt",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2011-11",
+        "2011-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA brw",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2011-11",
+        "2011-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA kum",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2011-11"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA mhd",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2011-11",
+        "2011-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA nwr",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2011-10",
+        "2011-11"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "NOAA thd",
+      "lab": "NOAA",
+      "south": false,
+      "months": [
+        "2011-10",
+        "2011-11",
+        "2011-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE mhd",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2011-11",
+        "2011-12"
+      ],
+      "other_gases_flagged": []
+    },
+    {
+      "source": "AGAGE zep",
+      "lab": "AGAGE",
+      "south": false,
+      "months": [
+        "2011-11",
+        "2011-12"
+      ],
+      "other_gases_flagged": []
+    }
+  ],
+  "labs": [
+    "AGAGE",
+    "NOAA"
+  ],
+  "first_flag_north": "2011-10",
+  "first_flag_south": null,
+  "build": "air",
+  "top_share": 0.1875,
+  "stretches": [],
+  "seen": true
+}
